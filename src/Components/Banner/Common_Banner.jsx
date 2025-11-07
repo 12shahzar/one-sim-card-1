@@ -14,7 +14,7 @@ const Common_Banner = ({ titleFirst, titleLast, breadcrumb }) => {
     >
       <div className="text-center">
         <h1 className="text-4xl md:text-6xl font-semibold">
-          <span className="text-white">{titleFirst}</span>{" "}
+          <span className="text-white">{titleFirst}</span>
           <span className="bg-gradient-to-r from-white to-[#F4C600] bg-clip-text text-transparent">
             {titleLast}
           </span>

@@ -4,6 +4,7 @@ import FeatureSection from "../../Components/FeatureComponent/FeatureSection";
 import SectionHeading from "../../Components/Heading/SectionHeading";
 
 function IoTSimSection() {
+
   return (
     <section
       data-aos="fade-down"
@@ -40,6 +41,7 @@ function IoTSimSection() {
         btnBgColor="#455E86"
         btnHoverColor="#3b5072"
         btnTextColor="#ffffff"
+        btnRedirect="/GlobalCoverage"
       />
     </section>
   );

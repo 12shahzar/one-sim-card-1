@@ -32,6 +32,7 @@ const FeatureSection = ({
   btnHoverColor = "#3b5072",
   btnTextColor = "white",
   subtitleColor = "#455E86",
+  btnRedirect
 }) => {
   return (
     <section
@@ -90,6 +91,7 @@ const FeatureSection = ({
               bgColor={btnBgColor}
               hoverColor={btnHoverColor}
               textColor={btnTextColor}
+              to={btnRedirect || '/'}
             />
           )}
         </div>

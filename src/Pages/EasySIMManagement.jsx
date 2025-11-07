@@ -42,7 +42,7 @@ function EasySIMManagement() {
           </div>
         </div>
       </section>
-      <div className="mx-4 md:mx-6 pb-16">
+      <div className="mx-4 md:mx-6 pb-16" data-aos="fade-left">
         <FeaturesGrid
          title="OneSimCard OSCAR Platform Features"
          featuresData={featuresData}

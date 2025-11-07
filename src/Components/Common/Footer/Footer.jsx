@@ -136,24 +136,25 @@ const Footer = () => {
 
       {/* === Social Media Icons === */}
       <div className="max-w-7xl mx-auto flex justify-center sm:justify-end px-4 sm:px-6 md:px-8">
-        <div className="flex space-x-4 text-white text-lg bg-[#6B7280] px-16 py-3 rounded-t-full">
-          <a href="#" className="hover:text-[#F4C600]">
-            <FaFacebookF />
-          </a>
-          <a href="#" className="hover:text-[#F4C600]">
-            <FaTwitter />
-          </a>
-          <a href="#" className="hover:text-[#F4C600]">
-            <FaGooglePlusG />
-          </a>
-          <a href="#" className="hover:text-[#F4C600]">
-            <FaInstagram />
-          </a>
-          <a href="#" className="hover:text-[#F4C600]">
-            <FaLinkedinIn />
-          </a>
-        </div>
-      </div>
+  <div className="flex text-white text-lg bg-[#6B7280] px-6 py-3 rounded-t-full divide-x divide-white/40">
+    {[
+      { Icon: FaFacebookF },
+      { Icon: FaTwitter },
+      { Icon: FaGooglePlusG },
+      { Icon: FaInstagram },
+      { Icon: FaLinkedinIn },
+    ].map(({ Icon }, idx) => (
+      <a
+        key={idx}
+        href="#"
+        className="hover:text-[#F4C600] px-4 first:pl-0 last:pr-0 flex items-center justify-center"
+      >
+        <Icon />
+      </a>
+    ))}
+  </div>
+</div>
+
 
       {/* Divider */}
       <div className="border-t border-gray-200 "></div>
