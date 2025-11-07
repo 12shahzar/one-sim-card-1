@@ -10,7 +10,7 @@ export default function CustomButton({
     <button
       onClick={onClick}
       className={`self-center md:self-start inline-flex items-center justify-center 
-        font-medium text-sm px-16 py-4 rounded-full transition w-2xs cursor-pointer 
+        font-medium text-sm px-10 py-4 rounded-full transition w-3xs cursor-pointer 
         ${className}`}
       style={{
         backgroundColor: bgColor,

@@ -1,6 +1,5 @@
-import simCard from "../../assets/images/pricing_image.png"; // main SIM card image
-import bg_image from "../../assets/images/bg_color.jpg"; // background image (optional floating)
-import graphImg from "../../assets/images/security_level.svg"; // background image (optional floating)
+import simCard from "../../assets/images/pricing_image.png";
+import bg_image from "../../assets/images/bg_color.jpg";
 import SectionHeading from "../../Components/Heading/SectionHeading";
 
 export default function PricingByApplication() {
@@ -9,7 +8,7 @@ export default function PricingByApplication() {
       className="
     w-full bg-white mx-auto my-8 px-4 md:px-8 rounded-2xl overflow-hidden
     bg-no-repeat bg-center
-    bg-cover md:bg-contain   // 👈 Responsive background sizing
+    bg-cover md:bg-contain   
   "
       style={{
         backgroundImage: `url(${bg_image})`,
@@ -17,14 +16,9 @@ export default function PricingByApplication() {
     >
       <div className="max-w-7xl mx-auto">
         {/* ====== TOP TEXT SECTION ====== */}
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-12">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 ">
           {/* Left Title */}
           <div className="flex-1">
-            {/* <h2 className="text-4xl sm:text-5xl font-thin text-[#08080C] leading-tight">
-              Intelligent pricing
-              <br />
-              <span className="font-thin">by Application</span>
-            </h2> */}
             <SectionHeading
               title=" Intelligent pricing<br/>& by Application"
               showBreak={true}
@@ -49,9 +43,9 @@ export default function PricingByApplication() {
         </div>
 
         {/* ====== IMAGE & PRICING SECTION ====== */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 mb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 mb-40">
           {/* SIM Card Image (Left Side on Desktop) */}
-          <div className="col-span-12 lg:col-span-7 relative flex justify-center lg:justify-start ">
+          <div className="col-span-12 lg:col-span-7 relative flex justify-center lg:justify-start mt-28">
             <img
               src={simCard}
               alt="5G IoT SIM Cards with World Map and Graph"
@@ -60,7 +54,7 @@ export default function PricingByApplication() {
           </div>
 
           {/* Pricing Card */}
-          <div className="col-span-12 lg:col-span-5 relative bg-white rounded-3xl shadow-lg border border-gray-100 p-6 sm:p-8 mx-auto max-w-md lg:max-w-none lg:ml-32">
+          <div className="col-span-12 lg:col-span-5 relative bg-white rounded-3xl shadow-lg border border-gray-100 p-6 mt-28 sm:p-8 mx-auto max-w-md lg:max-w-none lg:ml-32">
             {/* Price Badge */}
             <div className="absolute -top-10 right-6 z-10">
               <div className="bg-[#FFD912] rounded-2xl shadow-lg relative">

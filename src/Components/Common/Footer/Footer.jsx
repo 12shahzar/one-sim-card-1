@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <footer className="bg-white text-[#6B7280] w-full">
       {/* === Top Section === */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* === Logo + Buttons === */}
         <div className="flex flex-col items-start">
           <div className="flex items-center space-x-2 mb-6">
@@ -57,7 +57,7 @@ const Footer = () => {
         {/* === Company === */}
         <div>
           <h3 className="text-[#455E86] font-semibold mb-3 text-lg">Company</h3>
-          <ul className="text-sm space-y-1.5 text-regular">
+          <ul className="text-sm space-y-1.5 font-regular">
             <li>
               <a href="#" className="hover:text-[#F4C600]">
                 About Us
@@ -99,7 +99,7 @@ const Footer = () => {
         {/* === Support === */}
         <div>
           <h3 className="text-[#455E86] font-semibold mb-3 text-lg">Support</h3>
-          <ul className="text-sm space-y-1.5 text-regular">
+          <ul className="text-sm space-y-1.5 font-regular">
             <li>
               <a href="#" className="hover:text-[#F4C600]">
                 FAQs
@@ -159,7 +159,7 @@ const Footer = () => {
       <div className="border-t border-gray-200 "></div>
 
       {/* === Bottom Section === */}
-      <div className="bg-gray-50 py-6">
+      <div className="bg-white py-3">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 px-4 sm:px-6 md:px-8">
           <p className="text-center text-xs text-gray-500">
             © 2006–2025 Belmont Telecom Inc., DBA OneSimCard.com. All rights

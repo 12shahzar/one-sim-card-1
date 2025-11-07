@@ -20,7 +20,7 @@ function IoTSimSection() {
       </div>
 
       {/* Description */}
-      <p className="text-[#6B7280] font-regular text-lg leading-relaxed mb-12 pr-2 md:pr-72">
+      <p className="text-[#6B7280] font-regular text-base  leading-relaxed mb-12 pr-2 md:pr-72">
         With a focus on worldwide M2M roaming, network redundancy in most
         countries, secure connectivity and intelligent pricing by application,{" "}
         <span className="text-[#455E86] font-semibold">OneSimCard IoT</span>{" "}

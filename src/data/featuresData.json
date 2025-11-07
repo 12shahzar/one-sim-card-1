@@ -1,0 +1,47 @@
+[
+  {
+    "icon": "/images/digital-assistant.svg",
+    "title": "Quickly Manage Individual or Groups of Devices Under One Account",
+    "desc": "Easily organize and control your IoT SIM cards with unified access."
+  },
+  {
+    "icon": "/images/sim-card.svg",
+    "title": "One Main Corporate Balance with Different SIM Funding Options",
+    "desc": "Flexible billing and management for enterprise-level control."
+  },
+  {
+    "icon": "/images/dual-sim.svg",
+    "title": "Filters: View only the SIMs with the selected parameter",
+    "desc": "Smart filtering to locate devices instantly."
+  },
+  {
+    "icon": "/images/cash-payment.svg",
+    "title": "Pooled and Pay-As-You-Go (PAYG) Accounts",
+    "desc": "Choose between prepaid or shared data options."
+  },
+  {
+    "icon": "/images/sim-card-signal.svg",
+    "title": "1SIM IoT App - Manage Your IoT SIM Cards On The Go",
+    "desc": "Stay connected and control SIMs anytime, anywhere."
+  },
+  {
+    "icon": "/images/web-rating.svg",
+    "title": "New Features Added Based on YOUR Feedback",
+    "desc": "We evolve continuously with customer insights."
+  },
+  {
+    "icon": "/images/data-management.svg",
+    "title": "Records Management",
+    "desc": "Track and manage IoT usage with detailed reporting tools."
+  },
+  {
+    "icon": "/images/Bulb.svg",
+    "title": "Various Funding Options",
+    "desc": "Multiple payment plans tailored to your needs."
+  },
+  {
+    "icon": "/images/content-management.svg",
+    "title": "Full API for Custom Integrations",
+    "desc": "Integrate OneSimCard IoT into your existing systems seamlessly."
+  }
+]
