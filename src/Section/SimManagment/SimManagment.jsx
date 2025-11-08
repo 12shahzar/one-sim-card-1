@@ -17,6 +17,7 @@ function SimManagment() {
         btnBgColor="#455E86"
         btnHoverColor="#3b5072"
         btnTextColor="#ffffff"
+        btnRedirect={'/EasySIMManagement'}
       />
     </>
   );

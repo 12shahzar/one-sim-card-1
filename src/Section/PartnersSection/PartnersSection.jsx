@@ -39,8 +39,8 @@ export default function PartnersSection() {
     <section className="max-w-screen-xl mx-auto py-16 font-sora">
       <div className="flex flex-col lg:flex-row gap-8">
         {/* SIDEBAR */}
-        <aside className="w-full lg:w-96">
-          <div className="bg-white rounded-4xl p-6 shadow-[0_8px_90px_rgba(0,0,0,0.04)] overflow-y-auto max-h-[80vh]">
+        <aside className="w-full lg:w-96 mx-2 md:mx-0">
+          <div className="bg-white rounded-4xl p-2 md:p-8 shadow-[0_8px_90px_rgba(0,0,0,0.04)] overflow-y-auto max-h-[80vh]">
             {sections.map((section, sIdx) => (
               <div key={sIdx} className="mb-6">
                 {/* Section Header */}
@@ -101,7 +101,7 @@ export default function PartnersSection() {
         </aside>
 
         {/* MAIN CONTENT */}
-        <div className="flex-1 p-6 lg:p-8">
+        <div className="flex-1 p-2 md:p-8">
           {activeItem ? (
             <>
               <h2 className="text-2xl md:text-5xl font-thin text-[#08080C] mb-4">

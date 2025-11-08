@@ -8,11 +8,6 @@ import SectionHeading from "../Components/Heading/SectionHeading";
 function OSCARIoTSIMCardManagementPortal() {
   return (
     <>
-      <Common_Banner
-        titleFirst="Why OneSim"
-        titleLast="Card"
-        breadcrumb="OSCAR IoT SIM Card Management Portal"
-      />
       <div className="py-16 max-w-7xl mx-auto" data-aos="fade-right">
         <div className="mb-4">
           <SectionHeading title="OSCAR IoT SIM Card Management Portal" />
@@ -28,8 +23,6 @@ function OSCARIoTSIMCardManagementPortal() {
           <CustomButton text={"Request A Quote"} />
         </div>
       </div>
- 
-      <FaqSection />
     </>
   );
 }

@@ -50,7 +50,7 @@ const FeatureSection = ({
 
         <div
           data-aos={reverse ? "fade-left" : "fade-right"}
-          className="w-[20rem] h-[16rem] sm:w-[22rem] sm:h-[18rem] md:w-[24rem] md:h-[20rem] 
+          className="w-[20rem] h-[16rem] sm:w-[22rem] sm:h-[18rem] md:w-[32rem] md:h-[18rem] 
              flex items-center justify-center bg-white rounded-4xl p-6"
           style={{
             boxShadow: `0px 1px 5px ${btnBgColor}20`,

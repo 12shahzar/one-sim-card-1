@@ -36,16 +36,20 @@ function Header() {
               </li>
               <li>
                 <Link
-                  to="/"
-                  className={`hover:text-[#455E86] transition ${isActive("/GlobalCoverage")}`}
+                  to="/IoTSolutions"
+                  className={`hover:text-[#455E86] transition ${isActive(
+                    "/IoTSolutions"
+                  )}`}
                 >
                   IoT Solutions
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/"
-                  className={`hover:text-[#455E86] transition ${isActive("/EasySIMManagement")}`}
+                  to="/ConsumerIOT"
+                  className={`hover:text-[#455E86] transition ${isActive(
+                    "/ConsumerIOT"
+                  )}`}
                 >
                   Consumer IoT
                 </Link>
@@ -53,7 +57,9 @@ function Header() {
               <li>
                 <Link
                   to="/"
-                  className={`hover:text-[#455E86] transition ${isActive("/PremierPartners")}`}
+                  className={`hover:text-[#455E86] transition ${isActive(
+                    "/PremierPartners"
+                  )}`}
                 >
                   Technology
                 </Link>
@@ -110,18 +116,22 @@ function Header() {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/IoTSolutions"
                   onClick={() => setMenuOpen(false)}
-                  className={`block py-2 hover:text-[#455E86] ${isActive("/GlobalCoverage")}`}
+                  className={`block py-2 hover:text-[#455E86] ${isActive(
+                    "/GlobalCoverage"
+                  )}`}
                 >
                   IoT Solutions
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/ConsumerIOT"
                   onClick={() => setMenuOpen(false)}
-                  className={`block py-2 hover:text-[#455E86] ${isActive("/EasySIMManagement")}`}
+                  className={`block py-2 hover:text-[#455E86] ${isActive(
+                    "/EasySIMManagement"
+                  )}`}
                 >
                   Consumer IoT
                 </Link>
@@ -130,7 +140,9 @@ function Header() {
                 <Link
                   to="/"
                   onClick={() => setMenuOpen(false)}
-                  className={`block py-2 hover:text-[#455E86] ${isActive("/PremierPartners")}`}
+                  className={`block py-2 hover:text-[#455E86] ${isActive(
+                    "/PremierPartners"
+                  )}`}
                 >
                   Technology
                 </Link>

@@ -17,7 +17,7 @@ export default function FaqSection({ bgColor = "#F5F5F5" }) {
 
   return (
     <section
-      className="py-16 md:py-14 font-sora rounded-4xl mx-4 md:mx-6"
+      className="py-16 md:py-14 font-sora rounded-4xl mx-2 md:mx-6"
       style={{ backgroundColor: bgColor }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
@@ -33,7 +33,7 @@ export default function FaqSection({ bgColor = "#F5F5F5" }) {
         <div className="mt-12 flex flex-col md:flex-row gap-10">
           {/* Sidebar */}
           <div className="md:w-1/3 w-full flex justify-center md:justify-start">
-            <div className="w-full max-w-xs sm:max-w-sm bg-white rounded-4xl p-4 shadow-[0_8px_90px_rgba(0,0,0,0.04)]">
+            <div className="w-full max-w-xs sm:max-w-sm bg-white rounded-4xl p-2 md:p-8 shadow-[0_8px_90px_rgba(0,0,0,0.04)]">
               {categories.map((cat) => (
                 <button
                   key={cat}
@@ -66,7 +66,7 @@ export default function FaqSection({ bgColor = "#F5F5F5" }) {
                 <div key={index} className="transition-all">
                   <button
                     onClick={() => handleToggle(index)}
-                    className="w-full flex items-center gap-3 px-5 py-3 text-left"
+                    className="w-full flex items-center gap-3 px-0 md:px-5 py-3 text-left"
                   >
                     {/* Toggle Icon (Left) */}
                     <ChevronRight

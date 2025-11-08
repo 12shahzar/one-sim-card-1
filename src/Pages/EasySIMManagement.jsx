@@ -8,11 +8,6 @@ import featuresData from "../data/featuresData";
 function EasySIMManagement() {
   return (
     <>
-      <Common_Banner
-        titleFirst="Why OneSim"
-        titleLast="Card"
-        breadcrumb="Manage Unlimited SIM Cards Under One Web Account"
-      />
       <section
         data-aos="slide-up"
         className="font-sora md:min-h-96 mx-4 md:mx-6 my-2 py-16"
@@ -44,12 +39,10 @@ function EasySIMManagement() {
       </section>
       <div className="mx-4 md:mx-6 pb-16" data-aos="fade-left">
         <FeaturesGrid
-         title="OneSimCard OSCAR Platform Features"
-         featuresData={featuresData}
-         />
+          title="OneSimCard OSCAR Platform Features"
+          featuresData={featuresData}
+        />
       </div>
-
-      <FaqSection />
     </>
   );
 }

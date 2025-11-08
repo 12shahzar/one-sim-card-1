@@ -6,11 +6,6 @@ import CoverageSection from "../Section/CoverageSection/CoverageSection";
 const GlobalCoverage = () => {
   return (
     <>
-      <Common_Banner
-        titleFirst="Why OneSim"
-        titleLast="Card"
-        breadcrumb="IoT SIM Card Coverage"
-      />
       <ContentSection
         title="IoT SIM Card Coverage"
         paragraphs={[
@@ -19,14 +14,9 @@ const GlobalCoverage = () => {
           "With our Pooled Data Plan, we tailor our plans to your specific coverage needs. This customized approach saves you money by providing exactly what you need with nothing you don’t. Every country can potentially have different costs. By including only those countries you need, we can remove higher cost countries from your plan and pass the savings to you.",
         ]}
       />
-      <div className="py-16"
-            data-aos="fade-left"
-
-      >
+      <div className="py-16" data-aos="fade-left">
         <CoverageSection />
       </div>
-
-      <FaqSection />
     </>
   );
 };

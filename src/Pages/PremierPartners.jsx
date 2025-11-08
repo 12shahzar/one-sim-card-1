@@ -6,13 +6,7 @@ import PartnersSection from "../Section/PartnersSection/PartnersSection";
 function PremierPartners() {
   return (
     <>
-      <Common_Banner
-        titleFirst="Technolo"
-        titleLast="gy"
-        breadcrumb="Premier Partners"
-      />
       <PartnersSection />
-      <FaqSection />
     </>
   );
 }

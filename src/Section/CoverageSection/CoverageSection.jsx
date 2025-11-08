@@ -92,7 +92,7 @@ const CoverageSection = () => {
         </svg>
       </div>
 
-      <section className="min-w-7xl mx-auto bg-white rounded-4xl p-6 sm:p-10 font-sora border border-[#D2D2D2] mb-4 md:mb-20">
+      <section className="min-w-7xl mx-auto bg-white rounded-4xl p-8 sm:p-10 font-sora border border-[#D2D2D2] mb-4 md:mb-20">
         {/* Top Row */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-[#08080C] text-xl font-regular ">
