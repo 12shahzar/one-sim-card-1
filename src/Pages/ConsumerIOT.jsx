@@ -7,6 +7,8 @@ import SectionHeading from "../Components/Heading/SectionHeading";
 import worldMap from "../assets/images/World_map.svg";
 import network_redundancy from "../assets/images/network_redundancy.svg";
 import simCalculator from "../assets/images/sim_Managment.svg";
+import PopularApplications from "../Section/PopularApplications/PopularApplications";
+import PopularPlans from "../Section/PopularPlans/PopularPlans";
 
 function ConsumerIOT() {
   return (
@@ -82,7 +84,8 @@ function ConsumerIOT() {
         aos={{ type: "fade-up", delay: 200, duration: 1000 }}
         btnBgColor="#455E86"
       />
-
+      <PopularApplications />
+      <PopularPlans />
       <FaqSection />
     </>
   );

@@ -14,6 +14,9 @@ import Layout from "./Layout/Layout";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollToTop from "./Components/Common/ScrollToTop/ScrollToTop";
+import IoTSolutionDetails from "./Pages/IoTSolutionDetails";
+import SimPlansSection from "./Pages/SimPlans";
+import SimPlans from "./Pages/SimPlans";
 
 function App() {
   useEffect(() => {
@@ -105,34 +108,31 @@ function App() {
             }
           />
 
+          <Route path="/IoTSolutions" element={<IoTSolutions />} />
+
+          <Route path="/IoTSolutions/:slug" element={<IoTSolutionDetails />} />
+
+          <Route path="/ConsumerIOT" element={<ConsumerIOT />} />
           <Route
-            path="/IoTSolutionsFleet"
+            path="/SimPlans"
             element={
               <Layout
                 banner={{
-                  titleFirst: "OneSimCard M2M",
-                  titleLast: " for IoT",
+                  titleFirst:"OneSim",
+                  titleLast: "Card",
                   breadcrumb: [
-                    { label: "IoT Solutions", path: "/IoTSolutions" },
                     {
-                      label: "Fleet Management Solutions",
-                      path: "/IoTSolutionsFleet",
+                      label: "ConsumerIOT",
+                      path: "/ConsumerIOT",
+                    },{
+                      label: "IoT Track Order",
+                      path: "/ConsumerIOT/SimPlans",
                     },
                   ],
                 }}
               >
-                <IoTSolutionsFleet />
+                <SimPlans />
               </Layout>
-            }
-          />
-
-          <Route path="/IoTSolutions" element={<IoTSolutions />} />
-
-          <Route
-            path="/ConsumerIOT"
-            element={
-             
-                <ConsumerIOT />
             }
           />
         </Routes>

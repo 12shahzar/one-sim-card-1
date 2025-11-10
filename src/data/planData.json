@@ -1,0 +1,213 @@
+{
+  "Equatorial Guinea": {
+    "1": {
+      "plans": [
+        { "label": "3 GB - 3 months", "price": "$1692.08 / SIM" },
+        { "label": "10 GB - 6 months", "price": "$5634.29 / SIM" },
+        { "label": "20 GB - 12 months", "price": "$11266.33 / SIM" }
+      ],
+      "sms": [
+        { "label": "25 SMS - 1 month", "price": "$11.58 / SIM" }
+      ]
+    },
+    "2": {
+      "plans": [
+        { "label": "3 GB - 3 months", "price": "$3384.16 / 2 SIMs" },
+        { "label": "10 GB - 6 months", "price": "$11268.58 / 2 SIMs" },
+        { "label": "20 GB - 12 months", "price": "$22532.66 / 2 SIMs" }
+      ],
+      "sms": [
+        { "label": "50 SMS - 1 month", "price": "$23.16 / 2 SIMs" }
+      ]
+    },
+    "3": {
+      "plans": [
+        { "label": "3 GB - 3 months", "price": "$5076.24 / 3 SIMs" },
+        { "label": "10 GB - 6 months", "price": "$16902.87 / 3 SIMs" },
+        { "label": "20 GB - 12 months", "price": "$33798.99 / 3 SIMs" }
+      ],
+      "sms": [
+        { "label": "75 SMS - 1 month", "price": "$34.74 / 3 SIMs" }
+      ]
+    },
+    "4": {
+      "plans": [
+        { "label": "3 GB - 3 months", "price": "$6768.32 / 4 SIMs" },
+        { "label": "10 GB - 6 months", "price": "$22537.16 / 4 SIMs" },
+        { "label": "20 GB - 12 months", "price": "$45065.32 / 4 SIMs" }
+      ],
+      "sms": [
+        { "label": "100 SMS - 1 month", "price": "$46.32 / 4 SIMs" }
+      ]
+    },
+    "5": {
+      "plans": [
+        { "label": "3 GB - 3 months", "price": "$8460.40 / 5 SIMs" },
+        { "label": "10 GB - 6 months", "price": "$28171.45 / 5 SIMs" },
+        { "label": "20 GB - 12 months", "price": "$56331.65 / 5 SIMs" }
+      ],
+      "sms": [
+        { "label": "125 SMS - 1 month", "price": "$57.90 / 5 SIMs" }
+      ]
+    }
+  },
+
+  "Canada": {
+    "1": {
+      "plans": [
+        { "label": "2 GB - 1 month", "price": "$10.00 / SIM" },
+        { "label": "5 GB - 3 months", "price": "$25.00 / SIM" },
+        { "label": "10 GB - 6 months", "price": "$45.00 / SIM" }
+      ],
+      "sms": [
+        { "label": "100 SMS - 1 month", "price": "$5.00 / SIM" }
+      ]
+    },
+    "2": {
+      "plans": [
+        { "label": "2 GB - 1 month", "price": "$19.00 / 2 SIMs" },
+        { "label": "5 GB - 3 months", "price": "$48.00 / 2 SIMs" },
+        { "label": "10 GB - 6 months", "price": "$88.00 / 2 SIMs" }
+      ],
+      "sms": [
+        { "label": "200 SMS - 1 month", "price": "$9.50 / 2 SIMs" }
+      ]
+    },
+    "3": {
+      "plans": [
+        { "label": "2 GB - 1 month", "price": "$27.50 / 3 SIMs" },
+        { "label": "5 GB - 3 months", "price": "$72.00 / 3 SIMs" },
+        { "label": "10 GB - 6 months", "price": "$132.00 / 3 SIMs" }
+      ],
+      "sms": [
+        { "label": "300 SMS - 1 month", "price": "$14.00 / 3 SIMs" }
+      ]
+    },
+    "4": {
+      "plans": [
+        { "label": "2 GB - 1 month", "price": "$36.00 / 4 SIMs" },
+        { "label": "5 GB - 3 months", "price": "$94.00 / 4 SIMs" },
+        { "label": "10 GB - 6 months", "price": "$176.00 / 4 SIMs" }
+      ],
+      "sms": [
+        { "label": "400 SMS - 1 month", "price": "$18.50 / 4 SIMs" }
+      ]
+    },
+    "5": {
+      "plans": [
+        { "label": "2 GB - 1 month", "price": "$45.00 / 5 SIMs" },
+        { "label": "5 GB - 3 months", "price": "$115.00 / 5 SIMs" },
+        { "label": "10 GB - 6 months", "price": "$215.00 / 5 SIMs" }
+      ],
+      "sms": [
+        { "label": "500 SMS - 1 month", "price": "$23.00 / 5 SIMs" }
+      ]
+    }
+  },
+
+  "USA": {
+    "1": {
+      "plans": [
+        { "label": "1 GB - 1 month", "price": "$7.50 / SIM" },
+        { "label": "5 GB - 3 months", "price": "$20.00 / SIM" },
+        { "label": "15 GB - 6 months", "price": "$38.00 / SIM" }
+      ],
+      "sms": [
+        { "label": "50 SMS - 1 month", "price": "$3.00 / SIM" }
+      ]
+    },
+    "2": {
+      "plans": [
+        { "label": "1 GB - 1 month", "price": "$14.00 / 2 SIMs" },
+        { "label": "5 GB - 3 months", "price": "$38.00 / 2 SIMs" },
+        { "label": "15 GB - 6 months", "price": "$74.00 / 2 SIMs" }
+      ],
+      "sms": [
+        { "label": "100 SMS - 1 month", "price": "$6.00 / 2 SIMs" }
+      ]
+    },
+    "3": {
+      "plans": [
+        { "label": "1 GB - 1 month", "price": "$21.00 / 3 SIMs" },
+        { "label": "5 GB - 3 months", "price": "$58.00 / 3 SIMs" },
+        { "label": "15 GB - 6 months", "price": "$111.00 / 3 SIMs" }
+      ],
+      "sms": [
+        { "label": "150 SMS - 1 month", "price": "$9.00 / 3 SIMs" }
+      ]
+    },
+    "4": {
+      "plans": [
+        { "label": "1 GB - 1 month", "price": "$28.00 / 4 SIMs" },
+        { "label": "5 GB - 3 months", "price": "$76.00 / 4 SIMs" },
+        { "label": "15 GB - 6 months", "price": "$146.00 / 4 SIMs" }
+      ],
+      "sms": [
+        { "label": "200 SMS - 1 month", "price": "$12.00 / 4 SIMs" }
+      ]
+    },
+    "5": {
+      "plans": [
+        { "label": "1 GB - 1 month", "price": "$35.00 / 5 SIMs" },
+        { "label": "5 GB - 3 months", "price": "$94.00 / 5 SIMs" },
+        { "label": "15 GB - 6 months", "price": "$180.00 / 5 SIMs" }
+      ],
+      "sms": [
+        { "label": "250 SMS - 1 month", "price": "$15.00 / 5 SIMs" }
+      ]
+    }
+  },
+
+  "UK": {
+    "1": {
+      "plans": [
+        { "label": "5 GB - 1 month", "price": "£8.00 / SIM" },
+        { "label": "15 GB - 3 months", "price": "£20.00 / SIM" },
+        { "label": "30 GB - 6 months", "price": "£36.00 / SIM" }
+      ],
+      "sms": [
+        { "label": "100 SMS - 1 month", "price": "£4.00 / SIM" }
+      ]
+    },
+    "2": {
+      "plans": [
+        { "label": "5 GB - 1 month", "price": "£15.00 / 2 SIMs" },
+        { "label": "15 GB - 3 months", "price": "£38.00 / 2 SIMs" },
+        { "label": "30 GB - 6 months", "price": "£70.00 / 2 SIMs" }
+      ],
+      "sms": [
+        { "label": "200 SMS - 1 month", "price": "£7.50 / 2 SIMs" }
+      ]
+    },
+    "3": {
+      "plans": [
+        { "label": "5 GB - 1 month", "price": "£22.00 / 3 SIMs" },
+        { "label": "15 GB - 3 months", "price": "£55.00 / 3 SIMs" },
+        { "label": "30 GB - 6 months", "price": "£100.00 / 3 SIMs" }
+      ],
+      "sms": [
+        { "label": "300 SMS - 1 month", "price": "£11.00 / 3 SIMs" }
+      ]
+    },
+    "4": {
+      "plans": [
+        { "label": "5 GB - 1 month", "price": "£29.00 / 4 SIMs" },
+        { "label": "15 GB - 3 months", "price": "£72.00 / 4 SIMs" },
+        { "label": "30 GB - 6 months", "price": "£130.00 / 4 SIMs" }
+      ],
+      "sms": [
+        { "label": "400 SMS - 1 month", "price": "£14.00 / 4 SIMs" }
+      ]
+    },
+    "5": {
+      "plans": [
+        { "label": "5 GB - 1 month", "price": "£36.00 / 5 SIMs" },
+        { "label": "15 GB - 3 months", "price": "£90.00 / 5 SIMs" },
+        { "label": "30 GB - 6 months", "price": "£165.00 / 5 SIMs" }
+      ],
+      "sms": [
+        { "label": "500 SMS - 1 month", "price": "£17.50 / 5 SIMs" }
+      ]
+    }
+  }
+}

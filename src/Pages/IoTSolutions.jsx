@@ -4,7 +4,7 @@ import CustomButton from "../Components/CustomButton/CustomButton";
 import IOT_Banner from "../assets/images/IOT_Banner.svg";
 import ContentSection from "../Section/ContentSection/ContentSection";
 import FeatureSection from "../Components/FeatureComponent/FeatureSection";
-import worldMap from "../assets/images/World_map.svg"; 
+import worldMap from "../assets/images/World_map.svg";
 import connectivity from "../assets/images/connectivity.svg";
 import esim from "../assets/images/esim.svg";
 import GSim from "../assets/images/GSim.svg";
@@ -14,23 +14,25 @@ import { Link } from "react-router-dom";
 
 function IoTSolutions() {
   const partners = [
-    { title: "Premier Partners" },
-    { title: "Compatible Software" },
-    { title: "Compatible Devices" },
+    { title: "Premier Partners" , link: "/PremierPartners" },
+    { title: "Compatible Software", link: "/PremierPartners"  },
+    { title: "Compatible Devices", link: "/PremierPartners"  },
   ];
   const segments = [
-    { title: "Fleet Management Solutions",link:'/IoTSolutionsFleet' },
-    { title: "Connected Vehicle" },
-    { title: "Asset Tracking" },
-    { title: "Supply Chain Tracking and Tracing" },
-    { title: "Digital Advertising Updates" },
-    { title: "Smart Home" },
-    { title: "AgTech" },
-    { title: "AgTech" },
-    { title: "EV Charging" },
-    { title: "Wearables" },
-    { title: "Meter Monitoring" },
-    { title: "Medical Monitoring" },
+    {
+      title: "Fleet Management Solutions",
+      link: "/IoTSolutions/FleetManagementSolutions",
+    },
+    { title: "Connected Vehicle", link: "/IoTSolutions/ConnectedVehicle" },
+    { title: "Asset Tracking", link: "/IoTSolutions/AssetTracking" },
+    { title: "Supply Chain Tracking and Tracing", link: "/IoTSolutions/SupplyChainTrackingAndTracing" },
+    { title: "Digital Advertising Updates", link: "/IoTSolutions/DigitalAdvertisingUpdates" },
+    { title: "Smart Home",link:"/IoTSolutions/SmartHome" },
+    { title: "AgTech",link:"/IoTSolutions/AgTech" },
+    { title: "EV Charging",link:"/IoTSolutions/EVCharging"  },
+    { title: "Wearables",link:"/IoTSolutions/Wearables"  },
+    { title: "Meter Monitoring", link: "/IoTSolutions/MeterMonitoring"  },
+    { title: "Medical Monitoring",link:"/IoTSolutions/MedicalMonitoring" },
   ];
 
   return (
@@ -119,13 +121,13 @@ function IoTSolutions() {
           {/* Buttons */}
           <div className="flex flex-wrap gap-4">
             {partners.map((item, index) => (
-              <p
+              <Link
                 key={index}
-                href={item.link}
+                to={item.link}
                 className="cursor-pointer border border-[#D2D2D2] text-white min-w-2xs md:min-w-sm text-center px-6 py-2 md:px-8 md:py-3 rounded-full font-medium hover:bg-[#F4C600] hover:text-[#08080C] transition-all duration-300"
               >
                 {item.title}
-              </p>
+              </Link>
             ))}
           </div>
         </div>
