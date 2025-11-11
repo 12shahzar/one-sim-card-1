@@ -14,9 +14,9 @@ import { Link } from "react-router-dom";
 
 function IoTSolutions() {
   const partners = [
-    { title: "Premier Partners" , link: "/PremierPartners" },
-    { title: "Compatible Software", link: "/PremierPartners"  },
-    { title: "Compatible Devices", link: "/PremierPartners"  },
+    { title: "Premier Partners" , link: "/Technology?section=Partners"},
+    { title: "Compatible Software", link: "/Technology?section=Partners"  },
+    { title: "Compatible Devices", link: "/Technology?section=Partners"  },
   ];
   const segments = [
     {
@@ -55,7 +55,7 @@ function IoTSolutions() {
           </p>
 
           <div>
-            <CustomButton text="Starter Kit Available" />
+            <CustomButton text="Starter Kit Available" to="/StarterKit" />
           </div>
         </div>
 
@@ -161,7 +161,7 @@ function IoTSolutions() {
           "The OneSimCard IoT Global IoT SIM Card and the OneSimCard IoT platform were developed for many key IoT industry segments where OneSimCard IoT offers advanced IoT solutions and expertise.",
         ]}
       />
-      <div className="max-w-7xl mx-auto my-8" data-aos="fade-right">
+      <div className="max-w-7xl mx-auto my-8 px-4 md:px-0" data-aos="fade-right">
         <p className="text-[#455E86] text-xl font-semibold">
           These segments include:
         </p>

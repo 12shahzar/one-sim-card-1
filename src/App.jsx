@@ -17,8 +17,11 @@ import ScrollToTop from "./Components/Common/ScrollToTop/ScrollToTop";
 import IoTSolutionDetails from "./Pages/IoTSolutionDetails";
 import SimPlansSection from "./Pages/SimPlans";
 import SimPlans from "./Pages/SimPlans";
+import StarterKit from "./Pages/StarterKit";
+import CustomQuote from "./Section/CustomQuote/CustomQuote";
 
 function App() {
+  
   useEffect(() => {
     AOS.init({ duration: 1500 });
   }, []);
@@ -72,15 +75,13 @@ function App() {
           />
 
           <Route
-            path="/PremierPartners"
+            path="/Technology"
             element={
               <Layout
                 banner={{
                   titleFirst: "Technolo",
                   titleLast: "gy",
-                  breadcrumb: [
-                    { label: "Premier Partners", path: "/PremierPartners" },
-                  ],
+                  breadcrumb: [{ label: "Technology", path: "/Technology" }],
                 }}
               >
                 <PremierPartners />
@@ -98,7 +99,7 @@ function App() {
                   breadcrumb: [
                     {
                       label: "OSCAR IoT SIM Card Management Portal",
-                      path: "/PremierPartners",
+                      path: "/Technology",
                     },
                   ],
                 }}
@@ -118,13 +119,14 @@ function App() {
             element={
               <Layout
                 banner={{
-                  titleFirst:"OneSim",
+                  titleFirst: "OneSim",
                   titleLast: "Card",
                   breadcrumb: [
                     {
                       label: "ConsumerIOT",
                       path: "/ConsumerIOT",
-                    },{
+                    },
+                    {
                       label: "IoT Track Order",
                       path: "/ConsumerIOT/SimPlans",
                     },
@@ -135,6 +137,64 @@ function App() {
               </Layout>
             }
           />
+          <Route
+            path="/StarterKit"
+            element={
+              <Layout
+                banner={{
+                  titleFirst: "Starter",
+                  titleLast: "Kit",
+                  breadcrumb: [
+                    {
+                      label: "Starter Kit",
+                      path: "/",
+                    },
+                  ],
+                }}
+              >
+                <StarterKit />
+              </Layout>
+            }
+          />
+
+          <Route
+            path="/CustomQuote"
+            element={
+              <Layout
+                banner={{
+                  titleFirst: "Custom Qu",
+                  titleLast: "ote",
+                  breadcrumb: [
+                    {
+                      label: "Custom Quote",
+                      path: "/",
+                    },
+                  ],
+                }}
+              >
+                <CustomQuote />
+              </Layout>
+            }
+          />
+          {/* <Route
+            path="/Technology"
+            element={
+              <Layout
+                banner={{
+                  titleFirst:"Technolo",
+                  titleLast: "gy",
+                  breadcrumb: [
+                    {
+                      label: "Custom Quote",
+                      path: "/",
+                    }
+                  ],
+                }}
+              >
+                <CustomQuote />
+              </Layout>
+            }
+          /> */}
         </Routes>
 
         <Footer />

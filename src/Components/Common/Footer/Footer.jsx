@@ -27,8 +27,8 @@ const Footer = () => {
             />
           </div>
           <div className="flex flex-col space-y-3 w-full sm:w-auto">
-            <CustomButton text="IoT Starter Kit" />
-            <CustomButton text="Custom IoT Quote" />
+            <CustomButton text="IoT Starter Kit" to="/StarterKit"/>
+            <CustomButton text="Custom IoT Quote" to='/CustomQuote' />
           </div>
         </div>
 

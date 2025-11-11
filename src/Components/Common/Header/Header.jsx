@@ -56,9 +56,9 @@ function Header() {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/Technology"
                   className={`hover:text-[#455E86] transition ${isActive(
-                    "/PremierPartners"
+                    "/Technology"
                   )}`}
                 >
                   Technology
@@ -138,10 +138,10 @@ function Header() {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/Technology"
                   onClick={() => setMenuOpen(false)}
                   className={`block py-2 hover:text-[#455E86] ${isActive(
-                    "/PremierPartners"
+                    "/Technology"
                   )}`}
                 >
                   Technology

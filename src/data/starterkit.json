@@ -1,0 +1,23 @@
+[
+  {
+    "icon": "/images/world_internet.svg",
+    "title": "Internet Data Coverage in 200+ countries",
+    "desc": "Internet Data Coverage in 200+ countries"
+  },
+  {
+    "icon": "/images/tech_support.svg",
+    "title": "Live, USA Based Technical Support",
+    "desc": "Live, USA Based Technical Support"
+  },
+  {
+    "icon": "/images/calendar.svg",
+    "title": "Pooled and Pay-As-You Go discount plans available",
+    "desc": "Pooled and Pay-As-You Go discount plans available"
+  },
+  {
+    "icon": "/images/cloud.svg",
+    "title": "SIM Card Management Portal",
+    "desc": "SIM Card Management Portal"
+  }
+  
+]

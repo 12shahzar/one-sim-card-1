@@ -8,7 +8,7 @@ function SecurityLevel() {
       <FeatureSection
         title="Security"
         subtitle="Unsurpassed"
-        buttonText="IMEI LOCK"
+        // buttonText="IMEI LOCK"
         imageSrc={security}
         description="Protecting your IoT deployment and data through a variety of security features such as Private APN, VPN, Static IP’s, & IMEI Lock."
         reverse={true}

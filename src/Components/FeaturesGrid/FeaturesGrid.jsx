@@ -1,8 +1,7 @@
 import React from "react";
 import CustomButton from "../CustomButton/CustomButton";
-import imgd from "../../data/featuresData.json";
 
-export default function FeaturesGrid({ title,featuresData }) {
+export default function FeaturesGrid({ title, featuresData, showButtons = true }) {
   return (
     <section className="max-w-7xl mx-auto font-sora">
       {/* Title */}
@@ -30,16 +29,19 @@ export default function FeaturesGrid({ title,featuresData }) {
         ))}
       </div>
 
-      {/* Buttons */}
-      <div className="flex flex-wrap items-center gap-4 mt-12">
-        <CustomButton
-          text="View All Features"
-          bgColor="#455E86"
-          hoverColor="#3b5072"
-          textColor="white"
-        />
-        <CustomButton text="Request A Quote" variant="filled" />
-      </div>
+      {/* Buttons (conditionally rendered) */}
+      {showButtons && (
+        <div className="flex flex-wrap items-center gap-4 mt-12">
+          <CustomButton
+            text="View All Features"
+            bgColor="#455E86"
+            hoverColor="#3b5072"
+            textColor="white"
+            to="/OSCARIoTSIMCardManagementPortal"
+          />
+          <CustomButton text="Request A Quote" to='/CustomQuote' />
+        </div>
+      )}
     </section>
   );
 }
