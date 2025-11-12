@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../../../assets/logo.svg";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
@@ -6,9 +6,27 @@ import { Link, useLocation } from "react-router-dom";
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const [desktopMenuOpen, setDesktopMenuOpen] = useState(false);
+  const desktopMenuRef = useRef(null);
 
   const isActive = (path) =>
     location.pathname === path ? "text-[#455E86] font-semibold" : "";
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        desktopMenuRef.current &&
+        !desktopMenuRef.current.contains(event.target)
+      ) {
+        setDesktopMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <header className="w-full bg-white font-sora">
@@ -66,10 +84,54 @@ function Header() {
               </li>
 
               {/* MENU ICON AFTER TECHNOLOGY */}
-              <li>
-                <button className="p-2 border-2 border-[#455E86] rounded-full hover:bg-[#455E86] hover:text-white transition">
-                  <Menu color="#F4C600" size={26} />
+              <li className="relative">
+                <button
+                  onClick={() => setDesktopMenuOpen(!desktopMenuOpen)}
+                  className="p-2 border-2 border-[#455E86] rounded-full hover:bg-[#455E86] hover:text-white transition cursor-pointer"
+                >
+                  {desktopMenuOpen ? (
+                    <X size={26} color="#F4C600" />
+                  ) : (
+                    <Menu size={26} color="#F4C600" />
+                  )}
                 </button>
+
+                {desktopMenuOpen && (
+                  <div
+                    ref={desktopMenuRef}
+                    className="absolute right-0 mt-3 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+                  >
+                    <ul className="py-2 text-sm text-gray-700">
+                      <li>
+                        <Link
+                          to="/WhyOneSimCard"
+                          onClick={() => setDesktopMenuOpen(false)}
+                          className="block px-4 py-2 hover:bg-gray-100"
+                        >
+                          Why OneSimCard
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/starterkit"
+                          onClick={() => setDesktopMenuOpen(false)}
+                          className="block px-4 py-2 hover:bg-gray-100"
+                        >
+                          Starter Kit
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/customquote"
+                          onClick={() => setDesktopMenuOpen(false)}
+                          className="block px-4 py-2 hover:bg-gray-100"
+                        >
+                          Custom Quote
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                )}
               </li>
             </ul>
           </div>
@@ -145,6 +207,39 @@ function Header() {
                   )}`}
                 >
                   Technology
+                </Link>
+              </li>
+                        <li>
+                <Link
+                  to="/WhyOneSimCard"
+                  onClick={() => setMenuOpen(false)}
+                  className={`block py-2 hover:text-[#455E86] ${isActive(
+                    "/WhyOneSimCard"
+                  )}`}
+                >
+                  Why OneSimCard
+                </Link>
+              </li>
+                        <li>
+                <Link
+                  to="/StarterKit"
+                  onClick={() => setMenuOpen(false)}
+                  className={`block py-2 hover:text-[#455E86] ${isActive(
+                    "/StarterKit"
+                  )}`}
+                >
+                 Starter Kit
+                </Link>
+              </li>
+                        <li>
+                <Link
+                  to="/customquote"
+                  onClick={() => setMenuOpen(false)}
+                  className={`block py-2 hover:text-[#455E86] ${isActive(
+                    "/customquote"
+                  )}`}
+                >
+                    Custom Quote
                 </Link>
               </li>
               <li>

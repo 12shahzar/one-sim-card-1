@@ -1,5 +1,5 @@
 import React from "react";
-import CustomButton from "../CustomButton/CustomButton";
+import CustomButton from "../CustomButton/CustomButton"; 
 
 export default function FeaturesGrid({ title, featuresData, showButtons = true }) {
   return (

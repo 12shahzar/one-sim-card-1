@@ -19,10 +19,10 @@ import SimPlansSection from "./Pages/SimPlans";
 import SimPlans from "./Pages/SimPlans";
 import StarterKit from "./Pages/StarterKit";
 import CustomQuote from "./Section/CustomQuote/CustomQuote";
+import WhyOneSimCard from "./Pages/WhyOneSimCard";
 
 function App() {
-  
-  useEffect(() => {
+  useEffect(() => { 
     AOS.init({ duration: 1500 });
   }, []);
 
@@ -176,25 +176,25 @@ function App() {
               </Layout>
             }
           />
-          {/* <Route
-            path="/Technology"
+          <Route
+            path="/WhyOneSimCard"
             element={
               <Layout
                 banner={{
-                  titleFirst:"Technolo",
-                  titleLast: "gy",
+                  titleFirst:"Why OneSim",
+                  titleLast: "Card",
                   breadcrumb: [
                     {
-                      label: "Custom Quote",
+                      label: "Why OneSimCard",
                       path: "/",
                     }
                   ],
                 }}
               >
-                <CustomQuote />
+                <WhyOneSimCard />
               </Layout>
             }
-          /> */}
+          />
         </Routes>
 
         <Footer />

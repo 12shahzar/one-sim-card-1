@@ -31,7 +31,10 @@ function ConsumerIOT() {
           </p>
 
           <div>
-            <CustomButton text="Get Started" />
+            <CustomButton 
+            text="Get Started"
+            to="/SimPlans"
+            />
           </div>
         </div>
 

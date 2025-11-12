@@ -26,7 +26,7 @@ function CompatableDevice() {
             Compatable Devices & Software
           </p>
 
-          <CustomButton text="View All" />
+          <CustomButton text="View All" to="/Technology?section=Partners"/>
         </div>
       </div>
     </section>
