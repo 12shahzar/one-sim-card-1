@@ -22,7 +22,7 @@ import CustomQuote from "./Section/CustomQuote/CustomQuote";
 import WhyOneSimCard from "./Pages/WhyOneSimCard";
 
 function App() {
-  useEffect(() => { 
+  useEffect(() => {
     AOS.init({ duration: 1500 });
   }, []);
 
@@ -181,13 +181,13 @@ function App() {
             element={
               <Layout
                 banner={{
-                  titleFirst:"Why OneSim",
+                  titleFirst: "Why OneSim",
                   titleLast: "Card",
                   breadcrumb: [
                     {
                       label: "Why OneSimCard",
                       path: "/",
-                    }
+                    },
                   ],
                 }}
               >

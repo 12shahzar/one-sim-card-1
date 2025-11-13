@@ -257,7 +257,7 @@ function Header() {
                   onClick={() => setMenuOpen(false)}
                   className="block text-center bg-[#F4C600] rounded-full py-3 font-medium hover:bg-[#e2b900] transition"
                 >
-                  Contact
+                  Contact Us
                 </Link>
               </li>
             </ul>
