@@ -8,7 +8,7 @@ function IoTSimSection() {
   return (
     <section
       data-aos="fade-down"
-      className="max-w-screen-xl mx-auto py-14 font-sora px-4 md:px-0"
+      className="max-w-screen-xl mx-auto py-14 font-sora px-2 md:px-6"
     >
       {/* Header Section */}
       <div className="text-left ">

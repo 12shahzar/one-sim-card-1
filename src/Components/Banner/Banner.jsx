@@ -26,7 +26,7 @@ function Banner() {
         </p>
 
         <div>
-          <CustomButton text="Get Started" to="/SimPlans" />
+          <CustomButton text="Starter Kit Available" to="/StarterKit" />
         </div>
       </div>
 

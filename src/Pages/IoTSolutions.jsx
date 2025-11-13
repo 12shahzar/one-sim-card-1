@@ -161,7 +161,7 @@ function IoTSolutions() {
           "The OneSimCard IoT Global IoT SIM Card and the OneSimCard IoT platform were developed for many key IoT industry segments where OneSimCard IoT offers advanced IoT solutions and expertise.",
         ]}
       />
-      <div className="max-w-7xl mx-auto my-8 px-4 md:px-0" data-aos="fade-right">
+      <div className="max-w-7xl mx-auto my-8  px-2 md:px-6" data-aos="fade-right">
         <p className="text-[#455E86] text-xl font-semibold">
           These segments include:
         </p>

@@ -2,12 +2,13 @@ import React from "react";
 import simCards from "../../assets/images/sim_cards.png";
 import arrow from "../../assets/images/stats arriw.svg";
 import SectionHeading from "../../Components/Heading/SectionHeading";
+import { Link } from "react-router-dom";
 
 export default function ConnectivitySection() {
   return (
     <section
       data-aos="zoom-in"
-      className="max-w-screen-2xl mx-auto py-20 px-4 md:px-8 font-sora"
+      className="max-w-screen-2xl mx-auto py-20 px-2 md:px-6 font-sora"
     >
       <SectionHeading
         title="Elevate Your Connectivity<br/>with OneSIMCard"
@@ -19,7 +20,7 @@ export default function ConnectivitySection() {
         {/* LEFT COLUMN (3 cols on large) */}
         <div className="lg:col-span-3 flex flex-col gap-24 text-center lg:text-left ">
           {/* Box 1 */}
-          <div className="bg-white shadow-[0_8px_90px_rgba(0,0,0,0.03)] rounded-4xl p-6 md:mr-28">
+          <div className="bg-white shadow-[0_8px_90px_rgba(0,0,0,0.03)] rounded-4xl p-6 mr-2">
             <h4 className="text-lg md:text-2xl font-medium text-[#08080C] mb-2">
               Scalable Solutions
             </h4>
@@ -38,9 +39,9 @@ export default function ConnectivitySection() {
               Seamlessly connect your IoT devices with our multi-network roaming
               and global coverage in over 200 countries.
             </p>
-            <button className="text-[#F4C600] font-medium text-sm hover:underline cursor-pointer">
+            <Link to="/GlobalCoverage" className="text-[#F4C600] font-medium text-sm hover:underline cursor-pointer">
               Learn More
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -74,7 +75,7 @@ export default function ConnectivitySection() {
           </div>
 
           {/* Box 2 */}
-          <div className="bg-white p-6 shadow-[0_8px_90px_rgba(0,0,0,0.03)] rounded-4xl p md:mr-24">
+          <div className="bg-white p-6 shadow-[0_8px_90px_rgba(0,0,0,0.03)] rounded-4xl mr-2">
             <h4 className="text-lg md:text-2xl font-medium text-[#08080C] mb-2">
               200+ Countries | 99% Uptime
             </h4>

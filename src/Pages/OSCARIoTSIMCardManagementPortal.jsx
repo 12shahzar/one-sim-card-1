@@ -8,7 +8,7 @@ import SectionHeading from "../Components/Heading/SectionHeading";
 function OSCARIoTSIMCardManagementPortal() {
   return (
     <>
-      <div className="py-16 max-w-7xl mx-auto" data-aos="fade-right">
+      <div className="py-16 max-w-7xl mx-auto px-2 md:px-6" data-aos="fade-right">
         <div className="mb-4">
           <SectionHeading title="OSCAR IoT SIM Card Management Portal" />
         </div>

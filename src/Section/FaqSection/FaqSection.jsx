@@ -17,7 +17,7 @@ export default function FaqSection({ bgColor = "#F5F5F5" }) {
 
   return (
     <section
-      className="py-16 md:py-14 font-sora rounded-4xl mx-2 md:mx-6"
+      className="py-16 md:py-14 font-sora rounded-4xl mx-2 md:mx-6  px-2 md:px-6"
       style={{ backgroundColor: bgColor }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">

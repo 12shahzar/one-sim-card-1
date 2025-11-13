@@ -7,7 +7,7 @@ import CustomButton from "../Components/CustomButton/CustomButton";
 
 function StarterKit() {
   return (
-    <div className="max-w-7xl mx-auto py-16 font-sora px-4 md:px-0">
+    <div className="max-w-7xl mx-auto py-16 font-sora px-2 md:px-6">
       <div className="text-left ">
         <SectionHeading
           title="Buy IoT SIM Cards for Seamless Global Connectivity"

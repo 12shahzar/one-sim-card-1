@@ -145,10 +145,10 @@ function Header() {
               Login
             </Link>
             <Link
-              to="/"
+              to="/CustomQuote"
               className="text-black bg-[#F4C600] rounded-full text-sm px-8 py-3 font-medium hover:bg-[#e2b900] transition"
             >
-              Get Started
+             Contact Us
             </Link>
           </div>
 
@@ -253,11 +253,11 @@ function Header() {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/CustomQuote"
                   onClick={() => setMenuOpen(false)}
                   className="block text-center bg-[#F4C600] rounded-full py-3 font-medium hover:bg-[#e2b900] transition"
                 >
-                  Get Started
+                  Contact
                 </Link>
               </li>
             </ul>

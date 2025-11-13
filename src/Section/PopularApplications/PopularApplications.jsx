@@ -29,7 +29,7 @@ const PopularApplications = () => {
           Popular Applications
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-36 px-2">
           {popularApps.map((app, index) => (
             <div
               key={index}

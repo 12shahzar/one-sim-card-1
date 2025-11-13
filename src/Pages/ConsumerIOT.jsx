@@ -49,7 +49,7 @@ function ConsumerIOT() {
       </section>
       <div
         data-aos="fade-right"
-        className="max-w-screen-xl mx-auto pt-14 font-sora px-4 md:px-0"
+        className="max-w-screen-xl mx-auto pt-14 font-sora  px-2 md:px-6"
       >
         <SectionHeading title="Key Features" align="left" aos="fade-up" />
       </div>

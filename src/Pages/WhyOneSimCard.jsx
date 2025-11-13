@@ -4,7 +4,7 @@ import cardsData from "../data/whyonesim.json";
 
 function WhyOneSimCard() {
   return (
-    <div className="max-w-7xl mx-auto py-16 px-4 md:px-0 font-sora">
+    <div className="max-w-7xl mx-auto py-16 px-2 md:px-6 font-sora">
       {/* Section Heading */}
       <SectionHeading title="Why OneSimCard?" align="left" />
 

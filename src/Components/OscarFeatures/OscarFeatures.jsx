@@ -56,7 +56,7 @@ export default function OscarFeatures() {
   return (
     <div className=" bg-white rounded-4xl p-6 sm:p-10 font-sora border border-[#D2D2D2]">
       {/* Header Row */}
-      <div className="grid grid-cols-12 items-center py-3 text-xl font-regular text-[#08080C]">
+      <div className="grid grid-cols-12 items-center py-3 text-base md:text-xl font-regular text-[#08080C]">
         <div className="col-span-6">OSCAR Features</div>
         <div className="text-right col-span-3">PAYG Account</div>
         <div className="text-right col-span-3">Pooled Account</div>
@@ -71,7 +71,7 @@ export default function OscarFeatures() {
                 openSection === section.title ? null : section.title
               )
             }
-            className={`flex justify-between items-center w-full px-6 py-4 my-5 text-white font-med text-base text-left transition rounded-4xl ${openSection === section.title
+            className={`flex justify-between items-center w-full px-6 py-4 my-5 text-white font-medium text-base text-left transition rounded-4xl ${openSection === section.title
                 ? "bg-[#4A6590]/95"
                 : "bg-[#4A6590] hover:bg-[#4A6590]"
               }`}

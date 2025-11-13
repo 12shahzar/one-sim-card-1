@@ -40,7 +40,7 @@ const FeatureSection = ({
       data-aos={aos?.type}
       data-aos-delay={aos?.delay}
       data-aos-duration={aos?.duration}
-      className="max-w-screen-xl mx-auto py-4 font-sora"
+      className="max-w-screen-xl mx-auto px-2 md:px-6 py-4 font-sora"
     >
       <div
         className={`bg-${bgColor} py-6 md:py-8 ${rounded} flex flex-col md:flex-row items-center justify-between gap-8 ${
@@ -66,7 +66,7 @@ const FeatureSection = ({
         {/* TEXT SIDE */}
         <div
           data-aos={reverse ? "fade-right" : "fade-left"}
-          className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center pr-0 md:pr-36"
+          className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center pr-0 "
         >
           {subtitle && (
             <span

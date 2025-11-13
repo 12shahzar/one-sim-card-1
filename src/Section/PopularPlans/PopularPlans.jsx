@@ -30,10 +30,10 @@ const plans = [
 
 const PopularPlans = () => {
   return (
-    <section className="w-full  py-16 text-center font-sora">
+    <section className="w-full mb-16 text-center font-sora ">
       <div className="max-w-7xl mx-auto ">
-        <div className="flex flex-col sm:flex-row items-center justify-between mb-10 gap-4 text-center sm:text-left">
-          <h2 className="text-3xl sm:text-5xl font-thin text-[#08080C]">
+        <div className="flex flex-col sm:flex-row items-center justify-between mb-10 gap-4  text-center sm:text-left px-2 md:px-6">
+          <h2 className="text-3xl sm:text-5xl font-thin text-[#08080C]  ">
             Most Popular Plans
           </h2>
 
@@ -46,11 +46,11 @@ const PopularPlans = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-36 justify-items-center  px-2 md:px-6">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-6 rounded-2xl relative"
+              className="flex flex-col items-center p-8 rounded-2xl relative"
             >
               <div className="relative flex flex-col items-center">
                 <div className="w-56 h-56 rounded-full bg-white flex items-center justify-center shadow-[0_8px_90px_rgba(0,0,0,0.04)]">

@@ -68,7 +68,7 @@ const handleSelectItem = (section, id) => {
 
   
   return (
-    <section className="container mx-auto py-16 font-sora">
+    <section className="container mx-auto py-16 px-2 md:px-6 font-sora">
       <div className="flex flex-col lg:flex-row gap-8">
        <Sidebar
   sections={sections}

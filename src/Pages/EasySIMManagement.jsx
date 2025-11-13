@@ -10,7 +10,7 @@ function EasySIMManagement() {
     <>
       <section
         data-aos="slide-up"
-        className="font-sora md:min-h-96 mx-4 md:mx-6 my-2 py-16"
+        className="font-sora md:min-h-96 mx-4 md:mx-6 my-2 py-16 px-2 md:px-6"
       >
         {/* Card Section */}
         <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center md:items-start ">

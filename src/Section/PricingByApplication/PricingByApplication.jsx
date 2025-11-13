@@ -1,6 +1,7 @@
 import simCard from "../../assets/images/pricing_image.png";
 import bg_image from "../../assets/images/bg_color.jpg";
 import SectionHeading from "../../Components/Heading/SectionHeading";
+import CustomButton from "../../Components/CustomButton/CustomButton";
 
 export default function PricingByApplication() {
   return (
@@ -54,7 +55,7 @@ export default function PricingByApplication() {
           </div>
 
           {/* Pricing Card */}
-          <div className="col-span-12 lg:col-span-5 relative bg-white rounded-3xl shadow-lg border border-gray-100 p-6 mt-28 sm:p-8 mx-auto max-w-md lg:max-w-none lg:ml-32">
+          <div className="col-span-12 lg:col-span-5 relative bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mt-20 sm:p-8 mx-auto max-w-md lg:max-w-none lg:ml-32">
             {/* Price Badge */}
             <div className="absolute -top-10 right-6 z-10">
               <div className="bg-[#FFD912] rounded-2xl shadow-lg relative">
@@ -95,6 +96,14 @@ export default function PricingByApplication() {
                   </span>
                 </li>
               ))}
+              <div className="flex justify-center">
+              <CustomButton
+                text="Buy Now"
+                bgColor="#455E86"
+                hoverColor="#3b5072"
+                textColor="white"
+              />
+              </div>
             </ul>
           </div>
         </div>

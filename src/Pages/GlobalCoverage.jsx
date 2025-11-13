@@ -5,7 +5,7 @@ import CoverageSection from "../Section/CoverageSection/CoverageSection";
 
 const GlobalCoverage = () => {
   return (
-    <>
+    <div className="px-2 md:px-6">
       <ContentSection
         title="IoT SIM Card Coverage"
         paragraphs={[
@@ -17,7 +17,7 @@ const GlobalCoverage = () => {
       <div className="py-16" data-aos="fade-left">
         <CoverageSection />
       </div>
-    </>
+    </div>
   );
 };
 
