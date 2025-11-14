@@ -1,6 +1,14 @@
 import FleetImage from "../assets/images/Fleet_managment.svg";
-import ConnectedVehicleImg from "../assets/images/connectivity.svg";
-import AssetTrackingImg from "../assets/images/esim.svg";
+import Wearables from "../assets/images/Wearables.svg";
+import AssetTrackingImg from "../assets/images/AssetTracking.svg";
+import MeterMonitoring from "../assets/images/MeterMonitoring.svg";
+import MedicalMonitoring  from "../assets/images/MedicalMonitoring .svg";
+import DigitalSignage from "../assets/images/DigitalSignage.svg";
+import EVCharging from "../assets/images/EVCharging.svg";
+
+
+
+
 
 const IoTSolutionsData = {
 
@@ -122,7 +130,7 @@ const IoTSolutionsData = {
       {
         description:
           "IoT SIM cards ensure that wearables, such as smartwatches and fitness trackers, maintain continuous connectivity to the internet and other devices. This constant connection allows users to receive real-time notifications, updates, and alerts regardless of their location. For instance, fitness enthusiasts can track their progress, receive exercise recommendations, and share their achievements on social media platforms instantly.",
-        imageSrc: FleetImage,
+        imageSrc: Wearables,
         imageAlt: "Wearables 1",
         reverse: false,
         title: "Continuous Connectivity",
@@ -182,7 +190,7 @@ const IoTSolutionsData = {
       {
         description:
           "IoT SIM cards enable smart meters to transmit consumption data in real-time to utility providers. This continuous flow of information allows for accurate billing, timely updates, and efficient energy management. Customers can receive precise and up-to-date insights into their consumption patterns, helping them make informed decisions to reduce usage and save on costs.",
-        imageSrc: FleetImage,
+        imageSrc: MeterMonitoring,
         imageAlt: "MeterMonitoring 1",
         reverse: false,
         title: "Real-Time Data Transmission",
@@ -242,7 +250,7 @@ const IoTSolutionsData = {
       {
         description:
           "IoT SIM cards enable continuous monitoring of patients' vital signs through connected medical devices such as heart monitors, glucose meters, and wearable health trackers. These devices can transmit real-time data to healthcare providers, allowing for immediate response to any irregularities. This capability is particularly crucial for patients with chronic conditions, as it helps in early detection of potential health issues and reduces the need for frequent hospital visits.",
-        imageSrc: FleetImage,
+        imageSrc: MedicalMonitoring ,
         imageAlt: "MedicalMonitoring 1",
         reverse: false,
         title: "Continuous Monitoring and Real-Time Data Transmission",
@@ -319,7 +327,7 @@ const IoTSolutionsData = {
       {
         description:
           "IoT SIM cards ensure that digital signage systems are consistently connected to the internet, allowing for seamless data transmission and content updates. This connectivity is crucial for delivering dynamic content such as news, weather updates, advertisements, and social media feeds in real-time. Businesses can ensure their messages are always current and engaging, enhancing the overall impact of their digital displays.",
-        imageSrc: FleetImage,
+        imageSrc: DigitalSignage,
         imageAlt: "DigitalAdvertisingUpdates 1",
         reverse: false,
         title: "Seamless Connectivity",
@@ -466,7 +474,7 @@ const IoTSolutionsData = {
       {
         description:
           "IoT SIM cards facilitate real-time data transmission between EV charging stations and central management systems. This connectivity allows for instant updates on the status of charging stations, availability, and usage statistics. Drivers can access real-time information about the nearest available charging points through mobile apps, reducing wait times and improving the overall charging experience.",
-        imageSrc: FleetImage,
+        imageSrc: EVCharging,
         imageAlt: "EVCharging 1",
         reverse: false,
         title: "Real-Time Data Transmission",

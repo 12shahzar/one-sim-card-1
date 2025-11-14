@@ -20,6 +20,7 @@ import SimPlans from "./Pages/SimPlans";
 import StarterKit from "./Pages/StarterKit";
 import CustomQuote from "./Section/CustomQuote/CustomQuote";
 import WhyOneSimCard from "./Pages/WhyOneSimCard";
+import Rates from "./Pages/Rates";
 
 function App() {
   useEffect(() => {
@@ -45,7 +46,7 @@ function App() {
                   titleFirst: "Why OneSim",
                   titleLast: "Card",
                   breadcrumb: [
-                    { label: "IoT SIM Card Coverage", path: "/IoTSolutions" },
+                    { label: "IoT SIM Card Coverage", path: "/GlobalCoverage" },
                   ],
                 }}
               >
@@ -99,7 +100,7 @@ function App() {
                   breadcrumb: [
                     {
                       label: "OSCAR IoT SIM Card Management Portal",
-                      path: "/Technology",
+                      path: "/OSCARIoTSIMCardManagementPortal",
                     },
                   ],
                 }}
@@ -192,6 +193,25 @@ function App() {
                 }}
               >
                 <WhyOneSimCard />
+              </Layout>
+            }
+          />
+            <Route
+            path="/rates"
+            element={
+              <Layout
+                banner={{
+                  titleFirst: "OneSimCard M2M Data ",
+                  titleLast: "Rates ",
+                  breadcrumb: [
+                    {
+                      label: "Data Rates",
+                      path: "/",
+                    },
+                  ],
+                }}
+              >
+                <Rates />
               </Layout>
             }
           />

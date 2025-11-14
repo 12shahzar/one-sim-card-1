@@ -33,8 +33,8 @@ function IoTSimSection() {
         title="Coverage"
         subtitle="Global"
         description="OneSimCard gives you the world in the palm of your hand providing global connectivity IoT SIM card solutions in over 200 countries worldwide."
-        buttonText="Global IoT"
-        imageSrc={worldMap}
+        buttonText="Global Coverage"
+        imageSrc={worldMap}                
         imageAlt="World Map"
         reverse={false}
         aos={{ type: "fade-up", delay: 200, duration: 1000 }}

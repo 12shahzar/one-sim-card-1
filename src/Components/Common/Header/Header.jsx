@@ -129,6 +129,15 @@ function Header() {
                           Custom Quote
                         </Link>
                       </li>
+                      <li>
+                        <Link
+                          to="/rates"
+                          onClick={() => setDesktopMenuOpen(false)}
+                          className="block px-4 py-2 hover:bg-gray-100"
+                        >
+                          Rates{" "}
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 )}
@@ -148,7 +157,7 @@ function Header() {
               to="/CustomQuote"
               className="text-black bg-[#F4C600] rounded-full text-sm px-8 py-3 font-medium hover:bg-[#e2b900] transition"
             >
-             Contact Us
+              Contact Us
             </Link>
           </div>
 
@@ -209,7 +218,7 @@ function Header() {
                   Technology
                 </Link>
               </li>
-                        <li>
+              <li>
                 <Link
                   to="/WhyOneSimCard"
                   onClick={() => setMenuOpen(false)}
@@ -220,7 +229,7 @@ function Header() {
                   Why OneSimCard
                 </Link>
               </li>
-                        <li>
+              <li>
                 <Link
                   to="/StarterKit"
                   onClick={() => setMenuOpen(false)}
@@ -228,10 +237,10 @@ function Header() {
                     "/StarterKit"
                   )}`}
                 >
-                 Starter Kit
+                  Starter Kit
                 </Link>
               </li>
-                        <li>
+              <li>
                 <Link
                   to="/customquote"
                   onClick={() => setMenuOpen(false)}
@@ -239,7 +248,7 @@ function Header() {
                     "/customquote"
                   )}`}
                 >
-                    Custom Quote
+                  Custom Quote
                 </Link>
               </li>
               <li>
