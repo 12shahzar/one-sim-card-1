@@ -11,6 +11,7 @@ import location from "../../../assets/images/location.svg";
 import cell from "../../../assets/images/cell.svg";
 
 import CustomButton from "../../CustomButton/CustomButton";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -59,39 +60,39 @@ const Footer = () => {
           <h3 className="text-[#455E86] font-semibold mb-3 text-lg">Company</h3>
           <ul className="text-sm space-y-1.5 font-regular">
             <li>
-              <a href="#" className="hover:text-[#F4C600]">
+              <Link to="#" className="hover:text-[#F4C600]">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-[#F4C600]">
+              <Link to="#" className="hover:text-[#F4C600]">
                 Business Opportunities
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-[#F4C600]">
+              <Link to="#" className="hover:text-[#F4C600]">
                 IoT Blog
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-[#F4C600]">
+              <Link to="#" className="hover:text-[#F4C600]">
                 Press Releases
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-[#F4C600]">
+              <Link to="#" className="hover:text-[#F4C600]">
                 Terms of Use for M2M
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-[#F4C600]">
+              <Link to="#" className="hover:text-[#F4C600]">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-[#F4C600]">
+              <Link to="#" className="hover:text-[#F4C600]">
                 Sitemap
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -101,34 +102,34 @@ const Footer = () => {
           <h3 className="text-[#455E86] font-semibold mb-3 text-lg">Support</h3>
           <ul className="text-sm space-y-1.5 font-regular">
             <li>
-              <a href="#" className="hover:text-[#F4C600]">
+              <Link to="#" className="hover:text-[#F4C600]">
                 FAQs
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-[#F4C600]">
+              <Link to="#" className="hover:text-[#F4C600]">
                 My Account
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-[#F4C600]">
+              <Link to="#" className="hover:text-[#F4C600]">
                 Understanding M2M SIM Cards
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-[#F4C600]">
+              <Link to="#" className="hover:text-[#F4C600]">
                 IoT SIM Compatibility
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-[#F4C600]">
+              <Link to="#" className="hover:text-[#F4C600]">
                 IoT SIM Card Coverage
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-[#F4C600]">
+              <Link to="#" className="hover:text-[#F4C600]">
                 1SIM IoT App
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -144,13 +145,13 @@ const Footer = () => {
       { Icon: FaInstagram },
       { Icon: FaLinkedinIn },
     ].map(({ Icon }, idx) => (
-      <a
+      <Link
         key={idx}
-        href="#"
+        to="#"
         className="hover:text-[#F4C600] px-4 first:pl-0 last:pr-0 flex items-center justify-center"
       >
         <Icon />
-      </a>
+      </Link>
     ))}
   </div>
 </div>

@@ -92,6 +92,7 @@ function Rates() {
           </div>
         </div>
       </section>
+      
       <div className="text-center">
         <CustomButton
           text="Contact Sales for your Custom Quote"
