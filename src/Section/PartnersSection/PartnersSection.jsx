@@ -3,10 +3,11 @@ import { useLocation, useNavigate } from "react-router-dom"; // Added useNavigat
 import partnersData from "../../data/partnersData.json";
 import SectionContent from "./SectionContent";
 import DataTable from "./DataTable";
-import Sidebar from "./sidebar";
+import Sidebar from "./Sidebar";
 import Details from "./Details";
 
 export default function PartnersSection() {
+  
   const location = useLocation();
   const navigate = useNavigate(); // Added navigate
   const queryParams = new URLSearchParams(location.search);

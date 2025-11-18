@@ -199,7 +199,7 @@ function App() {
               </Layout>
             }
           />
-            <Route
+          <Route
             path="/rates"
             element={
               <Layout
@@ -218,9 +218,9 @@ function App() {
               </Layout>
             }
           />
-              <Route
+          <Route
             path="/aboutUs"
-            element={ 
+            element={
               <Layout
                 banner={{
                   titleFirst: "Why OneSimCard",
@@ -237,9 +237,9 @@ function App() {
               </Layout>
             }
           />
-           <Route
+          <Route
             path="/pressReleases"
-            element={ 
+            element={
               <Layout
                 banner={{
                   titleFirst: "Why OneSimCard",
@@ -256,16 +256,17 @@ function App() {
               </Layout>
             }
           />
-              <Route
+          <Route
             path="/businessOppotunities"
-            element={ 
+            element={
               <Layout
                 banner={{
                   titleFirst: "Business Opportuni",
                   titleLast: "ties",
                   breadcrumb: [
                     {
-                      label: "IoT SIM Card Business Opportunities for Distributors and Resellers ",
+                      label:
+                        "IoT SIM Card Business Opportunities for Distributors and Resellers ",
                       path: "/",
                     },
                   ],
@@ -275,9 +276,9 @@ function App() {
               </Layout>
             }
           />
-             <Route
+          <Route
             path="/m2mDistributorRegistration"
-            element={ 
+            element={
               <Layout
                 banner={{
                   titleFirst: "M2M/IoT Distributor",
@@ -294,9 +295,9 @@ function App() {
               </Layout>
             }
           />
-                <Route
+          <Route
             path="/blog"
-            element={ 
+            element={
               <Layout
                 banner={{
                   titleFirst: "OneSimCard IoT ",
