@@ -105,7 +105,6 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-
         {/* === Support === */}
         <div>
           <h3 className="text-[#455E86] font-semibold mb-3 text-lg">Support</h3>

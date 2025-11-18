@@ -8,10 +8,8 @@ export default function SimPlansSection() {
   const [selectedCountry, setSelectedCountry] = useState("Equatorial Guinea");
 
   // Dynamic data fetching based on selection
-  const currentPlans =
-    planData[selectedCountry]?.[selectedSim]?.plans || [];
-  const currentSmsPlans =
-    planData[selectedCountry]?.[selectedSim]?.sms || [];
+  const currentPlans = planData[selectedCountry]?.[selectedSim]?.plans || [];
+  const currentSmsPlans = planData[selectedCountry]?.[selectedSim]?.sms || [];
 
   return (
     <div className="rounded-4xl border border-slate-200 p-8 flex flex-col gap-10 font-sora">
