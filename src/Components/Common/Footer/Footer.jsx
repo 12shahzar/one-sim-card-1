@@ -152,7 +152,6 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-
       {/* === Social Media Icons === */}
       <div className="max-w-7xl mx-auto flex justify-center sm:justify-end px-4 sm:px-6 md:px-8">
         <div className="flex text-white text-lg bg-[#6B7280] px-6 py-3 rounded-t-full divide-x divide-white/40">
