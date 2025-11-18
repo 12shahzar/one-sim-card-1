@@ -10,7 +10,7 @@ export default function BlogSection() {
       author: "Mark Thompson",
       date: "25 Sep 2025",
       title: "The standard Lorem Ipsum passage natus error sit voluptatem",
-    },
+    }, 
     {
       image: blog,
       author: "Mark Thompson",
@@ -26,10 +26,7 @@ export default function BlogSection() {
   ];
 
   return (
-    <section
-      data-aos="fade-right"
-      className="py-16 md:py-20 font-sora"
-    >
+    <section data-aos="fade-right" className="py-16 md:py-20 font-sora">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-10">
@@ -40,8 +37,7 @@ export default function BlogSection() {
             title="Latest Insights<br/>& Blogs"
             showBreak={true}
             align="left"
-              className="mb-10 md:mb-0"
-
+            className="mb-10 md:mb-0"
           />
 
           <CustomButton
@@ -49,6 +45,7 @@ export default function BlogSection() {
             bgColor="#455E86"
             hoverColor="#3b5072"
             textColor="white"
+            to="/blog"
           />
         </div>
 

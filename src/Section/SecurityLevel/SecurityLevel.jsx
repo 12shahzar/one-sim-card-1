@@ -18,6 +18,7 @@ function SecurityLevel() {
         btnBgColor="#F3C500"
         btnHoverColor="#e2b900"
         btnTextColor="#08080C"
+        btnRedirect={"/Technology?section=Technology&item=IMEILock"}
       />
     </>
   );

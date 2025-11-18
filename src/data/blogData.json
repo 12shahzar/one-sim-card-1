@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Healthcare IoT: Remote Patient Monitoring Powered by M2M SIMs",
+      "date": "2025-11-10",
+      "category": "IoT News",
+      "image": "/images/post1.png",
+      "excerpt": "Enable continuous, global connectivity for medical devices and secure transmission of sensitive health data.",
+      "content": "<p>In the era of digital healthcare, the Internet of Things (IoT) is revolutionizing how patients are monitored...</p>"
+    },
+    {
+      "id": 2,
+      "title": "Transforming Patient Care Through Reliable, Connected Technology",
+      "date": "2025-10-25",
+      "category": "Case Study",
+      "image": "/images/post2.jpg",
+      "excerpt": "A closer look at how connected tech is improving outcomes and reducing cost.",
+      "content": "<p>Remote patient monitoring (RPM)...</p>"
+    },
+    {
+      "id": 3,
+      "title": "What Is Remote Patient Monitoring (RPM)?",
+      "date": "2025-09-15",
+      "category": "IoT News",
+      "image": "/images/post3.jpg",
+      "excerpt": "RPM uses connected medical devices that collect and transmit patient data in real time.",
+      "content": "<p>Remote Patient Monitoring refers to the use of connected medical devices...</p>"
+    },
+    {
+      "id": 4,
+      "title": "Why Connectivity Is the Heart of RPM",
+      "date": "2025-08-10",
+      "category": "SIM Platform",
+      "image": "/images/post4.jpg",
+      "excerpt": "Reliable, secure data transmission is the backbone of remote monitoring.",
+      "content": "<p>For remote monitoring to work effectively...</p>"
+    }
+  ],
+  "categories": ["IoT News", "Case Study", "SIM Platform", "General"],
+  "site": {
+    "title": "OneSim Blog",
+    "perPage": 3
+  }
+}

@@ -7,7 +7,6 @@ import GlobalCoverage from "./Pages/GlobalCoverage";
 import EasySIMManagement from "./Pages/EasySIMManagement";
 import PremierPartners from "./Pages/PremierPartners";
 import OSCARIoTSIMCardManagementPortal from "./Pages/OSCARIoTSIMCardManagementPortal";
-import IoTSolutionsFleet from "./Pages/IoTSolutionsFleet";
 import IoTSolutions from "./Pages/IoTSolutions";
 import ConsumerIOT from "./Pages/ConsumerIOT";
 import Layout from "./Layout/Layout";
@@ -15,7 +14,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollToTop from "./Components/Common/ScrollToTop/ScrollToTop";
 import IoTSolutionDetails from "./Pages/IoTSolutionDetails";
-import SimPlansSection from "./Pages/SimPlans";
 import SimPlans from "./Pages/SimPlans";
 import StarterKit from "./Pages/StarterKit";
 import CustomQuote from "./Section/CustomQuote/CustomQuote";
@@ -23,6 +21,9 @@ import WhyOneSimCard from "./Pages/WhyOneSimCard";
 import Rates from "./Pages/Rates";
 import AboutUs from "./Pages/AboutUs";
 import PressRelease from "./Pages/PressRelease";
+import BusinessOppotunities from "./Pages/BusinessOppotunities";
+import M2mDistributorRegistration from "./Pages/M2mDistributorRegistration";
+import BlogPage from "./Pages/BlogPage";
 
 function App() {
   useEffect(() => {
@@ -252,6 +253,63 @@ function App() {
                 }}
               >
                 <PressRelease />
+              </Layout>
+            }
+          />
+              <Route
+            path="/businessOppotunities"
+            element={ 
+              <Layout
+                banner={{
+                  titleFirst: "Business Opportuni",
+                  titleLast: "ties",
+                  breadcrumb: [
+                    {
+                      label: "IoT SIM Card Business Opportunities for Distributors and Resellers ",
+                      path: "/",
+                    },
+                  ],
+                }}
+              >
+                <BusinessOppotunities />
+              </Layout>
+            }
+          />
+             <Route
+            path="/m2mDistributorRegistration"
+            element={ 
+              <Layout
+                banner={{
+                  titleFirst: "M2M/IoT Distributor",
+                  titleLast: "Registration",
+                  breadcrumb: [
+                    {
+                      label: "OneSimCard M2M/IoT Distributor Registration ",
+                      path: "/",
+                    },
+                  ],
+                }}
+              >
+                <M2mDistributorRegistration />
+              </Layout>
+            }
+          />
+                <Route
+            path="/blog"
+            element={ 
+              <Layout
+                banner={{
+                  titleFirst: "OneSimCard IoT ",
+                  titleLast: "Blog",
+                  breadcrumb: [
+                    {
+                      label: "OneSimCard IoT Blog",
+                      path: "/",
+                    },
+                  ],
+                }}
+              >
+                <BlogPage />
               </Layout>
             }
           />

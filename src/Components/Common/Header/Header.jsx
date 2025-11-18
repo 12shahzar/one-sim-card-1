@@ -148,7 +148,7 @@ function Header() {
           {/* RIGHT BUTTONS */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              to="/"
+              to="https://www.onesimcard.com/corporate/"
               className="text-black text-sm px-4 border-r-2 border-[#A8ADB4] font-medium"
             >
               Login
@@ -253,7 +253,7 @@ function Header() {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="https://www.onesimcard.com/corporate/"
                   onClick={() => setMenuOpen(false)}
                   className="block py-2 border-t border-gray-100"
                 >

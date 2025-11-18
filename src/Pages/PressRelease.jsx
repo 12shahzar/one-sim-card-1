@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "../Components/Heading/SectionHeading";
 import FeatureSection from "../Components/FeatureComponent/FeatureSection";
-import worldMap from "../assets/images/World_map.svg";
+import multinetwork from "../assets/images/multinetwork.svg";
 import ContentSection from "../Section/ContentSection/ContentSection";
 
 function PressRelease() {
@@ -17,8 +17,8 @@ function PressRelease() {
         <FeatureSection
           title="GloBoston, MA Boston, MA /EIN Presswire/ July 23, 2020 --bal"
           description="Combining AT&T and Verizon on a Single SIM Ensures the Greatest Coverage & Unsurpassed Redundancy in the USA"
-          imageSrc={worldMap}
-          imageAlt="World Map"
+          imageSrc={multinetwork}
+          imageAlt="multinetwork"
           reverse={false}
           aos={{ type: "fade-up", delay: 200, duration: 1000 }}
           btnBgColor="#455E86"
@@ -40,8 +40,8 @@ function PressRelease() {
         <FeatureSection
           title="Boston, MA Boston, MA /EIN Presswire/ January 15, 2020 --"
           description="OneSimCard M2M / IoT announced today the release of a new solution for its global IoT SIM card clientele. The new OneSim IMEI Lock service adds a layer of security and assures that a SIM card can only be used in the IoT device to which it is assigned. OneSim IMEI Lock allows the user to link OneSimCard M2M's international data SIM to a particular IoT device by using the device's unique IMEI number. Locking a SIM card to a singular device can be critical to IoT security & can prevent significant financial losses, especially for international SIM card deployments. Companies using SIM cards need to make certain that the SIM card cannot be taken from the IoT unit and installed into another device (think Smartphone or Tablet) which may use considerably more data. OneSim IMEI Lock is also crucial to ensure data being collected is accurately tied to the device sending it. With the continued surge of IoT devices being deployed globally, having this additional layer of SIM security is pivotal"
-          imageSrc={worldMap}
-          imageAlt="World Map"
+          imageSrc={multinetwork}
+          imageAlt="multinetwork"
           reverse={false}
           aos={{ type: "fade-up", delay: 200, duration: 1000 }}
           btnBgColor="#455E86"
