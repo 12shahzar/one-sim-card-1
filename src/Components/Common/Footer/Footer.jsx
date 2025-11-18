@@ -60,14 +60,14 @@ const Footer = () => {
           <h3 className="text-[#455E86] font-semibold mb-3 text-lg">Company</h3>
           <ul className="text-sm space-y-1.5 font-regular">
             <li>
-              <Link to="#" className="hover:text-[#F4C600]">
+              <Link to="https://www.onesimcard.com/about-us/?_gl=1*1pg4f8r*_gcl_au*MTUzNzk1NTEwMy4xNzU3MDMyNzgw" className="hover:text-[#F4C600]">
                 About Us
               </Link>
             </li>
             <li>
               <Link to="#" className="hover:text-[#F4C600]">
                 Business Opportunities
-              </Link>
+              </Link> 
             </li>
             <li>
               <Link to="#" className="hover:text-[#F4C600]">
@@ -80,7 +80,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="#" className="hover:text-[#F4C600]">
+              <Link to="https://www.onesimcard.com/M2M-account-terms-of-use/" className="hover:text-[#F4C600]">
                 Terms of Use for M2M
               </Link>
             </li>

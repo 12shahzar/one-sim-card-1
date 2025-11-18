@@ -21,6 +21,8 @@ import StarterKit from "./Pages/StarterKit";
 import CustomQuote from "./Section/CustomQuote/CustomQuote";
 import WhyOneSimCard from "./Pages/WhyOneSimCard";
 import Rates from "./Pages/Rates";
+import AboutUs from "./Pages/AboutUs";
+import PressRelease from "./Pages/PressRelease";
 
 function App() {
   useEffect(() => {
@@ -212,6 +214,44 @@ function App() {
                 }}
               >
                 <Rates />
+              </Layout>
+            }
+          />
+              <Route
+            path="/aboutUs"
+            element={ 
+              <Layout
+                banner={{
+                  titleFirst: "Why OneSimCard",
+                  titleLast: "Card",
+                  breadcrumb: [
+                    {
+                      label: " IoT SIM Card Coverage",
+                      path: "/",
+                    },
+                  ],
+                }}
+              >
+                <AboutUs />
+              </Layout>
+            }
+          />
+           <Route
+            path="/pressReleases"
+            element={ 
+              <Layout
+                banner={{
+                  titleFirst: "Why OneSimCard",
+                  titleLast: "Card",
+                  breadcrumb: [
+                    {
+                      label: "IoT SIM Card Coverage",
+                      path: "/",
+                    },
+                  ],
+                }}
+              >
+                <PressRelease />
               </Layout>
             }
           />
