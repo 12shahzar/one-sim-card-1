@@ -1,7 +1,9 @@
 import React from "react";
 import SectionHeading from "../Components/Heading/SectionHeading";
 import FeatureSection from "../Components/FeatureComponent/FeatureSection";
+import IMEIRates from "../assets/images/IMEIRates.svg";
 import multinetwork from "../assets/images/multinetwork.svg";
+
 import ContentSection from "../Section/ContentSection/ContentSection";
 
 function PressRelease() {
@@ -14,15 +16,40 @@ function PressRelease() {
         to provide the Best Overall Coverage"
           align="left"
         />
-        <FeatureSection
-          title="GloBoston, MA Boston, MA /EIN Presswire/ July 23, 2020 --bal"
-          description="Combining AT&T and Verizon on a Single SIM Ensures the Greatest Coverage & Unsurpassed Redundancy in the USA"
-          imageSrc={multinetwork}
-          imageAlt="multinetwork"
-          reverse={false}
-          aos={{ type: "fade-up", delay: 200, duration: 1000 }}
-          btnBgColor="#455E86"
-        />
+
+        <section
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="800"
+          className="max-w-screen-xl mx-auto px-2 md:px-6 py-4 font-sora"
+        >
+          <div
+            className={`py-6 md:py-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8`}
+          >
+            {/* IMAGE SIDE */}
+            <div data-aos="fade-right" className="">
+              <img
+                src={multinetwork}
+                alt="multinetwork"
+                className="object-contain w-full h-full"
+              />
+            </div>
+
+            {/* TEXT SIDE */}
+            <div
+              data-aos="fade-left"
+              className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center pr-0 "
+            >
+              <p className="text-black m-4 mb-6 md:mx-0">
+                GloBoston, MA Boston, MA /EIN Presswire/ July 23, 2020 --bal
+              </p>
+              <p className="text-[#6B7280] m-4 mb-6 md:mx-0">
+                Combining AT&T and Verizon on a Single SIM Ensures the Greatest
+                Coverage & Unsurpassed Redundancy in the USA
+              </p>
+            </div>
+          </div>
+        </section>
         <ContentSection
           paragraphs={[
             "OneSimCard® is a division of Belmont Telecom, Inc., a licensed U.S. interexchange carrier (IXC) providing telecommunications services since 1994, celebrating over 30 years in telecoms. We strive to make communication as efficient and inexpensive as possible for you, whether you're using data, texting or calling across town, across the country or across the globe.",
@@ -37,15 +64,54 @@ function PressRelease() {
           title="OneSimCard M2M Launches OneSim IMEI Lock - Allowing IoT Clients to Lock SIM Cards to Device IMEI"
           align="left"
         />
-        <FeatureSection
-          title="Boston, MA Boston, MA /EIN Presswire/ January 15, 2020 --"
-          description="OneSimCard M2M / IoT announced today the release of a new solution for its global IoT SIM card clientele. The new OneSim IMEI Lock service adds a layer of security and assures that a SIM card can only be used in the IoT device to which it is assigned. OneSim IMEI Lock allows the user to link OneSimCard M2M's international data SIM to a particular IoT device by using the device's unique IMEI number. Locking a SIM card to a singular device can be critical to IoT security & can prevent significant financial losses, especially for international SIM card deployments. Companies using SIM cards need to make certain that the SIM card cannot be taken from the IoT unit and installed into another device (think Smartphone or Tablet) which may use considerably more data. OneSim IMEI Lock is also crucial to ensure data being collected is accurately tied to the device sending it. With the continued surge of IoT devices being deployed globally, having this additional layer of SIM security is pivotal"
-          imageSrc={multinetwork}
-          imageAlt="multinetwork"
-          reverse={false}
-          aos={{ type: "fade-up", delay: 200, duration: 1000 }}
-          btnBgColor="#455E86"
-        />
+
+        <section
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="800"
+          className="max-w-screen-xl mx-auto px-2 md:px-6 py-4 font-sora"
+        >
+          <div
+            className={`py-6 md:py-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8`}
+          >
+            {/* TEXT SIDE */}
+            <div
+              data-aos="fade-left"
+              className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center pr-0 "
+            >
+              <p className="text-black m-4 mb-6 md:mx-0">
+                Boston, MA Boston, MA /EIN Presswire/ January 15, 2020 --
+              </p>
+              <p className="text-[#6B7280] m-4 mb-6 md:mx-0">
+                OneSimCard M2M / IoT announced today the release of a new
+                solution for its global IoT SIM card clientele. The new OneSim
+                IMEI Lock service adds a layer of security and assures that a
+                SIM card can only be used in the IoT device to which it is
+                assigned. OneSim IMEI Lock allows the user to link OneSimCard
+                M2M's international data SIM to a particular IoT device by using
+                the device's unique IMEI number. Locking a SIM card to a
+                singular device can be critical to IoT security & can prevent
+                significant financial losses, especially for international SIM
+                card deployments. Companies using SIM cards need to make certain
+                that the SIM card cannot be taken from the IoT unit and
+                installed into another device (think Smartphone or Tablet) which
+                may use considerably more data. OneSim IMEI Lock is also crucial
+                to ensure data being collected is accurately tied to the device
+                sending it. With the continued surge of IoT devices being
+                deployed globally, having this additional layer of SIM security
+                is pivotal{" "}
+              </p>
+            </div>
+            {/* IMAGE SIDE */}
+            <div data-aos="fade-right" className="">
+              <img
+                src={IMEIRates}
+                alt="IMEIRates"
+                className="object-contain w-full h-full"
+              />
+            </div>
+          </div>
+        </section>
         <ContentSection
           paragraphs={[
             "Security has always been paramount to OneSimCard M2M / IoT and OneSim IMEI Lock is yet another component which adds to the many IoT SIM card security features offered to its clients. OneSimCard M2M / IoT offers Private (Custom) APN, VPN (both IP-SEC VPN and Open VPN), & Peer-to-Peer connections using Private Static IPs. All of these features are designed to keep IoT data secure and to ensure that IoT devices are less likely to be hacked. Many other important features designed specifically for IoT are available including: API’s for SIM Management, a single APN for all SIM cards deployed worldwide, OSCAR Portal for SIM management, and the list goes on",

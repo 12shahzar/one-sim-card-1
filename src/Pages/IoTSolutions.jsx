@@ -14,9 +14,9 @@ import { Link } from "react-router-dom";
 
 function IoTSolutions() {
   const partners = [
-    { title: "Premier Partners" , link: "/Technology?section=Partners"},
-    { title: "Compatible Software", link: "/Technology?section=Partners"  },
-    { title: "Compatible Devices", link: "/Technology?section=Partners"  },
+    { title: "Premier Partners" , link: "/Technology?section=Partners&item=premier"},
+    { title: "Compatible Software", link: "/Technology?section=Partners&item=software"  },
+    { title: "Compatible Devices", link: "/Technology?section=Partners&item=devices"  },
   ];
   const segments = [
     {

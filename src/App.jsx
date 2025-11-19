@@ -24,6 +24,7 @@ import PressRelease from "./Pages/PressRelease";
 import BusinessOppotunities from "./Pages/BusinessOppotunities";
 import M2mDistributorRegistration from "./Pages/M2mDistributorRegistration";
 import BlogPage from "./Pages/BlogPage";
+import BuyNow from "./Pages/BuyNow";
 
 function App() {
   useEffect(() => {
@@ -292,6 +293,25 @@ function App() {
                 }}
               >
                 <M2mDistributorRegistration />
+              </Layout>
+            }
+          />
+            <Route
+            path="/BuyNow"
+            element={
+              <Layout
+                banner={{
+                  titleFirst: "Buy ",
+                  titleLast: "Now",
+                  breadcrumb: [
+                    {
+                      label: "BuyNow",
+                      path: "/",
+                    },
+                  ],
+                }}
+              >
+                <BuyNow />
               </Layout>
             }
           />

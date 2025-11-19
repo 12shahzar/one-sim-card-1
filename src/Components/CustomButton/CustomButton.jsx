@@ -11,7 +11,7 @@ export default function CustomButton({
 }) {
   const navigate = useNavigate();
 
-  const handleClick = (e) => {
+  const handleClick = (e) => {  
     if (onClick) {
       onClick(e); // call custom handler
     } else if (to) {

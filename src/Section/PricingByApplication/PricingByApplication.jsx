@@ -102,6 +102,7 @@ export default function PricingByApplication() {
                 bgColor="#455E86"
                 hoverColor="#3b5072"
                 textColor="white"
+                to="/BuyNow"
               />
               </div>
             </ul>

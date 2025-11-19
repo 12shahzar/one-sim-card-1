@@ -74,6 +74,7 @@ const PopularPlans = () => {
                 bgColor="#6B7280"
                 hoverColor="#455E86"
                 textColor="white"
+                to="/BuyNow"
               />
             </div>
           ))}

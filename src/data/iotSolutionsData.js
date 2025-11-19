@@ -5,6 +5,10 @@ import MeterMonitoring from "../assets/images/MeterMonitoring.svg";
 import MedicalMonitoring  from "../assets/images/MedicalMonitoring .svg";
 import DigitalSignage from "../assets/images/DigitalSignage.svg";
 import EVCharging from "../assets/images/EVCharging.svg";
+import smartHome from "../assets/images/smartHome.svg";
+import AgTech from "../assets/images/AgTech.svg";
+import SupplyChain from "../assets/images/SupplyChain.svg";
+
 
 
 
@@ -102,7 +106,7 @@ const IoTSolutionsData = {
       {
         description:
           "Whether you wish to monitor temperatures inside a shipping container, trace the precise location of a package, optimize your truck’s route or have many different types of alerts sent, OneSimCard M2M services play an important role in managing your supply chain and getting your products to your customers on-time and in proper condition.",
-        imageSrc: FleetImage,
+        imageSrc: SupplyChain,
         imageAlt: "Supply Chain Tracking and Tracing",
         reverse: false,
       },
@@ -387,7 +391,7 @@ const IoTSolutionsData = {
       {
         description:
           "In this segment, OneSimCard M2M works with both Smart Home installers and Smart Home device manufacturers & distributors. For installation companies, OneSimCard M2M offers premium M2M connectivity at a fixed location along with a very dynamic SIM card management system with advanced reporting tools and features.",
-        imageSrc: AssetTrackingImg,
+        imageSrc: smartHome,
         imageAlt: "Smart Home",
         reverse: false,
       },
@@ -414,7 +418,7 @@ const IoTSolutionsData = {
       {
         description:
           "IoT SIM cards facilitate the implementation of precision agriculture techniques by ensuring seamless connectivity between various agricultural sensors and devices. These devices collect data on soil moisture, temperature, humidity, and crop health, transmitting it in real-time to a central system. Farmers can analyze this data to make informed decisions about irrigation, fertilization, and pest control, leading to increased crop yields and reduced resource wastage.",
-        imageSrc: FleetImage,
+        imageSrc: AgTech,
         imageAlt: "AgTech 1",
         reverse: false,
         title: "Precision Agriculture",
