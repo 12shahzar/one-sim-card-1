@@ -37,36 +37,34 @@ const Footer = () => {
         <div>
           <h3 className="text-[#455E86] font-semibold mb-3 text-lg">Contact</h3>
           <p className="text-sm mb-2">Contact Customer Support</p>
-        <div className="flex items-start mb-2 gap-2">
-  <img src={location} alt="location" />
+          <div className="flex items-start mb-2 gap-2">
+            <img src={location} alt="location" />
 
-  <a
-    href="https://www.google.com/maps/search/?api=1&query=PO+Box+4901,+Belmont,+MA+02478-0004,+USA"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-sm mb-2 leading-relaxed hover:underline"
-  >
-    PO Box 4901, Belmont, MA
-    <br />
-    02478-0004, USA
-  </a>
-</div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=PO+Box+4901,+Belmont,+MA+02478-0004,+USA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm mb-2 leading-relaxed hover:underline"
+            >
+              PO Box 4901, Belmont, MA
+              <br />
+              02478-0004, USA
+            </a>
+          </div>
 
+          <div className="flex items-start mb-2 gap-2">
+            <img src={cell} alt="cell" />
 
-     <div className="flex items-start mb-2 gap-2">
-  <img src={cell} alt="cell" />
+            <div>
+              <a href="tel:1-617-313-8888" className="text-sm mb-1 block">
+                1-617-313-8888
+              </a>
 
-  <div>
-    <a href="tel:1-617-313-8888" className="text-sm mb-1 block">
-      1-617-313-8888
-    </a>
-
-    <a href="tel:1-800-640-2113" className="text-sm block">
-      1-800-640-2113
-    </a>
-  </div>
-</div>
-
+              <a href="tel:1-800-640-2113" className="text-sm block">
+                1-800-640-2113
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* === Company === */}
@@ -145,7 +143,10 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/Technology?section=Partners&item=premier" className="hover:text-[#F4C600]">
+              <Link
+                to="/Technology?section=Partners&item=premier"
+                className="hover:text-[#F4C600]"
+              >
                 IoT SIM Compatibility
               </Link>
             </li>
@@ -167,26 +168,31 @@ const Footer = () => {
       </div>
       {/* === Social Media Icons === */}
       <div className="max-w-7xl mx-auto flex justify-center sm:justify-end px-4 sm:px-6 md:px-8">
-    <div className="flex text-white text-lg bg-[#6B7280] px-6 py-3 rounded-t-full divide-x divide-white/40">
-  {[
-    { Icon: FaFacebookF, url: "https://www.facebook.com/OneSimCard" },
-    { Icon: FaTwitter, url: "https://x.com/OneSimCard" },
-    { Icon: FaGooglePlusG, url: "https://plus.google.com/112770618596279116510?prsrc=3" },
-    { Icon: FaInstagram, url: "https://www.instagram.com/OneSimCard" },
-    { Icon: FaLinkedinIn, url: "https://www.linkedin.com/company/onesimcard/" },
-  ].map(({ Icon, url }, idx) => (
-    <Link
-      key={idx}
-      to={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="hover:text-[#F4C600] px-4 first:pl-0 last:pr-0 flex items-center justify-center"
-    >
-      <Icon />
-    </Link>
-  ))}
-</div>
-
+        <div className="flex text-white text-lg bg-[#6B7280] px-6 py-3 rounded-t-full divide-x divide-white/40">
+          {[
+            { Icon: FaFacebookF, url: "https://www.facebook.com/OneSimCard" },
+            { Icon: FaTwitter, url: "https://x.com/OneSimCard" },
+            {
+              Icon: FaGooglePlusG,
+              url: "https://plus.google.com/112770618596279116510?prsrc=3",
+            },
+            { Icon: FaInstagram, url: "https://www.instagram.com/OneSimCard" },
+            {
+              Icon: FaLinkedinIn,
+              url: "https://www.linkedin.com/company/onesimcard/",
+            },
+          ].map(({ Icon, url }, idx) => (
+            <Link
+              key={idx}
+              to={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#F4C600] px-4 first:pl-0 last:pr-0 flex items-center justify-center"
+            >
+              <Icon />
+            </Link>
+          ))}
+        </div>
       </div>
 
       {/* Divider */}

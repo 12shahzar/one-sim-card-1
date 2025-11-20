@@ -14,9 +14,18 @@ import { Link } from "react-router-dom";
 
 function IoTSolutions() {
   const partners = [
-    { title: "Premier Partners" , link: "/Technology?section=Partners&item=premier"},
-    { title: "Compatible Software", link: "/Technology?section=Partners&item=software"  },
-    { title: "Compatible Devices", link: "/Technology?section=Partners&item=devices"  },
+    {
+      title: "Premier Partners",
+      link: "/Technology?section=Partners&item=premier",
+    },
+    {
+      title: "Compatible Software",
+      link: "/Technology?section=Partners&item=software",
+    },
+    {
+      title: "Compatible Devices",
+      link: "/Technology?section=Partners&item=devices",
+    },
   ];
   const segments = [
     {
@@ -25,14 +34,20 @@ function IoTSolutions() {
     },
     { title: "Connected Vehicle", link: "/IoTSolutions/ConnectedVehicle" },
     { title: "Asset Tracking", link: "/IoTSolutions/AssetTracking" },
-    { title: "Supply Chain Tracking and Tracing", link: "/IoTSolutions/SupplyChainTrackingAndTracing" },
-    { title: "Digital Advertising Updates", link: "/IoTSolutions/DigitalAdvertisingUpdates" },
-    { title: "Smart Home",link:"/IoTSolutions/SmartHome" },
-    { title: "AgTech",link:"/IoTSolutions/AgTech" },
-    { title: "EV Charging",link:"/IoTSolutions/EVCharging"  },
-    { title: "Wearables",link:"/IoTSolutions/Wearables"  },
-    { title: "Meter Monitoring", link: "/IoTSolutions/MeterMonitoring"  },
-    { title: "Medical Monitoring",link:"/IoTSolutions/MedicalMonitoring" },
+    {
+      title: "Supply Chain Tracking and Tracing",
+      link: "/IoTSolutions/SupplyChainTrackingAndTracing",
+    },
+    {
+      title: "Digital Advertising Updates",
+      link: "/IoTSolutions/DigitalAdvertisingUpdates",
+    },
+    { title: "Smart Home", link: "/IoTSolutions/SmartHome" },
+    { title: "AgTech", link: "/IoTSolutions/AgTech" },
+    { title: "EV Charging", link: "/IoTSolutions/EVCharging" },
+    { title: "Wearables", link: "/IoTSolutions/Wearables" },
+    { title: "Meter Monitoring", link: "/IoTSolutions/MeterMonitoring" },
+    { title: "Medical Monitoring", link: "/IoTSolutions/MedicalMonitoring" },
   ];
 
   return (
@@ -161,7 +176,10 @@ function IoTSolutions() {
           "The OneSimCard IoT Global IoT SIM Card and the OneSimCard IoT platform were developed for many key IoT industry segments where OneSimCard IoT offers advanced IoT solutions and expertise.",
         ]}
       />
-      <div className="max-w-7xl mx-auto my-8  px-2 md:px-6" data-aos="fade-right">
+      <div
+        className="max-w-7xl mx-auto my-8  px-2 md:px-6"
+        data-aos="fade-right"
+      >
         <p className="text-[#455E86] text-xl font-semibold">
           These segments include:
         </p>
