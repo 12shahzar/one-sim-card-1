@@ -121,11 +121,11 @@ const Footer = () => {
         <div>
           <h3 className="text-[#455E86] font-semibold mb-3 text-lg">Support</h3>
           <ul className="text-sm space-y-1.5 font-regular">
-            {/* <li>
-              <Link to="#" className="hover:text-[#F4C600]">
+            <li>
+              <Link to="/Faq" className="hover:text-[#F4C600]">
                 FAQs
               </Link>
-            </li> */}
+            </li>
             <li>
               <Link
                 to="https://www.onesimcard.com/?user"

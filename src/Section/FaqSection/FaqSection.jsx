@@ -1,13 +1,11 @@
 import { useState } from "react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Search } from "lucide-react";
 import SectionHeading from "../../Components/Heading/SectionHeading";
 import faqData from "../../data/Faq.json";
 
-
 const { categories, faqs } = faqData;
 
-
-export default function FaqSection({ bgColor = "#F5F5F5" }) {
+export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
   const [activeCategory, setActiveCategory] = useState("General Service");
   const [openIndex, setOpenIndex] = useState(0); // first question open by default
 
@@ -29,6 +27,7 @@ export default function FaqSection({ bgColor = "#F5F5F5" }) {
           We are here to help you get answers to your questions about OneSimCard
           phones and services.{" "}
         </p>
+
         {/* FAQ Layout */}
         <div className="mt-12 flex flex-col md:flex-row gap-10">
           {/* Sidebar */}
@@ -59,7 +58,46 @@ export default function FaqSection({ bgColor = "#F5F5F5" }) {
           </div>
 
           {/* Right FAQ Content */}
-          <div className="md:w-2/3 w-full space-y-1">
+          <div className="md:w-2/3 w-full ">
+            {searchBar && (
+              <div
+                className="bg-[#455E86] p-8 rounded-4xl 
+                      flex flex-col md:flex-row md:items-center 
+                      gap-6 md:gap-10 md:mb-6"
+              >
+                {/* Left Text */}
+                <div className="text-white text-xl font-normal leading-tight">
+                  Search OneSimCard <br /> Support Pages:
+                </div>
+
+                {/* Search + Button Container */}
+                <div className="flex flex-col sm:flex-row gap-4 w-full md:flex-1">
+                  {/* Rounded Search Input */}
+                  <div className="relative w-full">
+                    <Search
+                      className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+                      size={22}
+                    />
+                    <input
+                      type="text"
+                      placeholder="Search"
+                      className="w-full bg-white rounded-full py-3 pl-12 pr-4 
+                         outline-none text-gray-700"
+                    />
+                  </div>
+
+                  {/* Yellow Button */}
+                  <button
+                    className="bg-yellow-400 hover:bg-yellow-500 
+                             px-10 py-3 rounded-full font-medium 
+                             whitespace-nowrap"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+            )}
+
             {faqs[activeCategory]?.map((faq, index) => {
               const isOpen = openIndex === index;
               return (

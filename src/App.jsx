@@ -25,6 +25,7 @@ import BusinessOppotunities from "./Pages/BusinessOppotunities";
 import M2mDistributorRegistration from "./Pages/M2mDistributorRegistration";
 import BlogPage from "./Pages/BlogPage";
 import BuyNow from "./Pages/BuyNow";
+import FaqPage from "./Pages/FaqPage";
 
 function App() {
   useEffect(() => {
@@ -331,6 +332,27 @@ function App() {
                 }}
               >
                 <BlogPage />
+              </Layout>
+            }
+          />
+            <Route
+            path="/Faq"
+            element={
+              <Layout
+                banner={{
+                  titleFirst: "OneSimCard M2M Que",
+                  titleLast: "stions",
+                  bgColor:"#ffffff",
+                  searchBar:true,
+                  breadcrumb: [
+                    {
+                      label: "FAQs",
+                      path: "/",
+                    },
+                  ],
+                }}
+              >
+                <FaqPage />
               </Layout>
             }
           />
