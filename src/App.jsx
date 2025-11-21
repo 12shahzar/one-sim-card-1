@@ -26,6 +26,7 @@ import M2mDistributorRegistration from "./Pages/M2mDistributorRegistration";
 import BlogPage from "./Pages/BlogPage";
 import BuyNow from "./Pages/BuyNow";
 import FaqPage from "./Pages/FaqPage";
+import M2MSupportForm from "./Pages/M2MSupportForm";
 
 function App() {
   useEffect(() => {
@@ -353,6 +354,27 @@ function App() {
                 }}
               >
                 <FaqPage />
+              </Layout>
+            }
+          />
+              <Route
+            path="/M2MSupportForm"
+            element={
+              <Layout
+                banner={{
+                  titleFirst: "Contact Sup",
+                  titleLast: "port",
+                  bgColor:"#ffffff",
+                  searchBar:true,
+                  breadcrumb: [
+                    {
+                      label: "Contact Support",
+                      path: "/",
+                    },
+                  ],
+                }}
+              >
+                <M2MSupportForm />
               </Layout>
             }
           />

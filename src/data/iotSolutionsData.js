@@ -1,21 +1,53 @@
 import FleetImage from "../assets/images/Fleet_managment.svg";
+
 import Wearables from "../assets/images/Wearables.svg";
+import HealthWearables from "../assets/images/HealthWearables.svg";
+import EnhancedWearables from "../assets/images/EnhancedWearables.svg";
+import SecurityWearables from "../assets/images/SecurityWearables.svg";
+import CustomizableWearables from "../assets/images/CustomizableWearables.svg";
+
 import AssetTrackingImg from "../assets/images/AssetTracking.svg";
+
 import MeterMonitoring from "../assets/images/MeterMonitoring.svg";
-import MedicalMonitoring  from "../assets/images/MedicalMonitoring .svg";
+import EnhancedMeterMonitoring from "../assets/images/EnhancedMeterMonitoring.svg";
+import RemoteMeterMonitoring from "../assets/images/RemoteMeterMonitoring.svg";
+import ScalabilityMeterMonitoring from "../assets/images/ScalabilityMeterMonitoring.svg";
+import ImprovedMeterMonitoring from "../assets/images/ImprovedMeterMonitoring.svg";
+
+import MedicalMonitoring from "../assets/images/MedicalMonitoring.svg";
+import RemoteMedicalMonitoring from "../assets/images/RemoteMedicalMonitoring.svg";
+import EnhancedMedicalMonitoring from "../assets/images/EnhancedMedicalMonitoring.svg";
+import imporvedMedicalMonitoring from "../assets/images/imporveMedicalMonitoring.svg";
+import ScalableMedicalMonitoring from "../assets/images/ScalableMedicalMonitoring.svg";
+import SecurityMedicalMonitoring from "../assets/images/SecuritMedicalMonitoring.svg";
+import ForCastMedicalMonitoring from "../assets/images/ForCastMedicalMonitoring.svg";
+
 import DigitalSignage from "../assets/images/DigitalSignage.svg";
+
+import RemoteDigitalSignage from "../assets/images/RemoteDigitalSignage.svg";
+import scalableDigitalSignage from "../assets/images/scalableDigitalSignage.svg";
+
+import EnhancedDigitalSignage from "../assets/images/EnhancedDigitalSignage.svg";
+import CostDigitalSignage from "../assets/images/CostDigitalSignage.svg";
+
 import EVCharging from "../assets/images/EVCharging.svg";
+import RemoteMonitoringEVCharging from "../assets/images/RemoteMonitoringEVCharging.svg";
+import OptimizedResourceEVCharging from "../assets/images/OptimizedResourceEVCharging.svg";
+import EnhancedSecurityEVCharging from "../assets/images/EnhancedSecurityEVCharging.svg";
+import SecurityAgEVCharging from "../assets/images/SecurityAgEVCharging.svg";
+import ScalabilityEVCharging from "../assets/images/ScalabilityEVCharging.svg";
+
 import smartHome from "../assets/images/smartHome.svg";
+
 import AgTech from "../assets/images/AgTech.svg";
+import RemoteMonitoringAgTech from "../assets/images/RemoteMonitoringAgTech.svg";
+import OptimizedResourceAgTech from "../assets/images/OptimizedResourceAgTech.svg";
+import EnhancedSecurityAgTech from "../assets/images/EnhancedSecurityAgTech.svg";
+import ScalabilityAgTech from "../assets/images/ScalabilityAgTech.svg";
+
 import SupplyChain from "../assets/images/SupplyChain.svg";
 
-
-
-
-
-
 const IoTSolutionsData = {
-
   FleetManagementSolutions: {
     banner: {
       titleFirst: "OneSimCard M2M",
@@ -143,16 +175,16 @@ const IoTSolutionsData = {
       {
         description:
           "IoT SIM cards ensure that wearables, such as smartwatches and fitness trackers, maintain continuous connectivity to the internet and other devices. This constant connection allows users to receive real-time notifications, updates, and alerts regardless of their location. For instance, fitness enthusiasts can track their progress, receive exercise recommendations, and share their achievements on social media platforms instantly.",
-        imageSrc: FleetImage,
-        imageAlt: "Wearables 2",
+        imageSrc: HealthWearables,
+        imageAlt: "HealthWearables",
         reverse: true,
         title: "Health Monitoring",
       },
       {
         description:
           "In the healthcare sector, wearables equipped with IoT SIM cards can monitor vital signs such as heart rate, blood pressure, and glucose levels. The data collected is transmitted to healthcare providers in real-time, enabling remote monitoring and timely medical interventions. This continuous monitoring can be crucial for managing chronic conditions, reducing hospital visits, and improving overall patient care.",
-        imageSrc: FleetImage,
-        imageAlt: "Wearables 2",
+        imageSrc: EnhancedWearables,
+        imageAlt: "EnhancedWearables",
         reverse: false,
         title: "Enhanced Mobility and Independence",
         btnBgColor: "#F3C500",
@@ -160,16 +192,16 @@ const IoTSolutionsData = {
       {
         description:
           "Security is a significant concern for wearable devices that handle sensitive personal data. IoT SIM cards incorporate robust security features such as encryption and secure data transmission protocols to protect user information from unauthorized access and breaches. This ensures that personal health and fitness data remain confidential and secure.",
-        imageSrc: FleetImage,
-        imageAlt: "Wearables 2",
+        imageSrc: SecurityWearables,
+        imageAlt: "SecurityWearables",
         reverse: true,
         title: "Data Security and Privacy",
       },
       {
         description:
           "IoT SIM cards offer customizable data plans and extensive global coverage, making them ideal for wearables used by frequent travelers. Users can stay connected across different regions without worrying about roaming charges or connectivity issues. This global reach ensures that wearables can function optimally wherever the user goes.",
-        imageSrc: FleetImage,
-        imageAlt: "Wearables 2",
+        imageSrc: CustomizableWearables,
+        imageAlt: "CustomizableWearables",
         reverse: false,
         title: "Customizable Plans and Global Coverage",
         btnBgColor: "#F3C500",
@@ -203,16 +235,16 @@ const IoTSolutionsData = {
       {
         description:
           "With IoT SIM cards, utility providers can remotely monitor and manage smart meters without the need for physical inspections. This capability is particularly beneficial for detecting issues such as leaks, tampering, or malfunctioning meters. Remote monitoring ensures that problems are identified and addressed promptly, minimizing downtime and service disruptions.",
-        imageSrc: FleetImage,
-        imageAlt: "MeterMonitoring 1",
+        imageSrc: EnhancedMeterMonitoring,
+        imageAlt: "EnhancedMeterMonitoring",
         reverse: true,
         title: "Remote Monitoring and Management",
       },
       {
         description:
           "The connectivity provided by IoT SIM cards allows for automated meter reading, eliminating the need for manual data collection. This automation reduces labor costs, human errors, and logistical challenges associated with traditional meter reading methods. Utility companies can allocate resources more efficiently and focus on optimizing service delivery.",
-        imageSrc: FleetImage,
-        imageAlt: "MeterMonitoring 1",
+        imageSrc: RemoteMeterMonitoring,
+        imageAlt: "RemoteMeterMonitoring",
         reverse: false,
         title: "Enhanced Operational Efficiency",
         btnBgColor: "#F3C500",
@@ -220,16 +252,16 @@ const IoTSolutionsData = {
       {
         description:
           "IoT SIM cards offer scalability and flexibility, making it easy to deploy and expand smart meter networks. As cities grow and demand for utilities increases, IoT SIM cards enable the seamless addition of new meters without extensive infrastructure modifications. This scalability is essential for accommodating the increasing number of connected devices in smart cities.",
-        imageSrc: FleetImage,
-        imageAlt: "MeterMonitoring 1",
+        imageSrc: ScalabilityMeterMonitoring,
+        imageAlt: "ScalabilityMeterMonitoring",
         reverse: true,
         title: "Scalability and Flexibility",
       },
       {
         description:
           "By leveraging the connectivity of IoT SIM cards, utility companies can provide customers with detailed consumption data through online portals or mobile apps. This transparency fosters better customer engagement and empowers consumers to manage their usage more effectively. Enhanced customer satisfaction and loyalty are natural outcomes of this improved service.",
-        imageSrc: FleetImage,
-        imageAlt: "MeterMonitoring 1",
+        imageSrc: ImprovedMeterMonitoring,
+        imageAlt: "ImprovedMeterMonitoring",
         reverse: false,
         title: "Improved Customer Engagement",
         btnBgColor: "#F3C500",
@@ -254,7 +286,7 @@ const IoTSolutionsData = {
       {
         description:
           "IoT SIM cards enable continuous monitoring of patients' vital signs through connected medical devices such as heart monitors, glucose meters, and wearable health trackers. These devices can transmit real-time data to healthcare providers, allowing for immediate response to any irregularities. This capability is particularly crucial for patients with chronic conditions, as it helps in early detection of potential health issues and reduces the need for frequent hospital visits.",
-        imageSrc: MedicalMonitoring ,
+        imageSrc: MedicalMonitoring,
         imageAlt: "MedicalMonitoring 1",
         reverse: false,
         title: "Continuous Monitoring and Real-Time Data Transmission",
@@ -263,16 +295,16 @@ const IoTSolutionsData = {
       {
         description:
           "With IoT SIM cards, medical devices can function seamlessly in remote and home care settings. Remote patient management systems rely on these SIM cards to transmit data from patients' homes to healthcare facilities. This allows healthcare providers to monitor patients' health remotely, offer timely interventions, and reduce hospital admissions. For instance, elderly patients or those with mobility issues can receive quality care without the need to travel to a medical facility.",
-        imageSrc: FleetImage,
-        imageAlt: "MedicalMonitoring 1",
+        imageSrc: RemoteMedicalMonitoring,
+        imageAlt: "RemoteMedicalMonitoring",
         reverse: true,
         title: "Remote Patient Management",
       },
       {
         description:
           "Medical devices equipped with IoT SIM cards are not restricted by location, making them highly mobile. This is particularly beneficial for emergency medical services and mobile health units that need to operate in various locations. IoT SIM cards ensure these devices remain connected to the network, providing real-time data and communication capabilities essential for emergency medical care.",
-        imageSrc: FleetImage,
-        imageAlt: "MedicalMonitoring 1",
+        imageSrc: EnhancedMedicalMonitoring,
+        imageAlt: "EnhancedMedicalMonitoring",
         reverse: false,
         title: "Enhanced Device Mobility",
         btnBgColor: "#F3C500",
@@ -280,16 +312,16 @@ const IoTSolutionsData = {
       {
         description:
           "IoT SIM cards facilitate the accurate collection and transmission of medical data. Automated data collection reduces the chances of human error associated with manual data entry, ensuring that healthcare providers have access to precise and reliable information. This accuracy is vital for making informed medical decisions and developing effective treatment plans.",
-        imageSrc: FleetImage,
-        imageAlt: "MedicalMonitoring 1",
+        imageSrc: imporvedMedicalMonitoring,
+        imageAlt: "imporvedMedicalMonitoring",
         reverse: true,
         title: "Improved Data Accuracy and Collection",
       },
       {
         description:
           "IoT SIM cards offer scalability and flexibility in the deployment of connected medical devices. Healthcare facilities can easily scale their operations by adding new devices without extensive infrastructure modifications. This flexibility allows for the expansion of telemedicine services and the integration of new technologies as they emerge.",
-        imageSrc: FleetImage,
-        imageAlt: "MedicalMonitoring 1",
+        imageSrc: ScalableMedicalMonitoring,
+        imageAlt: "ScalableMedicalMonitoring",
         reverse: false,
         title: "Scalability and Flexibility",
         btnBgColor: "#F3C500",
@@ -297,16 +329,16 @@ const IoTSolutionsData = {
       {
         description:
           "Security is paramount in healthcare, where patient data privacy and regulatory compliance are critical. IoT SIM cards offer robust security features, including encryption and secure data transmission protocols, to protect sensitive medical information. This ensures compliance with healthcare regulations such as HIPAA (Health Insurance Portability and Accountability Act) and GDPR (General Data Protection Regulation).",
-        imageSrc: FleetImage,
-        imageAlt: "MedicalMonitoring 1",
+        imageSrc: SecurityMedicalMonitoring,
+        imageAlt: "SecurityMedicalMonitoring",
         reverse: true,
         title: "Enhanced Security and Compliance",
       },
       {
         description:
           "By enabling remote monitoring and reducing the need for in-person visits, IoT SIM cards can lead to significant cost savings for both healthcare providers and patients. Hospitals and clinics can optimize their resources, reduce operational costs, and focus on providing quality care.",
-        imageSrc: FleetImage,
-        imageAlt: "MedicalMonitoring 1",
+        imageSrc: ForCastMedicalMonitoring,
+        imageAlt: "ForCastMedicalMonitoring",
         reverse: false,
         title: "Cost Efficiency",
         btnBgColor: "#F3C500",
@@ -340,16 +372,16 @@ const IoTSolutionsData = {
       {
         description:
           "With IoT SIM cards, digital signage networks can be managed remotely, eliminating the need for on-site personnel to update or maintain the displays. This capability allows operators to update content, monitor performance, and troubleshoot issues from a central location. Remote management significantly reduces operational costs and ensures that the signage remains up-to-date and functional at all times.",
-        imageSrc: FleetImage,
-        imageAlt: "DigitalAdvertisingUpdates 2",
+        imageSrc: RemoteDigitalSignage,
+        imageAlt: "RemoteDigitalSignage",
         reverse: true,
         title: "Remote Management and Control",
       },
       {
         description:
           "The flexibility offered by IoT SIM cards enables digital signage to be deployed in various environments, from urban centers to remote locations, without relying on traditional wired internet connections. This adaptability is particularly beneficial for temporary installations, outdoor events, and locations where wired infrastructure is unavailable or impractical. Additionally, IoT SIM cards facilitate the easy scaling of digital signage networks, allowing businesses to expand their reach without extensive infrastructure changes.",
-        imageSrc: FleetImage,
-        imageAlt: "DigitalAdvertisingUpdates 2",
+        imageSrc: scalableDigitalSignage,
+        imageAlt: "scalableDigitalSignage",
         reverse: false,
         title: "Flexibility and Scalability",
         btnBgColor: "#F3C500",
@@ -357,16 +389,16 @@ const IoTSolutionsData = {
       {
         description:
           "IoT SIM cards incorporate advanced security features to protect data transmission and prevent unauthorized access to the digital signage network. Encryption and secure communication protocols ensure that content delivery is safeguarded against cyber threats, maintaining the integrity and confidentiality of the displayed information.",
-        imageSrc: FleetImage,
-        imageAlt: "DigitalAdvertisingUpdates 2",
+        imageSrc: EnhancedDigitalSignage,
+        imageAlt: "EnhancedDigitalSignage",
         reverse: true,
         title: "Enhanced Security",
       },
       {
         description:
           "By leveraging IoT SIM cards, businesses can achieve cost efficiency in their digital signage operations. The reduced need for physical updates and maintenance, coupled with the ability to manage multiple displays remotely, lowers overall operational costs. Additionally, the real-time data provided by IoT-enabled signage can offer valuable insights into audience engagement, helping businesses optimize their advertising strategies.",
-        imageSrc: FleetImage,
-        imageAlt: "DigitalAdvertisingUpdates 2",
+        imageSrc: CostDigitalSignage,
+        imageAlt: "CostDigitalSignage",
         reverse: false,
         title: "Cost Efficiency",
         btnBgColor: "#F3C500",
@@ -374,7 +406,7 @@ const IoTSolutionsData = {
     ],
   },
 
-   SmartHome: {
+  SmartHome: {
     banner: {
       titleFirst: "OneSimCard M2M",
       titleLast: " for IoT",
@@ -401,7 +433,7 @@ const IoTSolutionsData = {
     ],
   },
 
-   AgTech: {
+  AgTech: {
     banner: {
       titleFirst: "OneSimCard M2M",
       titleLast: " for IoT",
@@ -427,16 +459,16 @@ const IoTSolutionsData = {
       {
         description:
           "IoT SIM cards enable remote monitoring and control of agricultural equipment and systems. Farmers can manage irrigation systems, monitor livestock health, and track machinery from anywhere, reducing the need for constant on-site supervision. This remote capability is especially beneficial for large farms or those located in remote areas, as it saves time and labor while ensuring that operations continue smoothly.",
-        imageSrc: FleetImage,
-        imageAlt: "AgTech 2",
+        imageSrc: RemoteMonitoringAgTech,
+        imageAlt: "RemoteMonitoringAgTech",
         reverse: true,
         title: "Remote Monitoring and Control",
       },
       {
         description:
           "Efficient resource management is critical in agriculture, and IoT SIM cards play a key role in this aspect. By providing real-time data on weather conditions, soil quality, and crop status, these SIM cards help farmers optimize the use of water, fertilizers, and pesticides. This not only enhances crop productivity but also minimizes environmental impact and reduces operational costs.",
-        imageSrc: FleetImage,
-        imageAlt: "AgTech 2",
+        imageSrc: OptimizedResourceAgTech,
+        imageAlt: "OptimizedResourceAgTech",
         reverse: false,
         title: "Optimized Resource Management",
         btnBgColor: "#F3C500",
@@ -444,16 +476,16 @@ const IoTSolutionsData = {
       {
         description:
           "Incorporating IoT SIM cards in AgTech systems enhances the security and traceability of agricultural products. Farmers can track the location and condition of produce during transportation and storage, ensuring that quality is maintained from farm to market. This traceability is essential for food safety compliance and can boost consumer confidence in agricultural products.",
-        imageSrc: FleetImage,
-        imageAlt: "Wearables 2",
+        imageSrc: EnhancedSecurityAgTech,
+        imageAlt: "EnhancedSecurityAgTech",
         reverse: true,
         title: "Enhanced Security and Traceability",
       },
       {
         description:
           "IoT SIM cards offer scalability and flexibility, making it easy to expand and adapt AgTech solutions as needed. Farmers can add new devices or upgrade existing systems without extensive infrastructure changes, allowing for continuous improvement and adaptation to evolving agricultural practices and technologies.",
-        imageSrc: FleetImage,
-        imageAlt: "Wearables 2",
+        imageSrc: ScalabilityAgTech,
+        imageAlt: "ScalabilityAgTech ",
         reverse: false,
         title: "Scalability and Flexibility",
         btnBgColor: "#F3C500",
@@ -461,7 +493,7 @@ const IoTSolutionsData = {
     ],
   },
 
-   EVCharging: {
+  EVCharging: {
     banner: {
       titleFirst: "OneSimCard M2M",
       titleLast: " for IoT",
@@ -487,16 +519,16 @@ const IoTSolutionsData = {
       {
         description:
           "The integration of IoT SIM cards in EV charging stations enables remote monitoring and maintenance. Operators can track the performance of charging stations, diagnose issues, and perform software updates without the need for physical inspections. This remote capability ensures that any technical problems are quickly identified and resolved, minimizing downtime and maintaining a high level of service reliability.",
-        imageSrc: FleetImage,
-        imageAlt: "EVCharging 2",
+        imageSrc: RemoteMonitoringEVCharging,
+        imageAlt: "RemoteMonitoringEVCharging",
         reverse: true,
         title: "Remote Monitoring and Maintenance",
       },
       {
         description:
           "IoT SIM cards help in optimizing energy management within the EV charging network. By collecting and analyzing data on energy consumption, load patterns, and peak usage times, operators can implement demand response strategies and dynamic pricing models. This ensures efficient use of energy resources, reduces operational costs, and helps in balancing the grid load, especially during peak times.",
-        imageSrc: FleetImage,
-        imageAlt: "EVCharging 2",
+        imageSrc: OptimizedResourceEVCharging,
+        imageAlt: "OptimizedResourceEVCharging",
         reverse: false,
         title: "Optimized Energy Management",
         btnBgColor: "#F3C500",
@@ -504,30 +536,30 @@ const IoTSolutionsData = {
       {
         description:
           "Connectivity provided by IoT SIM cards enhances the user experience by enabling seamless communication between EV charging stations and drivers. Features such as remote reservation of charging slots, mobile payments, and notifications about charging status add convenience for EV owners. This connectivity also supports loyalty programs and personalized services, fostering greater user satisfaction and engagement.",
-        imageSrc: FleetImage,
-        imageAlt: "EVCharging 2",
+        imageSrc: EnhancedSecurityEVCharging,
+        imageAlt: "EnhancedSecurityEVCharging",
         reverse: true,
         title: "Enhanced User Experience",
       },
       {
         description:
           "IoT SIM cards offer robust security features, including encryption and secure data transmission protocols, which are crucial for protecting sensitive user information and payment data. This security ensures compliance with industry standards and builds trust among users, encouraging wider adoption of EVs and charging infrastructure.",
-        imageSrc: FleetImage,
-        imageAlt: "EVCharging 2",
+        imageSrc: SecurityAgEVCharging,
+        imageAlt: "SecurityAgEVCharging",
         reverse: false,
         title: "Security and Compliance",
         btnBgColor: "#F3C500",
       },
-        {
+      {
         description:
           "The scalability and flexibility of IoT SIM cards make it easy to expand and upgrade EV charging networks. As the demand for EV charging grows, new stations can be added seamlessly without extensive infrastructure changes. This adaptability supports the rapid expansion of charging networks to meet the increasing number of electric vehicles on the road.",
-        imageSrc: FleetImage,
-        imageAlt: "EVCharging 2",
+        imageSrc: ScalabilityEVCharging,
+        imageAlt: "ScalabilityEVCharging",
         reverse: true,
         title: "Scalability and Flexibility",
       },
     ],
-     extraContent: [
+    extraContent: [
       "In summary, IoT SIM cards are essential for the efficient operation and management of EV charging infrastructure. They enable real-time data transmission, remote monitoring, optimized energy management, enhanced user experience, robust security, and scalability, making them integral to the growth and success of the EV ecosystem.",
     ],
   },
