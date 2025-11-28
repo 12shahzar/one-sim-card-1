@@ -12,6 +12,7 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
   const handleToggle = (index) => {
     setOpenIndex(index === openIndex ? null : index);
   };
+  
 
   return (
     <section
@@ -82,22 +83,21 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
                       type="text"
                       placeholder="Search"
                       className="w-full bg-white rounded-full py-3 pl-12 pr-4 
-                         outline-none text-gray-700"
+                      outline-none text-gray-700"
                     />
                   </div>
 
                   {/* Yellow Button */}
                   <button
                     className="bg-yellow-400 hover:bg-yellow-500 
-                             px-10 py-3 rounded-full font-medium 
-                             whitespace-nowrap"
+                               px-10 py-3 rounded-full font-medium 
+                               whitespace-nowrap"
                   >
                     Search
                   </button>
                 </div>
               </div>
             )}
-
             {faqs[activeCategory]?.map((faq, index) => {
               const isOpen = openIndex === index;
               return (

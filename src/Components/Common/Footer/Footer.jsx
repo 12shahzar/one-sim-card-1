@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="flex items-center space-x-2 mb-6">
             <img
               src={logo}
-              className="h-14  md:h-12 lg:h-16 "
+              className="h-14  md:h-12 lg:h-16"
               alt="One-Sim-Card Logo"
             />
           </div>
@@ -36,10 +36,9 @@ const Footer = () => {
         {/* === Contact === */}
         <div>
           <h3 className="text-[#455E86] font-semibold mb-3 text-lg">Contact</h3>
-          <p className="text-sm mb-2">Contact Customer Support</p>
+          <Link to='/M2MSupportForm' className="text-sm mb-2">Contact Customer Support</Link>
           <div className="flex items-start mb-2 gap-2">
             <img src={location} alt="location" />
-
             <a
               href="https://www.google.com/maps/search/?api=1&query=PO+Box+4901,+Belmont,+MA+02478-0004,+USA"
               target="_blank"
@@ -54,12 +53,10 @@ const Footer = () => {
 
           <div className="flex items-start mb-2 gap-2">
             <img src={cell} alt="cell" />
-
             <div>
               <a href="tel:1-617-313-8888" className="text-sm mb-1 block">
                 1-617-313-8888
               </a>
-
               <a href="tel:1-800-640-2113" className="text-sm block">
                 1-800-640-2113
               </a>

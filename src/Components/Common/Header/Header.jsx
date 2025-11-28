@@ -138,7 +138,7 @@ function Header() {
                           Rates{" "}
                         </Link>
                       </li>
-                        <li>
+                      <li>
                         <Link
                           to="/Faq"
                           onClick={() => setDesktopMenuOpen(false)}

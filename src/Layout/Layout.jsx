@@ -16,7 +16,7 @@ const Layout = ({ children, banner }) => {
 
       {/* ✅ Page content */}
       <main className="">{children}</main>
-      <FaqSection  bgColor={banner.bgColor} searchBar={banner.searchBar} />
+      <FaqSection bgColor={banner.bgColor} searchBar={banner.searchBar} />
     </div>
   );
 };

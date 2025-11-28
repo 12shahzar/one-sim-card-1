@@ -298,7 +298,7 @@ function App() {
               </Layout>
             }
           />
-            <Route
+          <Route
             path="/BuyNow"
             element={
               <Layout
@@ -336,15 +336,15 @@ function App() {
               </Layout>
             }
           />
-            <Route
+          <Route
             path="/Faq"
             element={
               <Layout
                 banner={{
                   titleFirst: "OneSimCard M2M Que",
                   titleLast: "stions",
-                  bgColor:"#ffffff",
-                  searchBar:true,
+                  bgColor: "#ffffff",
+                  searchBar: true,
                   breadcrumb: [
                     {
                       label: "FAQs",
@@ -357,15 +357,14 @@ function App() {
               </Layout>
             }
           />
-              <Route
+          <Route
             path="/M2MSupportForm"
             element={
               <Layout
                 banner={{
                   titleFirst: "Contact Sup",
                   titleLast: "port",
-                  bgColor:"#ffffff",
-                  searchBar:true,
+                  bgColor: "#ffffff",
                   breadcrumb: [
                     {
                       label: "Contact Support",

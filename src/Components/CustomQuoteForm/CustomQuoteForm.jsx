@@ -12,7 +12,7 @@ export default function CustomQuoteForm() {
     phone: "",
     sims: "",
     dataUse: "",
-    comments: ""
+    comments: "",
   });
 
   const fields = [
@@ -29,7 +29,17 @@ export default function CustomQuoteForm() {
     e.preventDefault();
 
     // Check required fields
-    const requiredFields = ["company","firstName","lastName","email","countries","code","phone","sims","dataUse"];
+    const requiredFields = [
+      "company",
+      "firstName",
+      "lastName",
+      "email",
+      "countries",
+      "code",
+      "phone",
+      "sims",
+      "dataUse",
+    ];
     for (let field of requiredFields) {
       if (!form[field] || form[field].trim() === "") {
         alert(`Please fill the ${field} field`);
@@ -46,14 +56,16 @@ export default function CustomQuoteForm() {
       <form onSubmit={submit} className="flex flex-col gap-10">
         {/* 3 fields per row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {fields.map(f => (
+          {fields.map((f) => (
             <div key={f.name}>
-              <label className="block mb-2 text-sm text-slate-700">{f.label}</label>
+              <label className="block mb-2 text-sm text-slate-700">
+                {f.label}
+              </label>
               <input
                 required
                 placeholder={f.placeholder || ""}
                 value={form[f.name]}
-                onChange={e => setForm({...form, [f.name]: e.target.value})}
+                onChange={(e) => setForm({ ...form, [f.name]: e.target.value })}
                 className="w-full bg-[#F8F9FA] h-12 rounded-full px-5 outline-none"
               />
             </div>
@@ -63,21 +75,27 @@ export default function CustomQuoteForm() {
           <div className="md:col-span-2">
             <div className="grid grid-cols-2 gap-6">
               <div>
-                <label className="block mb-2 text-sm text-slate-700">Estimate number of SIM Cards</label>
+                <label className="block mb-2 text-sm text-slate-700">
+                  Estimate number of SIM Cards
+                </label>
                 <input
                   required
                   type="number"
                   value={form.sims}
-                  onChange={e => setForm({...form, sims: e.target.value})}
+                  onChange={(e) => setForm({ ...form, sims: e.target.value })}
                   className="w-full bg-[#F8F9FA] h-12 rounded-full px-5 outline-none"
                 />
               </div>
               <div>
-                <label className="block mb-2 text-sm text-slate-700">Average Data Use Per SIM Card, MB</label>
+                <label className="block mb-2 text-sm text-slate-700">
+                  Average Data Use Per SIM Card, MB
+                </label>
                 <select
                   required
                   value={form.dataUse}
-                  onChange={e => setForm({...form, dataUse: e.target.value})}
+                  onChange={(e) =>
+                    setForm({ ...form, dataUse: e.target.value })
+                  }
                   className="w-full bg-[#F8F9FA] h-12 rounded-full px-5 outline-none"
                 >
                   <option value="">Select data use</option>
@@ -97,14 +115,14 @@ export default function CustomQuoteForm() {
             rows={4}
             placeholder="Write here"
             value={form.comments}
-            onChange={e => setForm({...form, comments: e.target.value})}
+            onChange={(e) => setForm({ ...form, comments: e.target.value })}
             className="w-full bg-[#F8F9FA] **:rounded-2xl p-5 outline-none"
           />
         </div>
 
         {/* Submit Button */}
-       
-        <CustomButton onClick={()=>{}} text="Contact Me"/>
+
+        <CustomButton onClick={() => {}} text="Contact Me" />
       </form>
     </div>
   );
