@@ -30,7 +30,6 @@ function AboutUs() {
               className="object-contain w-full h-full"
             />
           </div>
-
           {/* TEXT SIDE */}
           <div
             data-aos="fade-left"
@@ -53,7 +52,7 @@ function AboutUs() {
           </div>
         </div>
       </section>
-      <Testimonial/>
+      <Testimonial />
     </div>
   );
 }

@@ -36,7 +36,7 @@ export default function M2MSupportForm() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-8 font-sans">
+    <div className="max-w-7xl mx-auto py-16 font-sora px-2 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-8 font-sora">
       {/* Left Sidebar */}
       <div className="bg-white rounded-4xl p-2 md:p-6 shadow-[0_8px_90px_rgba(0,0,0,0.04)] h-fit">
         <h2 className="text-base md:text-3xl font-medium text-slate-700 mb-4">
@@ -52,10 +52,12 @@ export default function M2MSupportForm() {
                 setSelectedCompany("");
               }}
               className={`cursor-pointer ${
-                selectedTopic === item.topic ? "text-[#455E86] font-semibold" : ""
+                selectedTopic === item.topic
+                  ? "text-[#455E86] font-semibold"
+                  : ""
               }`}
             >
-              • {item.topic}
+              - {item.topic}
             </li>
           ))}
         </ul>
@@ -67,7 +69,9 @@ export default function M2MSupportForm() {
           <h2 className="text-sm text-slate-700 mb-3">Company</h2>
 
           {!selectedTopic ? (
-            <p className="text-gray-500 text-sm">Please select a topic first.</p>
+            <p className="text-gray-500 text-sm">
+              Please select a topic first.
+            </p>
           ) : (
             <select
               className="w-full bg-[#F8F9FA] h-12 rounded-full px-5 outline-none"
