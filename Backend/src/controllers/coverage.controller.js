@@ -25,7 +25,9 @@ exports.getOperatorsByCountry = async (req, res) => {
     const country = req.query.country;
 
     if (!country) {
-      return res.status(400).json({ message: "Country query parameter is required" });
+      return res
+        .status(400)
+        .json({ message: "Country query parameter is required" });
     }
 
     const data = await coverageService.getOperatorsByCountry(country);
@@ -33,7 +35,6 @@ exports.getOperatorsByCountry = async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(500).send("Error fetching operators");
-  }
+  } 
 };
-
 

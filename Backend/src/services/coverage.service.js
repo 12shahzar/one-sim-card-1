@@ -11,9 +11,9 @@ exports.getCountries = async () => {
     FROM coverage
     ORDER BY countryName 
   `);
-  
-   // Map to array of names
-  const countries = rows.map(row => row.countryName);
+
+  // Map to array of names
+  const countries = rows.map((row) => row.countryName);
   return countries;
 };
 
@@ -28,4 +28,3 @@ exports.getOperatorsByCountry = async (countryName) => {
 
   return rows; // array of objects
 };
-
