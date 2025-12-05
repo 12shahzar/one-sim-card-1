@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CustomButton from "../Components/CustomButton/CustomButton";
-import supportData from "../data/supportData"; // IMPORT JSON FILE
+import supportData from "../data/supportData"; 
 
 export default function M2MSupportForm() {
   const [selectedTopic, setSelectedTopic] = useState("");
