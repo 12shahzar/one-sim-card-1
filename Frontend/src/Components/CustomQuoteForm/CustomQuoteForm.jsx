@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import CustomButton from "../CustomButton/CustomButton";
+import axios from "axios";
+
 
 export default function CustomQuoteForm() {
   const [form, setForm] = useState({
@@ -25,31 +27,57 @@ export default function CustomQuoteForm() {
     { name: "phone", label: "Phone Number" },
   ];
 
-  const submit = (e) => {
-    e.preventDefault();
+  const submit = async (e) => {
+  e.preventDefault();
 
-    // Check required fields
-    const requiredFields = [
-      "company",
-      "firstName",
-      "lastName",
-      "email",
-      "countries",
-      "code",
-      "phone",
-      "sims",
-      "dataUse",
-    ];
-    for (let field of requiredFields) {
-      if (!form[field] || form[field].trim() === "") {
-        alert(`Please fill the ${field} field`);
-        return;
-      }
+  // Required fields
+  const requiredFields = [
+    "company",
+    "firstName",
+    "lastName",
+    "email",
+    "countries",
+    "code",
+    "phone",
+    "sims",
+    "dataUse",
+  ];
+
+  for (let field of requiredFields) {
+    if (!form[field] || form[field].trim() === "") {
+      alert(`Please fill the ${field} field`);
+      return;
     }
+  }
 
-    console.log(form);
-    alert("Form submitted! Check console for data.");
+  // Build payload same as your Node.js axios example
+  const payload = {
+    company: form.company,
+    firstName: form.firstName,
+    lastName: form.lastName,
+    email: form.email,
+    countries: form.countries,
+    code: form.code,
+    phone: form.phone,
+    sims: Number(form.sims),
+    dataUse: form.dataUse,
+    comments: form.comments || "",
   };
+
+  try {
+    const response = await axios.post(
+      "http://localhost:5000/api/quote/submit",
+      payload,
+      { headers: { "Content-Type": "application/json" } }
+    );
+
+    console.log("Response:", response.data);
+    alert("Form submitted successfully!");
+  } catch (error) {
+    console.error("Submit Error:", error);
+    alert("Failed to submit. Check console for error.");
+  }
+};
 
   return (
     <div className="py-5">

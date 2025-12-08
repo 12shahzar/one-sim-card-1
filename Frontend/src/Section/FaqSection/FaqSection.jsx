@@ -51,7 +51,7 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
         {/* FAQ Layout */}
         <div className="mt-12 flex flex-col md:flex-row gap-10">
           {/* Sidebar */}
-          <div className="md:w-1/3 w-full flex justify-center md:justify-start">
+          <div className="md:w-1/3 w-full flex justify-center md:justify-start h-fit">
             <div className="w-full max-w-xs sm:max-w-sm bg-white rounded-4xl p-2 md:p-8 shadow-[0_8px_90px_rgba(0,0,0,0.04)]">
               {categories.map((cat) => (
                 <button
@@ -138,16 +138,16 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
                       className={`text-base sm:text-lg md:text-xl font-medium ${
                         isOpen ? "text-[#455E86] " : "text-[#08080C]"
                       }`}
-                    >
-                      {faq.question}
-                    </span>
+                      dangerouslySetInnerHTML={{ __html: faq.question }}
+                    ></span>
                   </button>
 
                   {/* Answer Text */}
                   {isOpen && (
-                    <div className="px-12 pb-5 text-[#6B7280] text-lg sm:text-base md:text-lg font-regular">
-                      {faq.answer}
-                    </div>
+                    <div
+                      className="px-12 pb-5 text-[#6B7280] text-lg sm:text-base md:text-lg font-regular"
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    />
                   )}
                 </div>
               );

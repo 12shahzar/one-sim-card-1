@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import axios from "axios";
 import CustomButton from "../CustomButton/CustomButton";
+import SectionHeading from "../Heading/SectionHeading";
 
 function BuyNowForm() {
   const [form, setForm] = useState({
@@ -9,8 +11,6 @@ function BuyNowForm() {
     company: "",
     federalId: "",
     hearAboutUs: "",
-    
-    // Contact Person
     firstName: "",
     lastName: "",
     email: "",
@@ -19,16 +19,12 @@ function BuyNowForm() {
     rePassword: "",
     phone1: "",
     phone2: "",
-    
-    // Delivery Address (NOT REQUIRED)
     address1: "",
     address2: "",
     city: "",
     state: "",
     zip: "",
     country: "",
-    
-    // Signature
     agreeTerms: false,
     signedBy: "",
     title: "",
@@ -51,11 +47,12 @@ function BuyNowForm() {
     "phone1",
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Check required fields
     for (let field of requiredFields) {
-      if (!form[field] || form[field].trim() === "") {
+      if (!form[field] || form[field].toString().trim() === "") {
         alert(`Please fill the ${field} field`);
         return;
       }
@@ -66,8 +63,22 @@ function BuyNowForm() {
       return;
     }
 
-    console.log("Form Submitted: ", form);
-    alert("Form submitted!");
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/buynow/submit",
+        form,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log("Response:", response.data);
+      alert("Form submitted successfully!");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Error submitting form. Please try again.");
+    }
   };
 
   const inputBox = (label, name, type = "text", required = true, placeholder = "") => (
@@ -86,6 +97,7 @@ function BuyNowForm() {
 
   return (
     <div className="py-6 font-sora">
+      <SectionHeading title="Register New Corporate Account" align="left" />
       <form onSubmit={handleSubmit} className="flex flex-col gap-12">
 
         {/* MZM SECTION */}
