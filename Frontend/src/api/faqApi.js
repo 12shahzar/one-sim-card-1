@@ -1,0 +1,23 @@
+import axios from "axios";
+
+const BASE = "http://localhost:5000/api/faq";
+
+// Get all FAQ Groups
+export const getFaqGroups = async () => {
+  const res = await axios.get(`${BASE}/groups`);
+  console.log("result data group fetch", res.data);
+  return res.data; // return the array directly
+};
+
+
+// Get FAQ by group id
+export const getFaqsByGroup = async (groupId) => {
+  const res = await axios.get(`${BASE}/by-group/${groupId}`);
+  return res.data.faqs; // [{question, answer}]
+};
+
+// Search FAQ
+export const searchFaq = async (query) => {
+  const res = await axios.get(`${BASE}/search`, { params: { query } });
+  return res.data.results;
+};

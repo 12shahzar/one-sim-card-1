@@ -1,18 +1,37 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronRight, Search } from "lucide-react";
 import SectionHeading from "../../Components/Heading/SectionHeading";
 import faqData from "../../data/Faq.json";
+import { getFaqGroups, getFaqsByGroup, searchFaq } from "../../api/faqApi";
 
-const { categories, faqs } = faqData;
+const { faqs } = faqData;
 
 export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
   const [activeCategory, setActiveCategory] = useState("General Service");
   const [openIndex, setOpenIndex] = useState(0); // first question open by default
+  const [categories, setCategories] = useState([]);
 
   const handleToggle = (index) => {
     setOpenIndex(index === openIndex ? null : index);
   };
-  
+
+  useEffect(() => {
+    loadGroups();
+  }, []);
+
+  const loadGroups = async () => {
+    try {
+      const data = await getFaqGroups();
+      setCategories(data);
+
+      if (data.length > 0) {
+        setActiveGroupId(data[0].idgroup);
+        loadFaqList(data[0].idgroup);
+      }
+    } catch (err) {
+      console.error("Failed to load groups:", err);
+    }
+  };
 
   return (
     <section
@@ -36,23 +55,23 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
             <div className="w-full max-w-xs sm:max-w-sm bg-white rounded-4xl p-2 md:p-8 shadow-[0_8px_90px_rgba(0,0,0,0.04)]">
               {categories.map((cat) => (
                 <button
-                  key={cat}
+                  key={cat.idgroup}
                   onClick={() => {
-                    setActiveCategory(cat);
+                    setActiveCategory(cat.groupname);
                     setOpenIndex(0); // always open first question when switching category
                   }}
-                  className={`flex items-center w-full py-3 px-4 rounded-lg transition-all text-lg sm:text-2xl font-medium cursor-pointer
+                  className={`flex text-left w-full py-3 px-4 rounded-lg transition-all text-lg sm:text-2xl font-medium cursor-pointer
                        ${
-                         activeCategory === cat
+                         activeCategory === cat.groupname
                            ? "text-[#455E86] "
                            : "text-[#08080C] "
                        }
                   `}
                 >
-                  {activeCategory === cat && (
+                  {activeCategory === cat.idgroup && (
                     <ChevronRight className="mr-2 h-5 w-5 text-[#455E86]" />
                   )}
-                  {cat}
+                  {cat.groupname}
                 </button>
               ))}
             </div>

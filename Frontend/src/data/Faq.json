@@ -1,13 +1,35 @@
 {
   "categories": [
-    "General Service",
-    "Rates And Cost",
-    "Ordering",
-    "Terminology",
-    "OSCAR IoT SIM MP",
-    "OneSim IoT App",
-    "IoT Track SIM"
+      {
+    "idgroup": 9,
+    "groupname": "General Service"
+  },
+  {
+    "idgroup": 20,
+    "groupname": "IoT Track SIM"
+  },
+  {
+    "idgroup": 15,
+    "groupname": "OneSim IoT App"
+  },
+  {
+    "idgroup": 11,
+    "groupname": "Ordering"
+  },
+  {
+    "idgroup": 13,
+    "groupname": "OSCAR IoT SIM Management Platform "
+  },
+  {
+    "idgroup": 10,
+    "groupname": "Rates and Cost"
+  },
+  {
+    "idgroup": 12,
+    "groupname": "Terminology"
+  }
   ],
+  
   "faqs": {
     "General Service": [
       {
