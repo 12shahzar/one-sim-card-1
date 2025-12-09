@@ -1,57 +1,98 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import mapData from "../../data/mapData.json";
+import axios from "axios";
 
 const CoverageSection = () => {
   const [selectedCountry, setSelectedCountry] = useState("Canada");
+  const [countries, setCountries] = useState([]);
+  const [operators, setOperators] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const handleCountryClick = (country) => {
     console.log(country);
     setSelectedCountry(country.name || country.id);
   };
 
-  const countries = ["Canada", "USA", "UK"];
+  // 🔥 Fetch countries from API
+  useEffect(() => {
+    const fetchCountries = async () => {
+      try {
+        const res = await axios.get(
+          "http://localhost:5000/api/coverage/countries"
+        );
+        setCountries(res.data);
 
-  const generalCoverageData = [
-    { carrier: "Generic Carrier 1", code: "000000", speed: "4G/5G" },
-    { carrier: "Generic Carrier 2", code: "111111", speed: "4G/5G" },
-    { carrier: "Generic Carrier 3", code: "222222", speed: "4G/5G" },
-  ];
+        console.log("Fetched countries:", res.data);
 
-  const coverageData = {
-    Canada: [
-      { carrier: "Bell Mobility Canada", code: "302610", speed: "5G" },
-      {
-        carrier: "Rogers Communications Canada Inc",
-        code: "302720, 302370",
-        speed: "5G",
-      },
-      { carrier: "Telus Communication Inc.", code: "302220", speed: "5G" },
-    ],
-    USA: [
-      { carrier: "AT&T", code: "310410", speed: "5G" },
-      { carrier: "T-Mobile", code: "310260", speed: "5G" },
-      { carrier: "Verizon", code: "311480", speed: "5G" },
-    ],
-    UK: [
-      { carrier: "Vodafone UK", code: "23415", speed: "5G" },
-      { carrier: "O2 UK", code: "23410", speed: "5G" },
-      { carrier: "EE", code: "23430", speed: "5G" },
-    ],
-  };
+        // Default selected
+        if (res.data.length > 0) {
+          setSelectedCountry(res.data[0].name);
+        }
+      } catch (error) {
+        console.error("Error fetching countries:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCountries();
+  }, []);
+
+  useEffect(() => {
+    if (!selectedCountry) return;
+
+    const fetchOperators = async () => {
+      try {
+        const res = await axios.get(
+          `http://localhost:5000/api/coverage/operators?country=${selectedCountry}`
+        );
+
+        setOperators(res.data);
+        console.log("Operators:", res.data);
+      } catch (error) {
+        console.error("Error fetching operators:", error);
+      }
+    };
+
+    fetchOperators();
+  }, [selectedCountry]);
+
+  // const coverageData = {
+  //   Canada: [
+  //     { carrier: "Bell Mobility Canada", code: "302610", speed: "5G" },
+  //     {
+  //       carrier: "Rogers Communications Canada Inc",
+  //       code: "302720, 302370",
+  //       speed: "5G",
+  //     },
+  //     { carrier: "Telus Communication Inc.", code: "302220", speed: "5G" },
+  //   ],
+  //   USA: [
+  //     { carrier: "AT&T", code: "310410", speed: "5G" },
+  //     { carrier: "T-Mobile", code: "310260", speed: "5G" },
+  //     { carrier: "Verizon", code: "311480", speed: "5G" },
+  //   ],
+  //   UK: [
+  //     { carrier: "Vodafone UK", code: "23415", speed: "5G" },
+  //     { carrier: "O2 UK", code: "23410", speed: "5G" },
+  //     { carrier: "EE", code: "23430", speed: "5G" },
+  //   ],
+  // };
 
   return (
-    <section
-       className="
-    w-[calc(100vw-4rem)]  /* 3rem = m-6 * 2 (left + right) */
-    min-h-[calc(80vh-3rem)] /* same for top + bottom */
+<section
+  className="
+    w-[calc(100vw-1rem)]
+    md:w-[calc(100vw-4rem)]
+    sm:w-[calc(100vw-4rem)]
+    min-h-[calc(100vh-3rem)]
     flex flex-col items-center justify-center
-    overflow-hidden
-     rounded-4xl
+    overflow-hidden rounded-4xl
   "
-      style={{
-        background: "linear-gradient(to bottom, #FFFFFF 70%, #455E86 30%)",
-      }}
-    >
+  style={{
+    background: "linear-gradient(to bottom, #FFFFFF 70%, #455E86 30%)",
+  }}
+>
       {/* World Map */}
       <div className="w-full max-w-7xl mb-6 sm:mb-10">
         <svg
@@ -73,7 +114,7 @@ const CoverageSection = () => {
               .red:hover { fill: #adb5bd; }
             `}
           </style>
-          {mapData.map((country, index) => (
+          {mapData?.map((country, index) => (
             <path
               key={index}
               d={country["d"]}
@@ -94,8 +135,28 @@ const CoverageSection = () => {
             Use the tool below to discover the countries and networks
             <br className="hidden sm:block" /> on which we operate.
           </p>
-
-       <div className="relative"> <select value={selectedCountry} onChange={(e) => setSelectedCountry(e.target.value)} className="appearance-none border border-[#D2D2D2] rounded-full min-w-3xs px-4 py-2 text-[#455E86] text-lg font-medium focus:outline-none focus:ring-2 focus:ring-[#F4C600] cursor-pointer" > {/* Dynamically merge countries + selected one if missing */} {[...new Set([...countries, selectedCountry])].map((country) => ( <option key={country} value={country}> {country} </option> ))} </select> <span className="absolute right-4 top-2.5 text-[#455E86] pointer-events-none"> ▼ </span> </div> </div>
+          <div className="relative">
+            {" "}
+            <select
+              value={selectedCountry}
+              onChange={(e) => setSelectedCountry(e.target.value)}
+              className="appearance-none border border-[#D2D2D2] rounded-full min-w-3xs px-4 py-2 text-[#455E86] text-lg font-medium focus:outline-none focus:ring-2 focus:ring-[#F4C600] cursor-pointer"
+            >
+              {" "}
+              {/* Dynamically merge countries + selected one if missing */}{" "}
+              {[...new Set([...countries, selectedCountry])]?.map((country) => (
+                <option key={country} value={country}>
+                  {" "}
+                  {country}{" "}
+                </option>
+              ))}{" "}
+            </select>{" "}
+            <span className="absolute right-4 top-2.5 text-[#455E86] pointer-events-none">
+              {" "}
+              ▼{" "}
+            </span>{" "}
+          </div>{" "}
+        </div>
 
         {/* Responsive Table */}
         <div className="mt-6 sm:mt-8 overflow-x-auto">
@@ -114,24 +175,22 @@ const CoverageSection = () => {
               </tr>
             </thead>
             <tbody>
-              {(coverageData[selectedCountry] || generalCoverageData).map(
-                (item, index) => (
-                  <tr
-                    key={index}
-                    className="border-b border-[#D2D2D2] text-[#6B7280]"
-                  >
-                    <td className="py-3 sm:py-4 md:py-6 px-2 sm:px-3 md:px-4">
-                      {item.carrier}
-                    </td>
-                    <td className="py-3 sm:py-4 md:py-6 px-2 sm:px-3 md:px-4">
-                      {item.code}
-                    </td>
-                    <td className="py-3 sm:py-4 md:py-6 px-2 sm:px-3 md:px-4">
-                      {item.speed}
-                    </td>
-                  </tr>
-                )
-              )}
+              {operators?.map((item, index) => (
+                <tr
+                  key={index}
+                  className="border-b border-[#D2D2D2] text-[#6B7280]"
+                >
+                  <td className="py-3 sm:py-4 md:py-6 px-2 sm:px-3 md:px-4">
+                    {item.operatorName}
+                  </td>
+                  <td className="py-3 sm:py-4 md:py-6 px-2 sm:px-3 md:px-4">
+                    {item.mccMnc}
+                  </td>
+                  <td className="py-3 sm:py-4 md:py-6 px-2 sm:px-3 md:px-4">
+                    {item.supportedNetworkTypes}
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

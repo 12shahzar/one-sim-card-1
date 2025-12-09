@@ -5,6 +5,8 @@ import SectionContent from "./SectionContent";
 import DataTable from "./DataTable";
 import Sidebar from "./Sidebar";
 import Details from "./Details";
+import axios from "axios";
+
 
 export default function PartnersSection() {
   
@@ -19,6 +21,8 @@ export default function PartnersSection() {
   const [activeId, setActiveId] = useState(sections[0]?.items?.[0]?.id);
   const [activeItem, setActiveItem] = useState(sections[0]?.items?.[0]);
   const [expandedTables, setExpandedTables] = useState({});
+  const [apiData, setApiData] = useState(null);
+
   const [openSections, setOpenSections] = useState({
     [sections[0]?.header]: true,
   });
@@ -80,6 +84,21 @@ export default function PartnersSection() {
     }
   };
 
+  useEffect(() => {
+    if (!activeItem?.api_url) return;
+
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(activeItem.api_url);
+        setApiData(res.data);
+      } catch (error) {
+        console.error("Axios Error:", error);
+      }
+    };
+
+    fetchData();
+  }, [activeItem]);
+
   return (
     <section className="container mx-auto py-16 px-2 md:px-6 font-sora">
       <div className="flex flex-col lg:flex-row gap-8">
@@ -117,6 +136,10 @@ export default function PartnersSection() {
               />
 
               <Details details={activeItem.details} intro={activeItem.intro} />
+<div
+  dangerouslySetInnerHTML={{ __html: apiData?.data?.content }}
+/>
+              {/* {apiData && <pre></pre>} */}
 
               <DataTable
                 tables={activeItem.tables}

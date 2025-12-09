@@ -418,6 +418,19 @@
               ]
             }
           ]
+        },
+        {
+          "id": "GlossaryofTermsforIoTSIMCards&IoTDevices",
+          "label": "Glossary of Terms for IoT SIM Cards & IoT Devices",
+          "intro": "",
+          "api_url": "http://localhost:5000/api/content/448",
+
+          "details": [
+            {
+              "heading": "Glossary of Terms for IoT SIM Cards & IoT Devices",
+              "contact": false
+            }
+          ]
         }
       ]
     },

@@ -20,5 +20,9 @@ app.use("/api/buynow", buyNowRoutes);
 const m2mSupportRoutes = require("./routes/m2mSupport.routes");
 app.use("/api/m2m-support", m2mSupportRoutes);
 
+const contentRoutes = require("./routes/content.routes");
+app.use("/api/content", contentRoutes);
+
+
 
 module.exports = app;
