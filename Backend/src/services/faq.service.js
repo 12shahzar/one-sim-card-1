@@ -42,3 +42,4 @@ exports.searchFaq = async (query) => {
 
   return rows;
 };
+

@@ -7,9 +7,14 @@ import { getFaqGroups, getFaqsByGroup, searchFaq } from "../../api/faqApi";
 const { faqs } = faqData;
 
 export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
+
   const [activeCategory, setActiveCategory] = useState("General Service");
   const [openIndex, setOpenIndex] = useState(0); // first question open by default
   const [categories, setCategories] = useState([]);
+  const [activeGroupId, setActiveGroupId] = useState(null);
+  const [faqList, setFaqList] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+
 
   const handleToggle = (index) => {
     setOpenIndex(index === openIndex ? null : index);
@@ -25,13 +30,38 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
       setCategories(data);
 
       if (data.length > 0) {
-        setActiveGroupId(data[0].idgroup);
-        loadFaqList(data[0].idgroup);
+        const firstGroupId = data[0].idgroup;
+        setActiveGroupId(firstGroupId);
+        setActiveCategory(data[0].groupname);
+        loadFaqList(firstGroupId);
       }
     } catch (err) {
       console.error("Failed to load groups:", err);
     }
   };
+
+  const loadFaqList = async (groupId) => {
+    try {
+      const data = await getFaqsByGroup(groupId);
+      console.log("FAQ list:", data);
+      setFaqList(data); // <-- data is array based on your API
+      setOpenIndex(0); // open first question after switching group
+    } catch (err) {
+      console.error("Failed to load FAQs:", err);
+    }
+  };
+
+  const handleSearch = async () => {
+  if (!searchQuery.trim()) return;
+
+  try {
+    const results = await searchFaq(searchQuery.trim());
+    setFaqList(results); // show search results
+    setOpenIndex(0);     // open first question by default
+  } catch (err) {
+    console.error("Search failed:", err);
+  }
+};
 
   return (
     <section
@@ -58,17 +88,14 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
                   key={cat.idgroup}
                   onClick={() => {
                     setActiveCategory(cat.groupname);
-                    setOpenIndex(0); // always open first question when switching category
+                    setActiveGroupId(cat.idgroup);
+                    loadFaqList(cat.idgroup);
                   }}
                   className={`flex text-left w-full py-3 px-4 rounded-lg transition-all text-lg sm:text-2xl font-medium cursor-pointer
-                       ${
-                         activeCategory === cat.groupname
-                           ? "text-[#455E86] "
-                           : "text-[#08080C] "
-                       }
-                  `}
+    ${activeGroupId === cat.idgroup ? "text-[#455E86]" : "text-[#08080C]"}
+  `}
                 >
-                  {activeCategory === cat.idgroup && (
+                  {activeGroupId === cat.idgroup && (
                     <ChevronRight className="mr-2 h-5 w-5 text-[#455E86]" />
                   )}
                   {cat.groupname}
@@ -103,6 +130,8 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
                       placeholder="Search"
                       className="w-full bg-white rounded-full py-3 pl-12 pr-4 
                       outline-none text-gray-700"
+                        value={searchQuery}
+  onChange={(e) => setSearchQuery(e.target.value)}
                     />
                   </div>
 
@@ -111,38 +140,36 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
                     className="bg-yellow-400 hover:bg-yellow-500 
                                px-10 py-3 rounded-full font-medium 
                                whitespace-nowrap"
+                                 onClick={handleSearch}
+
                   >
                     Search
                   </button>
                 </div>
               </div>
             )}
-            {faqs[activeCategory]?.map((faq, index) => {
+            {faqList?.map((faq, index) => {
               const isOpen = openIndex === index;
+
               return (
                 <div key={index} className="transition-all">
                   <button
                     onClick={() => handleToggle(index)}
                     className="w-full flex items-center gap-3 px-0 md:px-5 py-3 text-left"
                   >
-                    {/* Toggle Icon (Left) */}
                     <ChevronRight
-                      className={`h-7 w-7 rounded-full flex-shrink-0 transition-transform text-white cursor-pointer ${
-                        isOpen
-                          ? "rotate-90 bg-[#F4C600] p-1"
-                          : "bg-[#455E86] p-1"
-                      }`}
+                      className={`h-7 w-7 rounded-full flex-shrink-0 transition-transform text-white cursor-pointer 
+            ${isOpen ? "rotate-90 bg-[#F4C600] p-1" : "bg-[#455E86] p-1"}`}
                     />
-                    {/* Question Text */}
+
                     <span
                       className={`text-base sm:text-lg md:text-xl font-medium ${
-                        isOpen ? "text-[#455E86] " : "text-[#08080C]"
+                        isOpen ? "text-[#455E86]" : "text-[#08080C]"
                       }`}
                       dangerouslySetInnerHTML={{ __html: faq.question }}
-                    ></span>
+                    />
                   </button>
 
-                  {/* Answer Text */}
                   {isOpen && (
                     <div
                       className="px-12 pb-5 text-[#6B7280] text-lg sm:text-base md:text-lg font-regular"

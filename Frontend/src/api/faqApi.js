@@ -13,11 +13,12 @@ export const getFaqGroups = async () => {
 // Get FAQ by group id
 export const getFaqsByGroup = async (groupId) => {
   const res = await axios.get(`${BASE}/by-group/${groupId}`);
-  return res.data.faqs; // [{question, answer}]
+  return res.data; // [{question, answer}]
 };
 
 // Search FAQ
 export const searchFaq = async (query) => {
-  const res = await axios.get(`${BASE}/search`, { params: { query } });
-  return res.data.results;
+  const res = await axios.get(`${BASE}/search`, { params: { q: query } });
+  return res.data; // your backend already returns an array
 };
+

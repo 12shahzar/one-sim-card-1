@@ -57,31 +57,9 @@ const CoverageSection = () => {
     fetchOperators();
   }, [selectedCountry]);
 
-  // const coverageData = {
-  //   Canada: [
-  //     { carrier: "Bell Mobility Canada", code: "302610", speed: "5G" },
-  //     {
-  //       carrier: "Rogers Communications Canada Inc",
-  //       code: "302720, 302370",
-  //       speed: "5G",
-  //     },
-  //     { carrier: "Telus Communication Inc.", code: "302220", speed: "5G" },
-  //   ],
-  //   USA: [
-  //     { carrier: "AT&T", code: "310410", speed: "5G" },
-  //     { carrier: "T-Mobile", code: "310260", speed: "5G" },
-  //     { carrier: "Verizon", code: "311480", speed: "5G" },
-  //   ],
-  //   UK: [
-  //     { carrier: "Vodafone UK", code: "23415", speed: "5G" },
-  //     { carrier: "O2 UK", code: "23410", speed: "5G" },
-  //     { carrier: "EE", code: "23430", speed: "5G" },
-  //   ],
-  // };
-
   return (
-<section
-  className="
+    <section
+      className="
     w-[calc(100vw-1rem)]
     md:w-[calc(100vw-4rem)]
     sm:w-[calc(100vw-4rem)]
@@ -89,10 +67,10 @@ const CoverageSection = () => {
     flex flex-col items-center justify-center
     overflow-hidden rounded-4xl
   "
-  style={{
-    background: "linear-gradient(to bottom, #FFFFFF 70%, #455E86 30%)",
-  }}
->
+      style={{
+        background: "linear-gradient(to bottom, #FFFFFF 70%, #455E86 30%)",
+      }}
+    >
       {/* World Map */}
       <div className="w-full max-w-7xl mb-6 sm:mb-10">
         <svg

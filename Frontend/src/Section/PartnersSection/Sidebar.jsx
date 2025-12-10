@@ -42,7 +42,7 @@ export default function Sidebar({
                     <li key={item.id}>
                       <button
                         onClick={() => onSelectItem(section.header, item.id)}
-                        className={`w-full text-left px-3 py-1 text-base transition-colors flex items-center gap-2 ${
+                        className={`w-full text-left px-3 py-1 text-base transition-colors flex items-center gap-2 cursor-pointer ${
                           activeId === item.id &&
                           activeSection === section.header
                             ? "text-[#455E86]"

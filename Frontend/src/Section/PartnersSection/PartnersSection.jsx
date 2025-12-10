@@ -7,9 +7,7 @@ import Sidebar from "./Sidebar";
 import Details from "./Details";
 import axios from "axios";
 
-
 export default function PartnersSection() {
-  
   const location = useLocation();
   const navigate = useNavigate(); // Added navigate
   const queryParams = new URLSearchParams(location.search);
@@ -115,34 +113,53 @@ export default function PartnersSection() {
           {activeItem ? (
             <>
               <h2 className="text-2xl md:text-5xl font-thin text-[#08080C] mb-4">
-                {activeSection === "Technology" ? "" : activeItem.label}
+                {activeSection === "Technology" ? "" : activeItem?.label}
               </h2>
 
-              {activeItem.image && (
+              {activeItem?.image && (
                 <img
-                  src={activeItem.image}
+                  src={activeItem?.image}
                   alt={activeItem.label}
                   className="w-48 mb-8"
                 />
               )}
-              {activeItem.intro && (
-                <p className="text-[#6B7280] mb-8">{activeItem.intro}</p>
+              {activeItem?.intro && (
+                <p className="text-[#6B7280] mb-8">{activeItem?.intro}</p>
               )}
 
               <SectionContent
-                sections={activeItem.section}
-                intro={activeItem.intro}
+                sections={activeItem?.section}
+                intro={activeItem?.intro}
                 onLearnMore={handleLearnMore}
               />
 
-              <Details details={activeItem.details} intro={activeItem.intro} />
-<div
-  dangerouslySetInnerHTML={{ __html: apiData?.data?.content }}
-/>
-              {/* {apiData && <pre></pre>} */}
+              <Details
+                details={activeItem?.details}
+                intro={activeItem?.intro}
+              />
+              <div className="flex flex-row items-start">
+                {activeItem?.moreImage?.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={item.image}
+                      alt={`${activeItem?.label} ${index + 1}`}
+                      className="w-48"
+                    />
+                  </a>
+                ))}
+              </div>
+
+              <div
+                dangerouslySetInnerHTML={{ __html: apiData?.data?.content }}
+              />
 
               <DataTable
-                tables={activeItem.tables}
+                tables={activeItem?.tables}
                 expandedTables={expandedTables}
                 onToggleTable={toggleTable}
               />
