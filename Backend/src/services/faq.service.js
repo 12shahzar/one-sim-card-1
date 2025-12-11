@@ -26,6 +26,7 @@ exports.getFaqsByGroup = async (groupId) => {
   return rows;
 };
 
+// Endpoint 3: search FAQs
 exports.searchFaq = async (query) => {
   const search = `%${query}%`;
 
@@ -34,7 +35,7 @@ exports.searchFaq = async (query) => {
     SELECT idfaq, question, answer
     FROM faq
     WHERE question LIKE ? 
-       OR answer LIKE ?
+    OR answer LIKE ?
     ORDER BY idfaq ASC
     `,
     [search, search]
@@ -42,4 +43,3 @@ exports.searchFaq = async (query) => {
 
   return rows;
 };
-
