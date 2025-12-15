@@ -23,6 +23,7 @@ app.use("/api/m2m-support", m2mSupportRoutes);
 const contentRoutes = require("./routes/content.routes");
 app.use("/api/content", contentRoutes);
 
-
+const packageGroupRoutes = require("./routes/packageGroup.routes");
+app.use("/api/package-group", packageGroupRoutes);
 
 module.exports = app;
