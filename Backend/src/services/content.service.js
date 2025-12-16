@@ -6,5 +6,5 @@ exports.getContentById = async (id) => {
     [id]
   );
 
-  return rows[0]; // return single record
+  return rows[0]; 
 };
