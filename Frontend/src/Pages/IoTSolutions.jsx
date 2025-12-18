@@ -93,7 +93,7 @@ function IoTSolutions() {
       <FeatureSection
         title="Coverage"
         subtitle="Global"
-        description="OneSimCard IoT offers extensive global coverage in over 200 countries and territories, with over 400 networks, ensuring that devices can stay connected no matter where they are located. This is particularly beneficial for smart solutions that rely on consistent connectivity across various regions and devices."
+        description="OneSimCard IoT offers extensive global coverage in over 400 countries and territories, with over 400 networks, ensuring that devices can stay connected no matter where they are located. This is particularly beneficial for smart solutions that rely on consistent connectivity across various regions and devices."
         imageSrc={worldMap}
         imageAlt="World Map"
         reverse={false}

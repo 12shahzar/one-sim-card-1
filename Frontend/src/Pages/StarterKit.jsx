@@ -21,7 +21,7 @@ function StarterKit() {
           OneSimCard M2M / IoT SIM card is a small electronic chip which inserts
           into a compatible device. It enables your remote device to transfer
           data on 2G, 3G, 4G LTE (including LTE-M and NB-Iot), or 5G networks in
-          over 200 countries on over 420 carriers with no steering. Starter Kit
+          over 400 countries on over 420 carriers with no steering. Starter Kit
           includes
           <span className="text-[#455E86] font-semibold">
             {" "}

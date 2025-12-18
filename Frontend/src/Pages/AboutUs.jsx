@@ -10,7 +10,7 @@ function AboutUs() {
         title="About Us"
         paragraphs={[
           "OneSimCard® is a division of Belmont Telecom, Inc., a licensed U.S. interexchange carrier (IXC) providing telecommunications services since 1994, celebrating over 30 years in telecoms. We strive to make communication as efficient and inexpensive as possible for you, whether you're using data, texting or calling across town, across the country or across the globe.",
-          "We provide you with the best, least expensive, and easiest to use international cell phone service. Whether you are an occasional international traveler wanting to make sure you have a phone in case of an emergency, or a frequent corporate jet setter who needs to stay in touch with your clients at all times, we will have the best solution for you. We offer the opportunity to stay connected in over 200 countries while avoiding your regular mobile carrier's high international roaming charges",
+          "We provide you with the best, least expensive, and easiest to use international cell phone service. Whether you are an occasional international traveler wanting to make sure you have a phone in case of an emergency, or a frequent corporate jet setter who needs to stay in touch with your clients at all times, we will have the best solution for you. We offer the opportunity to stay connected in over 400 countries while avoiding your regular mobile carrier's high international roaming charges",
         ]}
       />
       <section

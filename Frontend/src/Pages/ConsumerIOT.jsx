@@ -27,7 +27,7 @@ function ConsumerIOT() {
           </h1>
 
           <p className="font-sora text-xl font-medium text-white">
-            Reliable Data & SMS Solutions in Over 200 Countries
+            Reliable Data & SMS Solutions in over 400 Countries
           </p>
 
           <div>
@@ -54,7 +54,7 @@ function ConsumerIOT() {
       <FeatureSection
         title="Coverage"
         subtitle="Global"
-        description="Stay connected in over 200 countries."
+        description="Stay connected in over 400 countries."
         imageSrc={worldMap}
         imageAlt="World Map"
         reverse={false}

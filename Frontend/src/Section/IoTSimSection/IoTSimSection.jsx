@@ -32,7 +32,7 @@ function IoTSimSection() {
       <FeatureSection
         title="Coverage"
         subtitle="Global"
-        description="OneSimCard gives you the world in the palm of your hand providing global connectivity IoT SIM card solutions in over 200 countries worldwide."
+        description="OneSimCard gives you the world in the palm of your hand providing global connectivity IoT SIM card solutions in over 400 countries worldwide."
         buttonText="Global Coverage"
         imageSrc={worldMap}                
         imageAlt="World Map"
