@@ -2,14 +2,12 @@ const contentService = require('../services/contentService');
 
 async function getContent(req, res) {
     try {
-        const data = await contentService.getFullContent();
-        res.json({ sections: data });
+        const data = await contentService.getAllContent();
+        res.json({ iot_content: data });
     } catch (err) {
         console.error(err);
-        res.status(500).json({ error: 'Internal Server Error' });
+        res.status(500).json({ message: 'Server Error' });
     }
 }
 
-module.exports = {
-    getContent
-};
+module.exports = { getContent };

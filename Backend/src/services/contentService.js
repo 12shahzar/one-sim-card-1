@@ -1,151 +1,77 @@
-const db = require('../config/db');
+const pool = require('../config/db');
 
-async function getFullContent() {
+async function getAllContent() {
+    // 1️⃣ Fetch all sections
+    const [sections] = await pool.query('SELECT * FROM sections');
+
     const result = [];
 
-    // =======================
-    // 1. Technology Section
-    // =======================
-    const [technologySections] = await db.query(
-        'SELECT * FROM iot_content WHERE header = "Technology"'
-    );
+    for (const section of sections) {
+        // 2️⃣ Fetch items for section
+        const [items] = await pool.query('SELECT * FROM items WHERE section_id = ?', [section.id]);
 
-    if (technologySections.length > 0) {
-        const techSection = technologySections[0];
-
-        const sectionObj = {
-            header: techSection.header,
-            count: techSection.count,
-            items: []
-        };
-
-        // Fetch items linked to this section
-        const [items] = await db.query('SELECT * FROM items WHERE section_id = ?', [techSection.id]);
+        const itemsWithDetails = [];
 
         for (const item of items) {
-            const itemObj = {
-                id: item.item_json_id,
-                label: item.label,
-                intro: item.intro,
-                api_url: item.api_url,
-                details: [],
-                section: []
-            };
+            // 3️⃣ Fetch item details
+            const [details] = await pool.query('SELECT * FROM item_details WHERE item_id = ?', [item.id]);
 
-            // Fetch details for this item
-            const [details] = await db.query('SELECT * FROM item_details WHERE item_id = ?', [item.item_id]);
-
+            const detailsWithCategories = [];
             for (const detail of details) {
-                const detailObj = {
+                const [categories] = await pool.query('SELECT * FROM categories WHERE detail_id = ?', [detail.id]);
+
+                detailsWithCategories.push({
+                    id: detail.id,
                     heading: detail.heading,
                     description: JSON.parse(detail.description || '[]'),
                     bottomDescription: JSON.parse(detail.bottom_description || '[]'),
-                    featureContent: detail.feature_content ? JSON.parse(detail.feature_content) : false,
-                    contact: !!detail.contact,
-                    categories: []
-                };
-
-                // Fetch categories for this detail
-                const [categories] = await db.query('SELECT * FROM categories WHERE detail_id = ?', [detail.detail_id]);
-                if (categories.length > 0) {
-                    detailObj.categories = categories.map(c => ({
-                        id: c.category_json_id,
-                        label: c.label,
-                        image: c.image,
-                        description: c.description,
-                        learnmore: !!c.learn_more
-                    }));
-                }
-
-                itemObj.details.push(detailObj);
+                    featureContent: detail.feature_content ? { content: detail.feature_content, image: detail.feature_image } : false,
+                    contact: detail.contact ? true : false,
+                    image: detail.image,
+                    categories: categories.map(cat => ({
+                        id: cat.category_key,
+                        label: cat.label,
+                        image: cat.image,
+                        description: cat.description,
+                        learnmore: cat.learnmore ? true : false
+                    }))
+                });
             }
 
-            // Fetch nested categories for the item (section array)
-            const [nestedCategories] = await db.query('SELECT * FROM categories WHERE item_id = ? AND detail_id IS NULL', [item.item_id]);
-            if (nestedCategories.length > 0) {
-                itemObj.section = nestedCategories.map(c => ({
-                    id: c.category_json_id,
-                    label: c.label,
-                    image: c.image,
-                    description: c.description,
-                    learnmore: !!c.learn_more
-                }));
-            }
+            // 4️⃣ Fetch partner tables if exist
+            const [partnerTables] = await pool.query('SELECT * FROM partner_tables WHERE item_id = ?', [item.id]);
+            const tablesWithItems = [];
 
-            sectionObj.items.push(itemObj);
-        }
-
-        result.push(sectionObj);
-    }
-
-    // =======================
-    // 2. Partners Section
-    // =======================
-    const [partners] = await db.query('SELECT * FROM partners');
-    if (partners.length > 0) {
-        const partnersSection = {
-            header: 'Partners',
-            count: partners.length,
-            items: []
-        };
-
-        for (const partner of partners) {
-            const partnerObj = {
-                id: partner.partner_json_id || partner.partner_id,
-                label: partner.label,
-                intro: partner.intro,
-                image: partner.image,
-                tables: []
-            };
-
-            const [tables] = await db.query('SELECT * FROM partner_tables WHERE partner_id = ?', [partner.partner_id]);
-            for (const table of tables) {
-                const tableObj = {
+            for (const table of partnerTables) {
+                const [tableItems] = await pool.query('SELECT * FROM partner_table_items WHERE table_id = ?', [table.id]);
+                tablesWithItems.push({
                     heading: table.heading,
-                    items: []
-                };
-
-                const [tableItems] = await db.query('SELECT * FROM partner_table_items WHERE table_id = ?', [table.table_id]);
-                tableObj.items = tableItems.map(i => i.item_name);
-
-                partnerObj.tables.push(tableObj);
+                    items: tableItems.map(ti => ti.item_name)
+                });
             }
 
-            if (partner.button_text) {
-                partnerObj.button = {
-                    text: partner.button_text,
-                    visible: !!partner.button_visible
-                };
-            }
+            // 5️⃣ Fetch more images if exist
+            const [moreImages] = await pool.query('SELECT * FROM more_images WHERE item_id = ?', [item.id]);
 
-            partnersSection.items.push(partnerObj);
+            itemsWithDetails.push({
+                id: item.item_key,
+                label: item.label,
+                intro: item.intro,
+                api_url: item.api_url || undefined,
+                details: detailsWithCategories.length ? detailsWithCategories : undefined,
+                tables: tablesWithItems.length ? tablesWithItems : undefined,
+                moreImage: moreImages.length ? moreImages.map(mi => ({ image: mi.image, link: mi.link })) : undefined
+            });
         }
 
-        result.push(partnersSection);
-    }
-
-    // =======================
-    // 3. Accolades Section
-    // =======================
-    try {
-        const [accolades] = await db.query('SELECT * FROM accolades');
-        if (accolades.length > 0) {
-            const accoladesSection = {
-                header: 'Accolades',
-                count: accolades.length,
-                items: accolades.map(a => ({
-                    id: a.accolade_json_id || a.accolade_id,
-                    label: a.label,
-                    intro: a.intro
-                }))
-            };
-            result.push(accoladesSection);
-        }
-    } catch (err) {
-        console.warn('Accolades table missing, skipping section');
+        result.push({
+            header: section.header,
+            count: section.count,
+            items: itemsWithDetails
+        });
     }
 
     return result;
 }
 
-module.exports = { getFullContent };
+module.exports = { getAllContent };
