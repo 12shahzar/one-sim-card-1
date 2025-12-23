@@ -29,5 +29,9 @@ app.use("/api/package-group", packageGroupRoutes);
 const contentRoute = require('./routes/contentRoutes');
 app.use('/api', contentRoute);
 
+const keyFeaturesRoutes = require('./routes/keyFeaturesRoutes');
+app.use('/api', keyFeaturesRoutes);
+
+
 
 module.exports = app;
