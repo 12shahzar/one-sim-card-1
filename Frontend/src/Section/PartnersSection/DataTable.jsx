@@ -2,10 +2,19 @@ import React from "react";
 import CustomButton from "../../Components/CustomButton/CustomButton";
 
 export default function DataTable({ tables, expandedTables, onToggleTable }) {
+  // Tables that should show all items (no View More button)
+  const fullDisplayTables = [
+    "Compatible Device Manufacturers",
+    "Software Providers",
+    "Compatible Devices",
+    "Compatible Software"
+  ];
+
   return (
     <>
       {tables?.map((table, idx) => {
-        const isExpanded = expandedTables[idx];
+        const showFullList = fullDisplayTables.includes(table.heading);
+        const isExpanded = showFullList || expandedTables[idx];
         const visibleItems = isExpanded
           ? table.items
           : table.items.slice(0, 11);
@@ -13,7 +22,10 @@ export default function DataTable({ tables, expandedTables, onToggleTable }) {
         return (
           <div
             key={idx}
-            className="mb-10 bg-white rounded-4xl p-8 shadow-[0_8px_90px_rgba(0,0,0,0.04)]"
+            className="mb-10 bg-white rounded-4xl p-8 shadow-[0_8px_90px_rgba(0,0,0,0.04)] transition-all duration-300 hover:shadow-[0_8px_90px_rgba(0,0,0,0.08)]"
+            style={{
+              animation: `fadeInUp 0.5s ease-out ${idx * 0.1}s both`,
+            }}
           >
             {table.heading && (
               <h3 className="text-2xl font-medium mb-10 text-[#08080C]">
@@ -27,7 +39,8 @@ export default function DataTable({ tables, expandedTables, onToggleTable }) {
               ))}
             </div>
 
-            {table.items.length > 11 && (
+            {/* Only show View More button for tables that are NOT in fullDisplayTables */}
+            {!showFullList && table.items.length > 11 && (
               <div className="mt-10">
                 <CustomButton
                   text={isExpanded ? "View Less" : "View More"}
@@ -41,6 +54,18 @@ export default function DataTable({ tables, expandedTables, onToggleTable }) {
           </div>
         );
       })}
+      <style>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </>
   );
 }

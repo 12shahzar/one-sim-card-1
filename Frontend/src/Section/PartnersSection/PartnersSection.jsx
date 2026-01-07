@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom"; // Added useNavigate
-import partnersData from "../../data/partnersData.json";
+import partnersDataRaw from "../../data/partnersData.structured.json";
+import { transformPartnersData } from "../../utils/transformPartnersData";
 import SectionContent from "./SectionContent";
 import DataTable from "./DataTable";
 import Sidebar from "./Sidebar";
@@ -9,48 +10,90 @@ import axios from "axios";
 
 export default function PartnersSection() {
   const location = useLocation();
-  const navigate = useNavigate(); // Added navigate
+  const navigate = useNavigate();
   const queryParams = new URLSearchParams(location.search);
 
-  const sections = partnersData.sections || [];
+  // Transform normalized data to component-compatible format
+  const partnersData = useMemo(() => {
+    try {
+      return transformPartnersData(partnersDataRaw);
+    } catch (error) {
+      console.error("Error transforming partners data:", error);
+      return { sections: [] };
+    }
+  }, []);
+
+  const sections = partnersData?.sections || [];
+
+  // Get initial values safely
+  const getInitialSection = () => sections[0]?.header || null;
+  const getInitialItem = () => sections[0]?.items?.[0] || null;
+  const getInitialId = () => sections[0]?.items?.[0]?.id || null;
 
   // State initialization
-  const [activeSection, setActiveSection] = useState(sections[0]?.header);
-  const [activeId, setActiveId] = useState(sections[0]?.items?.[0]?.id);
-  const [activeItem, setActiveItem] = useState(sections[0]?.items?.[0]);
+  const [activeSection, setActiveSection] = useState(getInitialSection);
+  const [activeId, setActiveId] = useState(getInitialId);
+  const [activeItem, setActiveItem] = useState(getInitialItem);
   const [expandedTables, setExpandedTables] = useState({});
   const [apiData, setApiData] = useState(null);
 
-  const [openSections, setOpenSections] = useState({
-    [sections[0]?.header]: true,
+  const [openSections, setOpenSections] = useState(() => {
+    const firstSectionHeader = getInitialSection();
+    return firstSectionHeader ? { [firstSectionHeader]: true } : {};
   });
 
   // ⚡ Sync activeSection and activeId with route query params
   useEffect(() => {
-    const sectionFromRoute = queryParams.get("section") || sections[0]?.header;
+    if (!sections || sections.length === 0) return;
+
+    // Check both pathname and query params for section name
+    const pathSection = location.pathname.replace(/^\//, ''); // Remove leading slash
+    const sectionFromQuery = queryParams.get("section");
+    const sectionFromRoute = sectionFromQuery || 
+                             (pathSection && sections.find(s => s.header.toLowerCase() === pathSection.toLowerCase())?.header) ||
+                             sections[0]?.header;
     const itemFromRoute = queryParams.get("item");
 
     const sectionObj =
       sections.find((s) => s.header === sectionFromRoute) || sections[0];
+    
+    if (!sectionObj || !sectionObj.items || sectionObj.items.length === 0) return;
+
     const itemObj =
       sectionObj.items.find((i) => i.id === itemFromRoute) ||
       sectionObj.items[0];
 
-    setActiveSection(sectionObj.header);
-    setActiveId(itemObj.id);
-    setActiveItem(itemObj);
-    setOpenSections({ [sectionObj.header]: true });
-    setExpandedTables({});
+    if (itemObj) {
+      // Only update if something actually changed to prevent unnecessary re-renders and scroll issues
+      const shouldUpdate = 
+        activeSection !== sectionObj.header || 
+        activeId !== itemObj.id;
 
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [location.search, sections]);
+      if (shouldUpdate) {
+        setActiveSection(sectionObj.header);
+        setActiveId(itemObj.id);
+        setActiveItem(itemObj);
+        // Ensure the section is open when navigating to it
+        setOpenSections((prev) => ({ ...prev, [sectionObj.header]: true }));
+        setExpandedTables({});
+        
+        // Removed automatic scroll-to-top to allow user scrolling freely
+      }
+    }
+  }, [location.search, location.pathname, sections, activeSection, activeId]);
 
   // Keep activeItem in sync when activeId or activeSection changes manually
   useEffect(() => {
+    if (!sections || sections.length === 0 || !activeSection || !activeId) return;
+
     const currentSection = sections.find((s) => s.header === activeSection);
-    const foundItem = currentSection?.items?.find((i) => i.id === activeId);
-    setActiveItem(foundItem);
-    setExpandedTables({});
+    if (!currentSection || !currentSection.items) return;
+
+    const foundItem = currentSection.items.find((i) => i.id === activeId);
+    if (foundItem) {
+      setActiveItem(foundItem);
+      setExpandedTables({});
+    }
   }, [activeId, activeSection, sections]);
 
   const toggleTable = (idx) =>
@@ -63,26 +106,38 @@ export default function PartnersSection() {
   const handleSelectItem = (section, id) => {
     setActiveSection(section);
     setActiveId(id);
-    setOpenSections({ [section]: true });
+    // Preserve other open sections, but ensure the selected section is open
+    setOpenSections((prev) => ({ ...prev, [section]: true }));
 
-    navigate(`?section=${section}&item=${id}`, { replace: true });
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate(`?section=${encodeURIComponent(section)}&item=${encodeURIComponent(id)}`, { replace: true });
+    // Optional: Scroll to top only when explicitly selecting an item (not on route changes)
+    // Uncomment if you want scroll-to-top on sidebar clicks:
+    // window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleLearnMore = (categoryId) => {
+    if (!sections || sections.length === 0 || !activeSection) return;
+
     const currentSection = sections.find((s) => s.header === activeSection);
-    const detailItem = currentSection?.items?.find(
+    if (!currentSection || !currentSection.items) return;
+
+    const detailItem = currentSection.items.find(
       (i) =>
         i.id === categoryId ||
         (i.details && i.details.some((d) => d.id === categoryId))
     );
 
-    if (detailItem) {
-      handleSelectItem(activeSection, detailItem.id); // update URL and state
+    if (detailItem && detailItem.id) {
+      handleSelectItem(activeSection, detailItem.id);
     }
   };
 
+  // Clear API data when switching items, and fetch if new item has api_url
   useEffect(() => {
+    // Clear API data first when switching items
+    setApiData(null);
+
+    // Only fetch if the current item has an api_url
     if (!activeItem?.api_url) return;
 
     const fetchData = async () => {
@@ -91,11 +146,12 @@ export default function PartnersSection() {
         setApiData(res.data);
       } catch (error) {
         console.error("Axios Error:", error);
+        setApiData(null); // Clear on error
       }
     };
 
     fetchData();
-  }, [activeItem]);
+  }, [activeItem?.id, activeItem?.api_url]); // Only depend on id and api_url to avoid unnecessary fetches
 
   return (
     <section className="container mx-auto py-16 px-2 md:px-6 font-sora">
@@ -154,9 +210,12 @@ export default function PartnersSection() {
                 ))}
               </div>
 
-              <div
-                dangerouslySetInnerHTML={{ __html: apiData?.data?.content }}
-              />
+              {/* Only show API content if current item has api_url */}
+              {activeItem?.api_url && apiData?.data?.content && (
+                <div
+                  dangerouslySetInnerHTML={{ __html: apiData.data.content }}
+                />
+              )}
 
               <DataTable
                 tables={activeItem?.tables}
