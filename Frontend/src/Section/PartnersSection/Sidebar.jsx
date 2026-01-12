@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function Sidebar({
@@ -9,30 +9,9 @@ export default function Sidebar({
   onToggleSection,
   onSelectItem,
 }) {
-  // Inject animation styles
-  useEffect(() => {
-    if (!document.getElementById('sidebar-animations')) {
-      const style = document.createElement("style");
-      style.id = 'sidebar-animations';
-      style.textContent = `
-        @keyframes sidebarFadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `;
-      document.head.appendChild(style);
-    }
-  }, []);
-
   return (
     <aside className="w-full lg:w-96 mx-2 md:mx-0">
-      <div className="bg-white rounded-4xl p-4 md:p-8 shadow-[0_8px_90px_rgba(0,0,0,0.04)]">
+      <div className="bg-white rounded-4xl p-4 md:p-8 shadow-[0_8px_90px_rgba(0,0,0,0.04)] ">
         {sections.map((section, sIdx) => (
           <div key={sIdx} className="mb-6">
             <button
@@ -56,43 +35,32 @@ export default function Sidebar({
               </div>
             </button>
 
-            <div
-              className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                openSections[section.header]
-                  ? "max-h-[2000px] opacity-100"
-                  : "max-h-0 opacity-0"
-              }`}
-            >
-              <ul className="space-y-2">
-                {section.items.map((item, idx) => (
-                  <li
-                    key={item.id}
-                    style={{
-                      animation: openSections[section.header]
-                        ? `sidebarFadeIn 0.3s ease-in-out ${idx * 0.05}s both`
-                        : "none",
-                    }}
-                  >
-                    <button
-                      onClick={() => onSelectItem(section.header, item.id)}
-                      className={`w-full text-left px-3 py-1 text-base transition-colors flex items-center gap-2 cursor-pointer hover:text-[#455E86] ${
-                        activeId === item.id &&
-                        activeSection === section.header
-                          ? "text-[#455E86]"
-                          : "text-[#6B7280]"
-                      }`}
-                    >
-                      {activeId === item.id &&
-                        activeSection === section.header && (
-                          <span className="text-[#455E86]">•</span>
-                        )}
-                      <span>{item.label}</span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-              <hr className="border-[#E5E7EB] mt-4" />
-            </div>
+            {openSections[section.header] && (
+              <>
+                <ul className="space-y-2">
+                  {section.items.map((item) => (
+                    <li key={item.id}>
+                      <button
+                        onClick={() => onSelectItem(section.header, item.id)}
+                        className={`w-full text-left px-3 py-1 text-base transition-colors flex items-center gap-2 cursor-pointer ${
+                          activeId === item.id &&
+                          activeSection === section.header
+                            ? "text-[#455E86]"
+                            : "text-[#6B7280]"
+                        }`}
+                      >
+                        {activeId === item.id &&
+                          activeSection === section.header && (
+                            <span className="text-[#455E86]">•</span>
+                          )}
+                        <span>{item.label}</span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+                <hr className="border-[#E5E7EB] mt-4" />
+              </>
+            )}
           </div>
         ))}
       </div>
