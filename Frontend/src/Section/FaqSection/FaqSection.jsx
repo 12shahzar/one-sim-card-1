@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ChevronRight, Search } from "lucide-react";
 import SectionHeading from "../../Components/Heading/SectionHeading";
 import faqData from "../../data/Faq.json";
-import { getFaqGroups, getFaqsByGroup, searchFaq } from "../../api/faqApi";
+import { getFaqGroups, getFaqsByGroup, searchFaq } from "../../api/apiService";
 
 const { faqs } = faqData;
 
@@ -52,16 +52,16 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
   };
 
   const handleSearch = async () => {
-  if (!searchQuery.trim()) return;
+    if (!searchQuery.trim()) return;
 
-  try {
-    const results = await searchFaq(searchQuery.trim());
-    setFaqList(results); // show search results
-    setOpenIndex(0);     // open first question by default
-  } catch (err) {
-    console.error("Search failed:", err);
-  }
-};
+    try {
+      const results = await searchFaq(searchQuery.trim());
+      setFaqList(results); // show search results
+      setOpenIndex(0);     // open first question by default
+    } catch (err) {
+      console.error("Search failed:", err);
+    }
+  };
 
   return (
     <section
@@ -130,8 +130,8 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
                       placeholder="Search"
                       className="w-full bg-white rounded-full py-3 pl-12 pr-4 
                       outline-none text-gray-700"
-                        value={searchQuery}
-  onChange={(e) => setSearchQuery(e.target.value)}
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
                     />
                   </div>
 
@@ -140,7 +140,7 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
                     className="bg-yellow-400 hover:bg-yellow-500 
                                px-10 py-3 rounded-full font-medium 
                                whitespace-nowrap"
-                                 onClick={handleSearch}
+                    onClick={handleSearch}
 
                   >
                     Search
@@ -163,17 +163,16 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
                     />
 
                     <span
-                      className={`text-base sm:text-lg md:text-xl font-medium ${
-                        isOpen ? "text-[#455E86]" : "text-[#08080C]"
-                      }`}
-                      dangerouslySetInnerHTML={{ __html: faq.question }}
+                      className={`text-base sm:text-lg md:text-xl font-medium ${isOpen ? "text-[#455E86]" : "text-[#08080C]"
+                        }`}
+                      dangerouslySetInnerHTML={{ __html: faq?.question }}
                     />
                   </button>
 
                   {isOpen && (
                     <div
                       className="px-12 pb-5 text-[#6B7280] text-lg sm:text-base md:text-lg font-regular"
-                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                      dangerouslySetInnerHTML={{ __html: faq?.answer }}
                     />
                   )}
                 </div>

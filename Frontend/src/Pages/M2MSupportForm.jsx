@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CustomButton from "../Components/CustomButton/CustomButton";
 import supportData from "../data/supportData";
-import axios from "axios";
+import { submitM2MSupport } from "../api/apiService";
 
 
 export default function M2MSupportForm() {
@@ -14,43 +14,35 @@ export default function M2MSupportForm() {
   const [phone, setPhone] = useState("");
 
   const companies =
-    supportData.find((item) => item.topic === selectedTopic)?.companies || [];
+    supportData?.find((item) => item?.topic === selectedTopic)?.companies || [];
 
   // SUBMIT HANDLER
   const handleSubmit = async () => {
-  if (!selectedTopic) return alert("Please select a topic.");
-  if (!selectedCompany) return alert("Please select a company question.");
-  if (!message.trim()) return alert("Message is required.");
-  if (!name.trim()) return alert("Name is required.");
-  if (!email.trim()) return alert("Email is required.");
+    if (!selectedTopic) return alert("Please select a topic.");
+    if (!selectedCompany) return alert("Please select a company question.");
+    if (!message.trim()) return alert("Message is required.");
+    if (!name.trim()) return alert("Name is required.");
+    if (!email.trim()) return alert("Email is required.");
 
-  const formData = {
-    topic: selectedTopic,
-    company: selectedCompany,
-    message,
-    name,
-    email,
-    phone: phone || "", // optional
+    const formData = {
+      topic: selectedTopic,
+      company: selectedCompany,
+      message,
+      name,
+      email,
+      phone: phone || "", // optional
+    };
+
+    try {
+      const data = await submitM2MSupport(formData);
+
+      console.log("API Response:", data);
+      alert("Form submitted successfully!");
+    } catch (error) {
+      console.error("Submit Error:", error);
+      alert("Failed to submit. Check console for details.");
+    }
   };
-
-  try {
-    const response = await axios.post(
-      "http://localhost:5000/api/m2m-support/submit",
-      formData,
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-
-    console.log("API Response:", response.data);
-    alert("Form submitted successfully!");
-  } catch (error) {
-    console.error("Submit Error:", error);
-    alert("Failed to submit. Check console for details.");
-  }
-};
 
   return (
     <div className="max-w-7xl mx-auto py-16 font-sora px-2 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-8 font-sora">
@@ -68,11 +60,10 @@ export default function M2MSupportForm() {
                 setSelectedTopic(item.topic);
                 setSelectedCompany("");
               }}
-              className={`cursor-pointer ${
-                selectedTopic === item.topic
+              className={`cursor-pointer ${selectedTopic === item.topic
                   ? "text-[#455E86] font-semibold"
                   : ""
-              }`}
+                }`}
             >
               - {item.topic}
             </li>

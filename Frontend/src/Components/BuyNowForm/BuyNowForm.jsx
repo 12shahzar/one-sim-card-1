@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { submitBuyNow } from "../../api/apiService";
 import CustomButton from "../CustomButton/CustomButton";
 import SectionHeading from "../Heading/SectionHeading";
 
@@ -64,16 +64,8 @@ function BuyNowForm() {
     }
 
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/buynow/submit",
-        form,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      console.log("Response:", response.data);
+      const data = await submitBuyNow(form);
+      console.log("Response:", data);
       alert("Form submitted successfully!");
     } catch (error) {
       console.error("Error submitting form:", error);

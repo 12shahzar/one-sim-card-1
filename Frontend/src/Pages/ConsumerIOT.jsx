@@ -1,4 +1,5 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
+import { getKeyFeatures } from "../api/apiService";
 import FaqSection from "../Section/FaqSection/FaqSection";
 import FeatureSection from "../Components/FeatureComponent/FeatureSection";
 import CustomButton from "../Components/CustomButton/CustomButton";
@@ -9,24 +10,23 @@ import network_redundancy from "../assets/images/network_redundancy.svg";
 import simCalculator from "../assets/images/sim_Managment.svg";
 import PopularApplications from "../Section/PopularApplications/PopularApplications";
 import PopularPlans from "../Section/PopularPlans/PopularPlans";
-import axios from "axios";
 
 function ConsumerIOT() {
 
-const [features, setFeatures] = useState([]);
+  const [features, setFeatures] = useState([]);
 
   useEffect(() => {
-    const fetchKeyFeatures = async () => {
+    const fetchFeatures = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/key-features");
-        console.log("Key Features API:", res.data);
-        setFeatures(res.data.keyFeatures);
+        const data = await getKeyFeatures();
+        console.log("Key Features API:", data);
+        setFeatures(data?.keyFeatures || []);
       } catch (err) {
         console.error("Failed to fetch key features", err);
       }
     };
 
-    fetchKeyFeatures();
+    fetchFeatures();
   }, []);
 
   return (
@@ -68,18 +68,18 @@ const [features, setFeatures] = useState([]);
       >
         <SectionHeading title="Key Features" align="left" aos="fade-up" />
       </div>
-   {features?.map((feature, index) => (
+      {features?.map((feature, index) => (
         <FeatureSection
           key={index}
-          title={feature.title}
-          subtitle={feature.subtitle}
-          description={feature.description}
-          imageSrc={feature.imageSrc}
-          imageAlt={feature.imageAlt}
-          reverse={feature.reverse}
-          subtitleColor={feature.subtitleColor}
-          aos={feature.aos}
-          btnBgColor={feature.btnBgColor}
+          title={feature?.title}
+          subtitle={feature?.subtitle}
+          description={feature?.description}
+          imageSrc={feature?.imageSrc}
+          imageAlt={feature?.imageAlt}
+          reverse={feature?.reverse}
+          subtitleColor={feature?.subtitleColor}
+          aos={feature?.aos}
+          btnBgColor={feature?.btnBgColor}
         />
       ))}
       <PopularApplications />

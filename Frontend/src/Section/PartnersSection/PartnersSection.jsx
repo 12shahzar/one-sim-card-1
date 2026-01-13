@@ -5,7 +5,7 @@ import SectionContent from "./SectionContent";
 import DataTable from "./DataTable";
 import Sidebar from "./Sidebar";
 import Details from "./Details";
-import axios from "axios";
+import { fetchByUrl } from "../../api/apiService";
 
 export default function PartnersSection() {
   const location = useLocation();
@@ -87,10 +87,10 @@ export default function PartnersSection() {
 
     const fetchData = async () => {
       try {
-        const res = await axios.get(activeItem.api_url);
-        setApiData(res.data);
+        const data = await fetchByUrl(activeItem?.api_url);
+        setApiData(data);
       } catch (error) {
-        console.error("Axios Error:", error);
+        console.error("Fetch Error:", error);
       }
     };
 
@@ -119,7 +119,7 @@ export default function PartnersSection() {
               {activeItem?.image && (
                 <img
                   src={activeItem?.image}
-                  alt={activeItem.label}
+                  alt={activeItem?.label}
                   className="w-48 mb-8"
                 />
               )}
@@ -141,12 +141,12 @@ export default function PartnersSection() {
                 {activeItem?.moreImage?.map((item, index) => (
                   <a
                     key={index}
-                    href={item.link}
+                    href={item?.link}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img
-                      src={item.image}
+                      src={item?.image}
                       alt={`${activeItem?.label} ${index + 1}`}
                       className="w-48"
                     />

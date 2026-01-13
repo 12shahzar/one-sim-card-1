@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import mapData from "../../data/mapData.json";
-import axios from "axios";
+import { getCountries, getOperatorsAndPlans } from "../../api/apiService";
 
 const CoverageSection = () => {
   const [selectedCountry, setSelectedCountry] = useState("Canada");
@@ -15,18 +15,16 @@ const CoverageSection = () => {
 
   // 🔥 Fetch countries from API
   useEffect(() => {
-    const fetchCountries = async () => {
+    const fetchAllCountries = async () => {
       try {
-        const res = await axios.get(
-          "http://localhost:5000/api/coverage/countries"
-        );
-        setCountries(res.data);
+        const data = await getCountries();
+        setCountries(data || []);
 
-        console.log("Fetched countries:", res.data);
+        console.log("Fetched countries:", data);
 
         // Default selected
-        if (res.data.length > 0) {
-          setSelectedCountry(res.data[0].name);
+        if (data?.length > 0) {
+          setSelectedCountry(data[0]);
         }
       } catch (error) {
         console.error("Error fetching countries:", error);
@@ -35,7 +33,7 @@ const CoverageSection = () => {
       }
     };
 
-    fetchCountries();
+    fetchAllCountries();
   }, []);
 
   useEffect(() => {
@@ -43,12 +41,9 @@ const CoverageSection = () => {
 
     const fetchOperators = async () => {
       try {
-        const res = await axios.get(
-          `http://localhost:5000/api/coverage/operators?country=${selectedCountry}`
-        );
-
-        setOperators(res.data);
-        console.log("Operators:", res.data);
+        const data = await getOperatorsAndPlans(selectedCountry);
+        setOperators(data?.operators || []);
+        console.log("Operators:", data?.operators);
       } catch (error) {
         console.error("Error fetching operators:", error);
       }
@@ -95,11 +90,11 @@ const CoverageSection = () => {
           {mapData?.map((country, index) => (
             <path
               key={index}
-              d={country["d"]}
-              className={`country ${country.isRed ? "red" : ""}`}
+              d={country?.["d"]}
+              className={`country ${country?.isRed ? "red" : ""}`}
               onClick={() => handleCountryClick(country)}
             >
-              <title>{country["name"] || country["id"]}</title>
+              <title>{country?.["name"] || country?.["id"]}</title>
             </path>
           ))}
         </svg>
@@ -159,13 +154,13 @@ const CoverageSection = () => {
                   className="border-b border-[#D2D2D2] text-[#6B7280]"
                 >
                   <td className="py-3 sm:py-4 md:py-6 px-2 sm:px-3 md:px-4">
-                    {item.operatorName}
+                    {item?.operatorName}
                   </td>
                   <td className="py-3 sm:py-4 md:py-6 px-2 sm:px-3 md:px-4">
-                    {item.mccMnc}
+                    {item?.mccMnc}
                   </td>
                   <td className="py-3 sm:py-4 md:py-6 px-2 sm:px-3 md:px-4">
-                    {item.supportedNetworkTypes}
+                    {item?.supportedNetworkTypes}
                   </td>
                 </tr>
               ))}

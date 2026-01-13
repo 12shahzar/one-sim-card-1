@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CustomButton from "../CustomButton/CustomButton";
-import axios from "axios";
+import { submitCustomQuote } from "../../api/apiService";
 
 
 export default function CustomQuoteForm() {
@@ -28,56 +28,52 @@ export default function CustomQuoteForm() {
   ];
 
   const submit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  // Required fields
-  const requiredFields = [
-    "company",
-    "firstName",
-    "lastName",
-    "email",
-    "countries",
-    "code",
-    "phone",
-    "sims",
-    "dataUse",
-  ];
+    // Required fields
+    const requiredFields = [
+      "company",
+      "firstName",
+      "lastName",
+      "email",
+      "countries",
+      "code",
+      "phone",
+      "sims",
+      "dataUse",
+    ];
 
-  for (let field of requiredFields) {
-    if (!form[field] || form[field].trim() === "") {
-      alert(`Please fill the ${field} field`);
-      return;
+    for (let field of requiredFields) {
+      if (!form[field] || form[field].trim() === "") {
+        alert(`Please fill the ${field} field`);
+        return;
+      }
     }
-  }
 
-  // Build payload same as your Node.js axios example
-  const payload = {
-    company: form.company,
-    firstName: form.firstName,
-    lastName: form.lastName,
-    email: form.email,
-    countries: form.countries,
-    code: form.code,
-    phone: form.phone,
-    sims: Number(form.sims),
-    dataUse: form.dataUse,
-    comments: form.comments || "",
+    // Build payload same as your Node.js axios example
+    const payload = {
+      company: form.company,
+      firstName: form.firstName,
+      lastName: form.lastName,
+      email: form.email,
+      countries: form.countries,
+      code: form.code,
+      phone: form.phone,
+      sims: Number(form.sims),
+      dataUse: form.dataUse,
+      comments: form.comments || "",
+    };
+
+    try {
+      const data = await submitCustomQuote(payload);
+
+      console.log("Response:", data);
+      alert("Form submitted successfully!");
+    } catch (error) {
+      console.error("Submit Error:", error);
+      alert("Failed to submit. Check console for error.");
+    }
   };
-
-  try {
-    const response = await axios.post(
-      "http://localhost:5000/api/quote/submit",
-      payload,
-      { headers: { "Content-Type": "application/json" } }
-    );
-
-    console.log("Response:", response.data);
-    alert("Form submitted successfully!");
-  } catch (error) {
-    console.error("Submit Error:", error);
-    alert("Failed to submit. Check console for error.");
-  }
-};
 
   return (
     <div className="py-5">
@@ -142,7 +138,7 @@ export default function CustomQuoteForm() {
           <textarea
             rows={4}
             placeholder="Write here"
-            value={form.comments}
+            value={form?.comments}
             onChange={(e) => setForm({ ...form, comments: e.target.value })}
             className="w-full bg-[#F8F9FA] **:rounded-2xl p-5 outline-none rounded-xl"
           />
@@ -150,7 +146,7 @@ export default function CustomQuoteForm() {
 
         {/* Submit Button */}
 
-        <CustomButton onClick={() => {}} text="Contact Me" />
+        <CustomButton onClick={() => { }} text="Contact Me" />
       </form>
     </div>
   );
