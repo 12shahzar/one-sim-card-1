@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { getCountries, getOperatorsAndPlans } from "../../api/apiService";
 import simOptions from "../../data/simOptions.json";
 
@@ -9,13 +10,22 @@ export default function SimPlansSection() {
   const [plans, setPlans] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const location = useLocation();
+
   // Fetch countries on mount
   useEffect(() => {
     const fetchAllCountries = async () => {
       try {
         const data = await getCountries();
         setCountries(data || []);
-        if (data?.length > 0) {
+
+        // Check for country in query params
+        const params = new URLSearchParams(location.search);
+        const countryParam = params.get("country");
+
+        if (countryParam && data?.includes(countryParam)) {
+          setSelectedCountry(countryParam);
+        } else if (data?.length > 0) {
           setSelectedCountry(data[0]); // Default to first country
         }
       } catch (error) {
@@ -23,7 +33,7 @@ export default function SimPlansSection() {
       }
     };
     fetchAllCountries();
-  }, []);
+  }, [location.search]);
 
   // Fetch plans when country changes
   useEffect(() => {

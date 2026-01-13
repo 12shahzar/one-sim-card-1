@@ -11,6 +11,7 @@ const plans = [
     size: "1200MB",
     price: "$8.00 Annually",
     color: "bg-[#2E4A6F]", // navy blue
+    country: "Austria",
   },
   {
     title: "USA/Canada Plan",
@@ -18,6 +19,7 @@ const plans = [
     size: "1200MB",
     price: "$13.50 Annually",
     color: "bg-[#FFD700]", // yellow
+    country: "Canada",
   },
   {
     title: "USA Plan",
@@ -25,6 +27,7 @@ const plans = [
     size: "1200MB",
     price: "$10.41 Annually",
     color: "bg-[#2E4A6F]",
+    country: "USA",
   },
 ];
 
@@ -74,7 +77,7 @@ const PopularPlans = () => {
                 bgColor="#6B7280"
                 hoverColor="#455E86"
                 textColor="white"
-                to="/BuyNow"
+                to={`/SimPlans?country=${plan.country}`}
               />
             </div>
           ))}
