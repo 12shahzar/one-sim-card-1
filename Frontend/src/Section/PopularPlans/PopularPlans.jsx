@@ -66,7 +66,6 @@ const PopularPlans = () => {
                   {plan.title}
                 </div>
               </div>
-
               <div className="my-12 text-[#08080C]">
                 <p className="font-medium text-lg">{plan.size}</p>
                 <p className="font-medium text-lg">{plan.price}</p>
