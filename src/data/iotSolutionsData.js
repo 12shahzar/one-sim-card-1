@@ -1,19 +1,15 @@
 import FleetImage from "../assets/images/Fleet_managment.svg";
-
 import Wearables from "../assets/images/Wearables.svg";
 import HealthWearables from "../assets/images/HealthWearables.svg";
 import EnhancedWearables from "../assets/images/EnhancedWearables.svg";
 import SecurityWearables from "../assets/images/SecurityWearables.svg";
 import CustomizableWearables from "../assets/images/CustomizableWearables.svg";
-
 import AssetTrackingImg from "../assets/images/AssetTracking.svg";
-
 import MeterMonitoring from "../assets/images/MeterMonitoring.svg";
 import EnhancedMeterMonitoring from "../assets/images/EnhancedMeterMonitoring.svg";
 import RemoteMeterMonitoring from "../assets/images/RemoteMeterMonitoring.svg";
 import ScalabilityMeterMonitoring from "../assets/images/ScalabilityMeterMonitoring.svg";
 import ImprovedMeterMonitoring from "../assets/images/ImprovedMeterMonitoring.svg";
-
 import MedicalMonitoring from "../assets/images/MedicalMonitoring.svg";
 import RemoteMedicalMonitoring from "../assets/images/RemoteMedicalMonitoring.svg";
 import EnhancedMedicalMonitoring from "../assets/images/EnhancedMedicalMonitoring.svg";
