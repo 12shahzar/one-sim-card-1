@@ -9,7 +9,7 @@ export default function BlogCard({ image, author, date, title, link }) {
         {image ? (
           <img src={image} alt={title} className="w-full h-full object-cover rounded-4xl" />
         ) : (
-          <div className="w-full h-full bg-[url('/placeholder-image.png')] bg-center bg-cover opacity-20 rounded-4xl" />
+          <div className="w-full h-full bg-gray-200 bg-center bg-cover opacity-20 rounded-4xl" />
         )}
         <div className="absolute bottom-3 right-3 bg-white rounded-full p-2 shadow-md">
           <ArrowUpRight className="w-4 h-4 text-[#455E86]" />
