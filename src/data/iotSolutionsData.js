@@ -4,7 +4,7 @@ import HealthWearables from "../assets/images/HealthWearables.svg";
 import EnhancedWearables from "../assets/images/EnhancedWearables.svg";
 import SecurityWearables from "../assets/images/SecurityWearables.svg";
 import CustomizableWearables from "../assets/images/CustomizableWearables.svg";
-import AssetTrackingImg from "../assets/images/AssetTracking.svg";
+import AssetTrackingImg from "../assets/images/assetTracking.svg";
 import MeterMonitoring from "../assets/images/MeterMonitoring.svg";
 import EnhancedMeterMonitoring from "../assets/images/EnhancedMeterMonitoring.svg";
 import RemoteMeterMonitoring from "../assets/images/RemoteMeterMonitoring.svg";
