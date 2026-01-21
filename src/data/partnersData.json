@@ -199,7 +199,7 @@
               "image": "/images/VirtualPrivateNetwork.svg",
               "description": [
                 "VPN stands for Virtual Private Network. VPN provides even further extension of the security for your IoT application by removing the access to your IoT SIM card(s) from the public internet. As the name implies, it creates an isolated network that is terminated in your office or your control center and can work as an extension of the private APN (Access Point Name) bringing the network through the private tunnel directly to you. To access the private mobile network, a VPN router must be installed on your backend (on premises or cloud).",
-                "It is recommended to have VPN installed on the network of M2M/IoT SIM cards/devices when there are:"
+                "It is recommended to have VPN installed on the network of M2M/IoT SIM cards/devices when thereare:"
               ],
               "bottomDescription": [
                 "VPN requires a private APN, but Private APN and VPN are two parts required to create a complete private network and thus creates the most secure solution. VPN service includes Static IPs to be able to address each device on the network individually."
@@ -220,7 +220,9 @@
               "description": [
                 "Static IP  is used as part of the Virtual Private Network - VPN. Static IP is an actual dedicated address of the device that allows you to contact the device directly and securely without ever touching the public internet. Majority of the GSM /3G network M2M devices usually can get accessed for configuration of the device or to receive requests for sensor  information or just for waking the device up only by  SMS. The Static IP option eliminates this need and provides direct network access to the remote controller. This static IP makes the device to be on the local network of your internal local net. With Static IP you can easily send secure commands to the device, request specific information, change settings of the device etc. This is the top security measure that offers the maximum flexibility in managing remote devices. "
               ],
-              "bottomDescription": [""],
+              "bottomDescription": [
+                ""
+              ],
               "featureContent": false,
               "contact": false
             }
@@ -254,7 +256,7 @@
           "label": "1SIM IoT App",
           "intro": "",
           "moreImage": [
-             {
+            {
               "image": "https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83&releaseDate=1604534400&h=6987b6a17aa3a5a2ffc256fd3017431e",
               "link": "https://apps.apple.com/us/app/1sim-iot/id1512993522"
             },
@@ -262,9 +264,7 @@
               "image": "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png",
               "link": "https://play.google.com/store/apps/details?id=com.onesimcard.iot&utm_source=website&utm_campaign=app%20page&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
             }
-           
           ],
-
           "details": [
             {
               "heading": "1SIM IoT App - Manage Your SIM Cards On The Go",
@@ -424,8 +424,7 @@
           "id": "GlossaryofTermsforIoTSIMCards&IoTDevices",
           "label": "Glossary of Terms for IoT SIM Cards & IoT Devices",
           "intro": "",
-          "api_url": "http://localhost:5000/api/content/448",
-
+          "api_url": "https://onesimcardbackend.vercel.app/api/content/448",
           "details": [
             {
               "heading": "Glossary of Terms for IoT SIM Cards & IoT Devices",
@@ -435,7 +434,6 @@
         }
       ]
     },
-
     {
       "header": "Partners",
       "count": 3,

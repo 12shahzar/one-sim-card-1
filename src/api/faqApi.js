@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE = "http://localhost:5000/api/faq";
+const BASE = "https://onesimcardbackend.vercel.app/api/faq";
 
 // Get all FAQ Groups
 export const getFaqGroups = async () => {

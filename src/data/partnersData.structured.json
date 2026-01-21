@@ -143,7 +143,7 @@
       "label": "Glossary of Terms for IoT SIM Cards & IoT Devices",
       "intro": "",
       "item_type": "api_content",
-      "api_url": "http://localhost:5000/api/content/448",
+      "api_url": "https://onesimcardbackend.vercel.app/api/content/448",
       "sort_order": 13
     },
     {
@@ -668,7 +668,7 @@
     {
       "id": 18,
       "item_detail_id": 6,
-      "content": "It is recommended to have VPN installed on the network of M2M/IoT SIM cards/devices when there are:",
+      "content": "It is recommended to have VPN installed on the network of M2M/IoT SIM cards/devices when thereare:",
       "description_type": "main",
       "sort_order": 2
     },
