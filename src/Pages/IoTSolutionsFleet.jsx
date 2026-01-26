@@ -8,17 +8,17 @@ import Fleet_managment from "../assets/images/Fleet_managment.svg";
 function IoTSolutionsFleet() {
   return (
     <>
-   
+
       <div className="pb-16">
         <ContentSection
           title="Fleet Management Solutions"
           paragraphs={[
             "Transportation telematics have become a vital component in the managing of an efficient and cost effective fleet. Whether it is cutting down idle times, increasing delivery performance or better managing fuel usage, drive times or vehicle maintenance, telematics now plays a mission critical role and is a key factor in both controlling and reducing costs and expenses.",
-            "OneSimCard M2M and its IoT platform offers the fleet management industry advanced IoT solutions, products and services to optimize their businesses and use their vehicles in the most efficient manner possible. The OneSimCard M2M Global IoT SIM Card was specifically designed for Fleet Management Solutions with outstanding Network Connectivity and Redundancy worldwide and no network “Steering” of IoT SIM cards.  OneSimCard Global IoT SIM Cards are programmed to register on the IoT Roaming partner network offering the best signal strength. Whether the vehicles are traveling across town or across Europe, fleet managers can be assured of the best possible network coverage available by choosing the OneSimCard M2M Global IoT SIM Card.",
+            "OneSimCard M2M and its IoT platform offers the fleet management industry advanced IoT solutions, products and services to optimize their businesses and use their vehicles in the most efficient manner possible. The OneSimCard M2M Global IoT SIM card was specifically designed for Fleet Management Solutions with outstanding Network Connectivity and Redundancy worldwide and no network “Steering” of IoT SIM cards.  OneSimCard Global IoT SIM cards are programmed to register on the IoT Roaming partner network offering the best signal strength. Whether the vehicles are traveling across town or across Europe, fleet managers can be assured of the best possible network coverage available by choosing the OneSimCard M2M Global IoT SIM card.",
           ]}
         />
         <FeatureSection
-          description="OneSimCard M2M /IoT services also offers fleet management companies an advanced administrative account portal and IoT dashboard, along with an IoT platform which allows easy management thousands of IoT sim cards.  In addition, OneSimCard M2M offer IoT industry leading flexibility in data plans and service pricing by evaluating each project and application on its own merit. Unlike some of its IoT competitors, OneSimCard does not have any monthly management fees."
+          description="OneSimCard M2M /IoT services also offers fleet management companies an advanced administrative account portal and IoT dashboard, along with an IoT platform which allows easy management thousands of IoT SIM cards.  In addition, OneSimCard M2M offer IoT industry leading flexibility in data plans and service pricing by evaluating each project and application on its own merit. Unlike some of its IoT competitors, OneSimCard does not have any monthly management fees."
           imageSrc={Fleet_managment}
           imageAlt="Fleet_managment"
           reverse={false}

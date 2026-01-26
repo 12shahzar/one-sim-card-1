@@ -45,7 +45,7 @@ function ConsumerIOT() {
           </h1>
 
           <p className="font-sora text-xl font-medium text-white">
-            Reliable Data & SMS Solutions in over 400 Countries
+            Reliable Data & SMS Solutions in over 200 Countries
           </p>
 
           <div>

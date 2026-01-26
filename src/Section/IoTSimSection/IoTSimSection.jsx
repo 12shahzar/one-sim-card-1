@@ -12,10 +12,9 @@ function IoTSimSection() {
     >
       {/* Header Section */}
       <div className="text-left ">
-        <SectionHeading title="IoT SIM Card" align="left" />
+        <SectionHeading title="IoT SIM card" align="left" />
         <p className="text-[#08080C] mt-2 font-medium text-2xl ml-1">
-          IoT SIM Card For Global Connectivity | Secure M2M & Prepaid IoT SIM
-          Plans
+          IoT SIM Card For Global Connectivity | Secure M2M / IoT with Pooled and PAYG IoT SIM Plans
         </p>
         <hr className="border-gray-300 my-6" />
       </div>
@@ -32,9 +31,9 @@ function IoTSimSection() {
       <FeatureSection
         title="Coverage"
         subtitle="Global"
-        description="OneSimCard gives you the world in the palm of your hand providing global connectivity IoT SIM card solutions in over 400 countries worldwide."
+        description="OneSimCard gives you the world in the palm of your hand providing global connectivity IoT SIM card solutions in over 200 countries worldwide."
         buttonText="Global Coverage"
-        imageSrc={worldMap}                
+        imageSrc={worldMap}
         imageAlt="World Map"
         reverse={false}
         aos={{ type: "fade-up", delay: 200, duration: 1000 }}

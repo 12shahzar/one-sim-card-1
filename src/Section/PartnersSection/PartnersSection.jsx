@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom"; // Added useNavigate
-import partnersData from "../../data/partnersData.json";
+import partnersData from "../../data/partnersData";
 import SectionContent from "./SectionContent";
 import DataTable from "./DataTable";
 import Sidebar from "./Sidebar";

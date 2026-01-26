@@ -37,7 +37,7 @@ export default function ConnectivitySection() {
             </h4>
             <p className="text-[#6B7280] text-lg md:text-base">
               Seamlessly connect your IoT devices with our multi-network roaming
-              and global coverage in over 400 countries.
+              and global coverage in over 200 countries.
             </p>
             <Link to="/GlobalCoverage" className="text-[#F4C600] font-medium text-sm hover:underline cursor-pointer">
               Learn More

@@ -7,7 +7,7 @@ export default function SimPlans() {
     <div className="max-w-7xl mx-auto py-16 px-2 md:px-6">
       <SectionHeading title={"Consumer Global IoT Connectivity"} align="left" />
       <p className="text-[#08080C] mt-2 font-medium text-2xl my-5">
-        IoT SIM Card For Global Connectivity | Secure M2M & Prepaid IoT SIM
+        IoT SIM card for Global Connectivity | Secure M2M & Prepaid IoT SIM
         Plans
       </p>
       <SimPlansSection />

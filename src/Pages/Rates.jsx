@@ -9,9 +9,9 @@ function Rates() {
   return (
     <div className="max-w-7xl mx-auto pb-14 font-sora px-2 md:px-6">
       <ContentSection
-        title="Internet of Things SIM Card with Flexible M2M Data Rates"
+        title="Internet of Things IoT SIM card with Flexible M2M Data Rates"
         paragraphs={[
-          "Because every situation is unique, we offer many extremely competitive pricing plans to fit any budget, & we customize our plans based on each client’s specific needs. Our pricing ranges depending on certain factors such as countries included, volume of active SIM cards, and volume of data needed. Our pricing plans fall into 2 general categories: Pay-as-you-go & Pooled with offer rates as low as $0.01/MB in both categories.",
+          "Because every situation is unique, we offer many extremely competitive pricing plans to fit any budget, & we customize our plans based on each client’s specific needs. Our pricing ranges depending on certain factors such as countries included, volume of active SIM cards, and volume of data needed. Our pricing plans fall into 2 general categories: Pay-as-you-go & Pooled with offer rates as low as $0.005/MB in both categories",
         ]}
       />
       <section
@@ -42,12 +42,12 @@ function Rates() {
               their data consumption needs, or where individual IoT devices
               either consume a vastly different amount of data per month, or
               their IoT SIM card deployment covers many different countries
-              where rates in each country can vary. Each SIM is funded from an
+              where rates in each country can vary. Each IoT SIM card is funded from an
               existing balance on the account.
             </p>
             <p className="text-[#6B7280] m-4 mb-6 md:mx-0">
-              The SIM can either be set up as Pay-As-You-Go per MB or with a set
-              plan of any size per SIM. Each SIM can have a different plan
+              The IoT SIM card can either be set up as Pay-As-You-Go per MB or with a set
+              plan of any size per IoT SIM card. Each IoT SIM card can have a different plan
               giving you a tremendous amount of flexibility in your deployment.
             </p>
           </div>
@@ -72,12 +72,12 @@ function Rates() {
               This category of plans is ideal for clients who have a general
               idea of their average data consumption needs and all of their IoT
               devices tend to require a similar amount of cellular data traffic
-              and the SIM cards operate in similarly priced countries. Data in
+              and the IoT SIM cards operate in similarly priced countries. Data in
               this category of plans pools across all active devices on the
-              single account. All SIMs on a particular account must have the
+              single account. All IoT SIM cards on a particular account must have the
               same exact plan (e.g. same cost, same data plan, and same included
-              countries). Each active SIM contributes an equal amount of data
-              into the pool. Plan sizes can be of ANY size per SIM– simply tell
+              countries). Each active IoT SIM card contributes an equal amount of data
+              into the pool. Plan sizes can be of ANY size per IoT SIM card– simply tell
               us what you need and we will design a custom plan for your
               particular project.{" "}
             </p>
@@ -92,7 +92,7 @@ function Rates() {
           </div>
         </div>
       </section>
-      
+
       <div className="text-center">
         <CustomButton
           text="Contact Sales for your Custom Quote"

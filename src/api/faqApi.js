@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE = "https://onesimcardbackend.vercel.app/api/faq";
+const BASE = `${import.meta.env.VITE_API_BASE_URL}/api/faq`;
 
 // Get all FAQ Groups
 export const getFaqGroups = async () => {

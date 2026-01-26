@@ -17,16 +17,16 @@ function EasySIMManagement() {
           {/* Text Content */}
           <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center space-y-5">
             <p className="text-[#08080C] max-w-lg md:mx-0 font-sora font-thin text-3xl md:text-5xl">
-              OSCAR IoT SIM Card Platform: Scalable, Simple & Secure
+              OSCAR IoT SIM card platform: Scalable, Simple & Secure
             </p>
 
             <p className="text-[#08080C] max-w-lg  md:mx-0 font-sora font-regular text-xl">
-              Manage Unlimited Number of SIM Cards Under One Web Account
+              Manage Unlimited Number of IoT SIM cards Under One Web Account
             </p>
             <p className="text-[#6B7280] max-w-lg  md:mx-0 font-sora font-regular text-base">
               OneSimCard IoT's proprietary, cloud-based OSCAR SIM Management
               platform makes it easy for companies to manage any number of IoT
-              SIM cards. It's not enough to save on communications - SIM card
+              SIM cards. It's not enough to save on communications - IoT SIM card
               management has to be powerful & secure, yet simple.
             </p>
           </div>

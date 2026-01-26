@@ -100,7 +100,7 @@ export default function CustomQuoteForm() {
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <label className="block mb-2 text-sm text-slate-700">
-                  Estimate number of SIM Cards
+                  Estimate number of IoT SIM cards
                 </label>
                 <input
                   required
@@ -112,7 +112,7 @@ export default function CustomQuoteForm() {
               </div>
               <div>
                 <label className="block mb-2 text-sm text-slate-700">
-                  Average Data Use Per SIM Card, MB
+                  Average data use per IoT SIM card, MB
                 </label>
                 <select
                   required

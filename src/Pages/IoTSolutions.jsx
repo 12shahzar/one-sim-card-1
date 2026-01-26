@@ -66,7 +66,7 @@ function IoTSolutions() {
           </h1>
 
           <p className="font-sora text-xl font-medium text-white">
-            Secure Communications In 160+ Countries
+            Secure Communications In Over 200 Countries
           </p>
 
           <div>
@@ -85,7 +85,7 @@ function IoTSolutions() {
       </section>
 
       <ContentSection
-        title="IoT SIM Card"
+        title="IoT SIM card"
         paragraphs={[
           "OneSimCard IoT is a leading provider of global IoT SIM cards that play a pivotal role in advancing any solutions you can dream of. We work with businesses and organizations of all types, from Start-ups to Fortune 500 companies and Public Sector agencies. These are both end-users as well as device manufacturers. Here’s how OneSimCard IoT can help:",
         ]}
@@ -93,7 +93,7 @@ function IoTSolutions() {
       <FeatureSection
         title="Coverage"
         subtitle="Global"
-        description="OneSimCard IoT offers extensive global coverage in over 400 countries and territories, with over 400 networks, ensuring that devices can stay connected no matter where they are located. This is particularly beneficial for smart solutions that rely on consistent connectivity across various regions and devices."
+        description="OneSimCard IoT offers extensive global coverage in over 200 countries and territories, with over 350 networks, ensuring that devices can stay connected no matter where they are located. This is particularly beneficial for smart solutions that rely on consistent connectivity across various regions and devices."
         imageSrc={worldMap}
         imageAlt="World Map"
         reverse={false}
@@ -114,9 +114,7 @@ function IoTSolutions() {
       />
 
       <FeatureSection
-        title="Plans"
-        subtitle="Customizable "
-        description="OneSimCard IoT offers customizable plans (both Pooled and Pay-As-You-Go plans) tailored to the specific needs of IoT applications. This flexibility allows us to design the most suitable data plans for each client, optimizing costs while ensuring robust connectivity for all devices."
+        description="OneSimCard IoT offers customizable plans (both Pooled and Pay-As-You-Go plans) tailored to the specific requirements of IoT applications. This flexibility allows us to design the most suitable data plans for each client, optimizing costs while ensuring robust connectivity for all devices."
         imageSrc={esim}
         imageAlt="Customizable "
         reverse={false}
@@ -173,7 +171,7 @@ function IoTSolutions() {
       <ContentSection
         paragraphs={[
           "IoT SIM cards are instrumental in the development and operation of any IoT solutions, offering enhanced connectivity, real-time data collection, scalability, and cost efficiency. OneSimCard IoT, with its global coverage, reliable connectivity, customizable plans, easy integration, and robust security, is well-positioned to our clients and their solutions in the journey towards becoming smarter and more efficient.",
-          "The OneSimCard IoT Global IoT SIM Card and the OneSimCard IoT platform were developed for many key IoT industry segments where OneSimCard IoT offers advanced IoT solutions and expertise.",
+          "The OneSimCard IoT Global IoT SIM card and the OneSimCard IoT platform were developed for many key IoT industry segments where OneSimCard IoT offers advanced IoT solutions and expertise.",
         ]}
       />
       <div
@@ -201,7 +199,7 @@ function IoTSolutions() {
         >
           <img src={doc} />
           <p className="text-[#455E86] text-xl font-semibold">
-            An Introduction to the Role IoT SIM Cards Play in Connecting
+            An Introduction to the Role IoT SIM cards Play in Connecting
             “Things”
           </p>
         </Link>

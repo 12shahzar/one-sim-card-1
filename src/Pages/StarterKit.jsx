@@ -10,19 +10,15 @@ function StarterKit() {
     <div className="max-w-7xl mx-auto py-16 font-sora px-2 md:px-6">
       <div className="text-left ">
         <SectionHeading
-          title="Buy IoT SIM Cards for Seamless Global Connectivity"
+          title="Buy IoT SIM cards for Seamless Global Connectivity"
           align="left"
         />
         <p className="text-[#08080C] mt-2 font-medium text-2xl ml-1">
-          Get ready for the Internet of Things with the IoT SIM from OneSimCard.
+          Get ready for the Internet of Things with the IoT SIM card from OneSimCard.
         </p>
         <hr className="border-gray-300 my-6" />
         <p className="text-[#6B7280] font-regular text-light  leading-relaxed mb-12 pr-2 md:pr-72">
-          OneSimCard M2M / IoT SIM card is a small electronic chip which inserts
-          into a compatible device. It enables your remote device to transfer
-          data on 2G, 3G, 4G LTE (including LTE-M and NB-Iot), or 5G networks in
-          over 400 countries on over 420 carriers with no steering. Starter Kit
-          includes
+          The OneSimCard M2M / IoT SIM card is a small electronic chip which inserts into a compatible device. It enables your remote device to transfer data on 2G, 3G, 4G LTE (including LTE-M and NB-Iot), or 5G networks in over 200 countries on over 350 carriers with no steering. Starter Kit coverage includes
           <span className="text-[#455E86] font-semibold">
             {" "}
             150 of the most popular destinations.
@@ -32,14 +28,14 @@ function StarterKit() {
       <div>
         <div className="" data-aos="fade-left">
           <FeaturesGrid
-            title="International IoT SIM Card for M2M features:"
+            title="International IoT SIM card for M2M features:"
             featuresData={featuresData}
             showButtons={false}
           />
         </div>
         <div className="text-left py-16 font-sora">
           <SectionHeading
-            title="Order Your International M2M / IoT SIM Cards:"
+            title="Order Your International M2M / IoT SIM cards:"
             align="left"
           />
 
@@ -48,7 +44,7 @@ function StarterKit() {
             <div className="w-full lg:w-1/2 flex justify-center">
               <img
                 src={kitCard}
-                alt="5G SIM Card"
+                alt="5G IoT SIM card"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -60,21 +56,18 @@ function StarterKit() {
               </h2>
 
               <h3 className="text-xl md:text-2xl font-medium text-[#08080C]">
-                M2M / IoT SIM Card Starter Kit
+                M2M / IoT SIM card Starter Kit
               </h3>
 
               <ul className="list-disc list-outside text-base text-[#6B7280] pl-5 space-y-2">
-                <li>6 No Steering IoT SIM cards</li>
+                <li>5 No Steering IoT SIM cards</li>
                 <li>100MB Pooled data for 30 days</li>
                 <li>
-                  Coverage in 200+ countries on over 420 Networks (Starter Kit
-                  includes 150 countries)
+                  Coverage in 200+ countries on over 350 Networks (Starter Kit includes 150 countries)
                 </li>
                 <li>Web Account Management</li>
-                <li>Dedicated USA Based Support</li>
-                <li>
-                  Available for New Customers Only, limit 1 Starter Kit per
-                  Customer
+                <li>Free Dedicated USA Based Support</li>
+                <li>Available for New Customers Only, limit 1 Starter Kit per Customer
                 </li>
               </ul>
 

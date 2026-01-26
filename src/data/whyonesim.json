@@ -1,33 +1,32 @@
- [
-    {
-      "id": 1,
-      "icon": "/images/midsize.svg",
-      "label": "Focus on Small and Mid-Sized Companies",
-      "description": "OneSimCard M2M understands the challenges faced by small and mid-sized companies when they search for a quality IoT service provider at a reasonable price for their application. OneSimCard M2M’s mission is to be the premier M2M / IoT provider for this segment."
-    },
-    {
-      "id": 2,
-      "icon": "/images/partnership.svg",
-      "label": "True Interest in Partnership Building",
-      "description": "OneSimCard M2M evaluates each opportunity on its own merits without any minimum SIM card requirements or activation fees. Our focus is on building a long-term partnership with all our customers."
-    },
-    {
-      "id": 3,
-      "icon": "/images/intelligent.svg",
-      "label": "Intelligent Pricing by Application",
-      "description": "OneSimCard M2M understands that many IoT applications require only small amounts of data & SMS usage each month. We are determined to work with all customers to create pricing which considers application data & SMS usage."
-    },
-    {
-      "id": 4,
-      "icon": "/images/customerSupport.svg",
-      "label": "Outstanding Customer Support",
-      "description": "All OneSimCard M2M customers are assigned a dedicated Account Executive who will be responsible for managing the partnership. OneSimCard M2M also features highly qualified technical support 24/7."
-    },
-    {
-      "id": 5,
-      "icon": "/images/network.svg",
-      "label": "2G Network Options",
-      "description": "OneSimCard M2M will continue to offer 2G network support in 2017 and beyond. In addition, OneSimCard M2M offers cost-effective migration options and outstanding migration bonuses for those companies wishing to upgrade from 2G."
-    }
-  ]
-
+[
+  {
+    "id": 1,
+    "icon": "/images/midsize.svg",
+    "label": "Focus on Small and Mid-Sized Companies",
+    "description": "OneSimCard IoT understands the challenges faced by small and mid-sized companies when they search for a quality IoT service provider at a reasonable price for their application. OneSimCard IoT’s mission is to be the premier M2M / IoT provider for this segment."
+  },
+  {
+    "id": 2,
+    "icon": "/images/partnership.svg",
+    "label": "True Interest in Partnership Building",
+    "description": "OneSimCard IoT evaluates each opportunity on its own merits without any minimum IoT SIM card requirements or activation fees. Our focus is on building a long-term partnership with all our customers."
+  },
+  {
+    "id": 3,
+    "icon": "/images/intelligent.svg",
+    "label": "Intelligent Pricing by Application",
+    "description": "OneSimCard IoT understands that many IoT applications require only small amounts of data & SMS usage each month. We are determined to work with all customers to create pricing which considers application data & SMS usage."
+  },
+  {
+    "id": 4,
+    "icon": "/images/customerSupport.svg",
+    "label": "Outstanding Customer Support",
+    "description": "All OneSimCard IoT customers are assigned a dedicated Account Executive who will be responsible for managing the partnership. OneSimCard IoT also features highly qualified technical support 24/7."
+  },
+  {
+    "id": 5,
+    "icon": "/images/network.svg",
+    "label": "2G Network Options",
+    "description": "OneSimCard IoT will continue to offer 2G network support in 2017 and beyond. In addition, OneSimCard IoT offers cost-effective migration options and outstanding migration bonuses for those companies wishing to upgrade from 2G."
+  }
+]

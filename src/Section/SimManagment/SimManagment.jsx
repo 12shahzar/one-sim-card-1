@@ -8,7 +8,7 @@ function SimManagment() {
       <FeatureSection
         title="IoT SIM Portal"
         subtitle="Management"
-        description="A single portal and API capabilities to manage all your Global IoT SIM Card deployments. Providing complete control over all aspects of connectivity."
+        description="A single portal and API capabilities to manage all your Global IoT SIM card deployments. Providing complete control over all aspects of connectivity."
         buttonText="IoT SIM Management"
         imageSrc={simCalculator}
         imageAlt="SIM Management"

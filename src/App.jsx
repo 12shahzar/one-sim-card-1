@@ -52,7 +52,7 @@ function App() {
                   titleFirst: "Why OneSim",
                   titleLast: "Card",
                   breadcrumb: [
-                    { label: "IoT SIM Card Coverage", path: "/GlobalCoverage" },
+                    { label: "IoT SIM card coverage", path: "/GlobalCoverage" },
                   ],
                 }}
               >
@@ -70,7 +70,7 @@ function App() {
                   titleLast: "Card",
                   breadcrumb: [
                     {
-                      label: "Manage Unlimited SIM Cards Under One Web Account",
+                      label: "Manage Unlimited IoT SIM cards Under One Web Account",
                       path: "/EasySIMManagement",
                     },
                   ],
@@ -105,7 +105,7 @@ function App() {
                   titleLast: "Card",
                   breadcrumb: [
                     {
-                      label: "OSCAR IoT SIM Card Management Portal",
+                      label: "OSCAR IoT SIM card management portal",
                       path: "/OSCARIoTSIMCardManagementPortal",
                     },
                   ],
@@ -230,7 +230,7 @@ function App() {
                   titleLast: "Card",
                   breadcrumb: [
                     {
-                      label: " IoT SIM Card Coverage",
+                      label: " IoT SIM card coverage",
                       path: "/",
                     },
                   ],
@@ -249,7 +249,7 @@ function App() {
                   titleLast: "Card",
                   breadcrumb: [
                     {
-                      label: "IoT SIM Card Coverage",
+                      label: "IoT SIM card coverage",
                       path: "/",
                     },
                   ],
@@ -269,7 +269,7 @@ function App() {
                   breadcrumb: [
                     {
                       label:
-                        "IoT SIM Card Business Opportunities for Distributors and Resellers ",
+                        "IoT SIM card business opportunities for distributors and resellers ",
                       path: "/",
                     },
                   ],

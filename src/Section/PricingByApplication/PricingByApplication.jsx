@@ -85,7 +85,7 @@ export default function PricingByApplication() {
               {[
                 "5 IoT SIM cards",
                 "100MB Shared Data (20MB per SIM Pooled)",
-                "Coverage in 160+ countries",
+                "Coverage in 200+ countries (150 included in the Starter Kit)",
                 "Web Account Management",
                 "Dedicated Support",
               ].map((text, i) => (

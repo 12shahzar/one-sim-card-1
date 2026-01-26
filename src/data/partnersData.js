@@ -1,4 +1,4 @@
-{
+const partnersData = {
   "sections": [
     {
       "header": "Technology",
@@ -16,13 +16,13 @@
                   "id": "NetworkCoverage",
                   "label": "Network Coverage",
                   "image": "/images/network-coverage.svg",
-                  "description": "OneSimCard M2M has agreements with 325+ roaming partner networks worldwide and offers outstanding M2M services in over 140 countries. In addition, OneSimCard is constantly expanding our M2M coverage area to satisfy partner requests in more remote regions."
+                  "description": "OneSimCard M2M has agreements with 350+ roaming partner networks worldwide and offers outstanding M2M services in over 200 countries. In addition, OneSimCard is constantly expanding our M2M coverage area to satisfy partner requests in more remote regions."
                 },
                 {
                   "id": "NetworkConnectivity",
                   "label": "Network Connectivity and Redundancy",
                   "image": "/images/network-connectivity.svg",
-                  "description": "In most countries OneSimCard M2M has agreements with more than one roaming partner network.  This network redundancy allows OneSimCard M2M to offer the best possible network connectivity. Travel across borders with confidence. The OneSimCard M2M  IoT SIM will automatically search for the best signal in the area. If OneSimCard  loses signal, it will automatically connect to the next available network, making it more reliable than single network SIMs, especially in rural areas.  OneSimCard M2M / IoT also offers both 3G and 2G M2M coverage worldwide."
+                  "description": "In most countries OneSimCard M2M has agreements with more than one roaming partner network.  This network redundancy allows OneSimCard M2M to offer the best possible network connectivity. Travel across borders with confidence. The OneSimCard M2M IoT SIM card will automatically search for the best signal in the area. If OneSimCard loses signal, it will automatically connect to the next available network, making it more reliable than single network IoT SIM cards, especially in rural areas.  OneSimCard M2M / IoT also offers both 3G and 2G M2M coverage worldwide."
                 },
                 {
                   "id": "NoNetworkSteering",
@@ -39,7 +39,7 @@
                   "id": "PrivateAPN",
                   "label": "Private APN",
                   "image": "/images/private-apn.svg",
-                  "description": "APN stands for Access Point Name. APN is used by mobile service providers to combines many SIM cards into a single limited networks. It is recommended to have a private APN for security critical applications.",
+                  "description": "APN stands for Access Point Name. APN is used by mobile service providers to combines many IoT SIM cards into a single limited networks. It is recommended to have a private APN for security critical applications.",
                   "learnmore": true
                 },
                 {
@@ -60,7 +60,7 @@
                   "id": "IMEILock",
                   "label": "IMEI Lock",
                   "image": "/images/static-ip.svg",
-                  "description": "The OneSim IMEI Lock service adds a layer of security and assures that a SIM card can only be used in the IoT device to which it is assigned.",
+                  "description": "The OneSim IMEI Lock service adds a layer of security and assures that an IoT SIM card can only be used in the IoT device to which it is assigned.",
                   "learnmore": true
                 },
                 {
@@ -95,11 +95,11 @@
               "heading": "What is No Network Steering In M2M-IoT?",
               "image": "/images/NoNetworkSteering.svg",
               "description": [
-                "SIM Cards offering services in multiple countries roam on many other network providers. By doing this, the coverage area is significantly increased not only in additional countries, but also within the country where services are being provided. In many countries, OneSimCard offers services on more than one network. For example, in the USA we offer roaming on AT&T, T-Mobile and Verizon. In Canada, we offer roaming on Rogers, Bell Canada, and Telus. Some other roaming SIM providers do this too. What makes OneSimCard different though is the “No Network Steering” service."
+                "Our IoT SIM cards offer services in multiple countries and roam on many network providers. As a result, the coverage area is significantly increased not only in additional countries, but also within the country where services are being provided. In many countries, OneSimCard offers services on multiple networks. For example, in the USA we offer roaming on AT&T, T-Mobile and Verizon. In Canada, we offer roaming on Rogers, Bell Canada, Telus, and Videotron. Some other roaming IoT SIM card providers do this too, but what makes OneSimCard superior is our IoT SIM cards offer “No Network Steering” service. This lets the device decide which is the best network to use at that time, at that location."
               ],
               "bottomDescription": [
-                "“No Network Steering” means that not only is the coverage area enlarged, but also the service quality is improved and the speed at which the device registers on the network and start sending data is increased. Why? This is because we do not “steer” the SIM to the lowest cost network regardless of the signal strength. We offer no steering, which mean instructing the device to register on the network with the best signal.",
-                "It is logical for a carrier to try to steer the SIM to the network provider with the lowest cost. As the retail cost to end users is the same, margins are better using the lowest cost network provider. However, the quality of the service may suffer because of this. It is not that OneSimCard does not care about margins. We do. However, offering quality and reliable service with the best possible coverage is more important."
+                "“No Network Steering” means that not only is the coverage area enlarged, but also the service quality is improved and the speed at which the device registers on the network and starts sending data is increased. Why? This is because we do not “steer” the SIM to the lowest cost network regardless of the signal strength. We offer no steering, which means instructing the device to register on the network with the best signal.",
+                "It is financially advantageous for a carrier to steer the SIM to the network provider with the lowest cost. As the retail cost to their customer is the same, margins are better using the lowest cost network provider. However, the quality of the service may suffer because of this. It is not that OneSimCard does not care about margins. We do. However, offering quality and reliable service with the best possible coverage is more important."
               ],
               "featureContent": false,
               "contact": false
@@ -114,15 +114,15 @@
             {
               "heading": "The OneSimCard eSIM",
               "description": [
-                "In addition to our regular plastic SIM cards, OneSimCard now offers eSIMs.",
-                "eSIM cards (known also as embedded SIM cards or eUICC SIMs) are soldered directly to the device printed circuit board and, unlike regular SIM cards, are not removable or replaceable by the user.  The advantages of e SIMS, especially for M2M / IoT devices are numerous. As eSIMs require up to 92% less space within the device when compared to regular SIMs, there is more available space for other components or to further decrease the size of the device itself.   In addition, as e SIMs are soldered within the device, they can withstand high temperatures and vibrations much better than regular SIM cards. This feature make eSIMs or eUICC SIMs  especially useful in devices serving mobile IoT applications such a connected vehicles or in any device installed close to engines or any other heat emitting machinery.   But, the most important advantage of eSIMs is the way in which they are programmed."
+                "In addition to our regular plastic IoT SIM cards, OneSimCard now offers eSIMs.",
+                "eSIM cards (also known as embedded SIM cards or MFF2 SIMs) are soldered directly to the device printed circuit board and, unlike regular IoT SIM cards, are not removable or replaceable by the user.  The advantages of eSIMS, especially for M2M / IoT devices are numerous. As eSIMs require up to 92% less space within the device when compared to regular SIMs, there is more available space for other components or to further decrease the size of the device itself.   In addition, as eSIMs are soldered within the device, they can withstand high temperatures and vibrations much better than regular IoT SIM cards. This feature make eSIMs especially useful in devices serving mobile IoT applications such as connected vehicles or in any device installed close to engines or any other heat emitting machinery.   But, the most important advantage of eSIMs is the way in which they are programmed."
               ],
               "bottomDescription": [
-                "Service Providers are also able to reprogram eSIMs, so they can easily and remotely migrate a customer to their services by installing  a new operational profile. This a very important advantage as the cost and effort required to retrieve and change SIM cards in hundreds or thousands of remote devices is quite significant. This cost and effort is entirely eliminated by the use of e SIM cards.",
-                "A separate feature of eSIMs is that Service Providers can also add an additional operational profile to the eSIM because e SIM cards allow for the usage of multiple International Mobile Subscriber Identities or  IMSIs.  IMSIs  are  usually 15 digit numbers and serve as a unique indentifying number for GSM service subscribers. The IMSI number is compose of 2 parts which indentify both the GSM network where the subscriber holds their account and the subscriber’s unique identification number. Usage of multiple IMSI numbers are especially interesting for mobile devices which cross borders. The device user is able to utilize 2 or more different operational profiles for their devices.  Those operational profiles could be with a domestic Service Provider and additional international roaming Service Providers thereby creating both cost savings and better coverage.  As embedded SIM cards are able to switch seamlessly between IMSIs, a device crossing borders could be automatically switched from the regular domestic carrier to an international roaming carrier (such as OneSimCard)  as soon as the  device is registered abroad.  All  IMSI profiles are  housed on the embedded SIM and the customer would seamlessly enjoy outstanding rates and service both domestically and internationally."
+                "Service Providers are also able to reprogram eSIMs, so they can easily and remotely migrate a customer to their services by installing  a new operational profile. This a very important advantage as the cost and effort required to retrieve and change IoT SIM cards in hundreds or thousands of remote devices is quite significant. This cost and effort is entirely eliminated by the use of eSIM cards.",
+                "A separate feature of eSIMs is that Service Providers can also add an additional operational profile to the eSIM because eSIM cards allow for the usage of multiple International Mobile Subscriber Identities or  IMSIs.  IMSIs  are  usually 15 digit numbers and serve as a unique identifying number for GSM service subscribers. The IMSI number is compose of 2 parts which identify both the GSM network where the subscriber holds their account and the subscriber’s unique identification number. Usage of multiple IMSI numbers is especially interesting for mobile devices which cross borders. The device user is able to utilize 2 or more different operational profiles for their devices.  Those operational profiles could be with a domestic Service Provider and additional international roaming Service Providers thereby creating both cost savings and better coverage.  As embedded SIM cards are able to switch seamlessly between IMSIs, a device crossing borders could be automatically switched from the regular domestic carrier to an international roaming carrier (such as OneSimCard)  as soon as the  device is registered abroad.  All  IMSI profiles are  housed on the embedded SIM and the customer would seamlessly enjoy outstanding rates and service both domestically and internationally."
               ],
               "featureContent": {
-                "content": "M2M / IoT eSIMs are often installed in devices which are placed in very remote and not easily accessible locations such as deep under a truck dashboard. As the user cannot easily access the device, there must be an easy initial way for M2M e SIMs  to communicate with the outside world. eSIM can be provided pre-programmed to the manufacturer with the Service Provider network profile loaded. Service Providers can remotely program or re-program eSIMs (embedded SIMs)  over the air by providing an operational profile. The operational profile contains all the necessary subscriber information. ",
+                "content": "M2M / IoT eSIMs are often installed in devices which are placed in very remote and not easily accessible locations such as deep under a truck dashboard. As the user cannot easily access the device, there must be an easy initial way for M2M e SIMs  to communicate with the outside world. eSIM can be provided pre-programmed to the manufacturer with the Service Provider network profile loaded. Service Providers can remotely program or re-program eSIMs (embedded SIMs)  over the air by providing an operational profile. The operational profile contains all the necessary subscriber information.",
                 "image": "/images/TheOneSimCardeSIM.svg"
               },
               "contact": true
@@ -140,7 +140,7 @@
                 "eSIM bootstrap profiles allow M2M/ IoT device manufacturers to  complete device testing prior to customer delivery and to provide a working device with a temporary network service provider to their customers. The customer will be able to change the network provider later if required or keep OneSimCard as the network provider for future use."
               ],
               "bottomDescription": [
-                "Following connection to the OneSimCard M2M provisioning server, device users can decide whether to continue using OneSimCard M2M services or choose another carrier. If the user chooses OneSimCard M2M, the  profile provisioning server will securely send back the OneSimCard M2M Operational Profile to the eSIM via the OneSimCard M2M e SIM Bootstrap."
+                "Following connection to the OneSimCard M2M provisioning server, device users can decide whether to continue using OneSimCard M2M services or choose another carrier. If the user chooses OneSimCard M2M, the  profile provisioning server will securely send back the OneSimCard M2M Operational Profile to the eSIM via the OneSimCard M2M eSIM Bootstrap."
               ],
               "featureContent": {
                 "content": "eSIMs (embedded SIMs)  should not leave the factory empty. By installing a OneSimCard  M2M Bootstrap on an eSIM,  device users not only receive an operational device upon delivery but also the opportunity to purchase an immediately available Operational Profile from OneSimCard M2M.",
@@ -159,10 +159,10 @@
               "heading": "Peer to Peer (P2P) communications for IoT",
               "image": "/images/PeertoPeer.svg",
               "description": [
-                "Peer to Peer IoT communications is the simplest way to address devices directly without incurring the high cost of the VPN. Each SIM card gets assigned a static IP and all devices in the group become directly addressable by the IP address on the LAN."
+                "Peer to Peer IoT communications is the simplest way to address devices directly without incurring the high cost of the VPN. Each IoT SIM card gets assigned a static IP and all devices in the group become directly addressable by the IP address on the LAN."
               ],
               "bottomDescription": [
-                "This IoT SIM card configuration allows devices to talk to each other directly, without going through the cloud or server. If one peer devices is set up on the server side as a router, then this network configuration will also allow direct IP access of all of the devices from that server, without running a VPN. This IoT device configuration is not as secure as having a dedicated VPN tunnel, but it is more secure than having general IoT devices running on a common APN. Adding a private, dedicated APN for the group of devices make this arrangement very secure.  The cost of setting up static IP addresses with this option is minimal, compared to other available fixed IP solutions, and is the least expensive way to secure your IoT/M2M devices."
+                "This IoT SIM card configuration allows devices to talk to each other directly, without going through the cloud or server. If one peer SIM is set up on the server side in a router, then this network configuration will also allow direct IP access to of all of the devices from that server without running a VPN. This IoT device configuration is not as secure as having a dedicated VPN tunnel, but it is more secure than having general IoT devices running on a common APN. Adding a private, dedicated APN for the group of devices makes this arrangement very secure.  The cost of setting up static IP addresses with this option is minimal, compared to other available fixed IP solutions, and is the least expensive way to secure your IoT/M2M devices"
               ],
               "featureContent": false,
               "contact": false
@@ -178,7 +178,7 @@
               "heading": "Private Access Point Name (APN) for IoT",
               "image": "/images/PrivateAccessPoint.svg",
               "description": [
-                "APN stands for Access Point Name. APN is used by mobile service providers to combine many SIM cards into a single limited network. Only SIM cards that are preprogrammed to work on a specific APN of the mobile provider can access the internet. This provides an additional layer of security for your IoT device. By ordering a private APN you limit the access to devices to a very narrow network. If the device does not have such APN pre-programmed, it will not be able to access the internet and that means it can’t go rogue on you being controlled by a hacker. The number of SIM cards on APN could be as few as one or as many as 1 million. "
+                "APN stands for Access Point Name. APN is used by mobile service providers to combine many IoT SIM cards into a single limited network. Only IoT SIM cards that are preprogrammed to work on a specific APN of the mobile provider can access the internet. This provides an additional layer of security for your IoT device. By ordering a private APN you limit the access to devices to a very narrow network. If the device does not have such APN pre-programmed, it will not be able to access the internet and that means it can’t go rogue on you being controlled by a hacker. The number of IoT SIM cards on APN could be as few as one or as many as 1 million. "
               ],
               "bottomDescription": [
                 "This is your private network which you can access over the public internet. The device with private APN still gets a dynamic public IP address that will change quite often. This IP address can’t be used to initiate communications to the device as this IP is usually not known until the device initiated connection to the remote server. In such applications the initial communication to the device is done by SMS, rather than by mobile data – GPRS.",
@@ -199,7 +199,7 @@
               "image": "/images/VirtualPrivateNetwork.svg",
               "description": [
                 "VPN stands for Virtual Private Network. VPN provides even further extension of the security for your IoT application by removing the access to your IoT SIM card(s) from the public internet. As the name implies, it creates an isolated network that is terminated in your office or your control center and can work as an extension of the private APN (Access Point Name) bringing the network through the private tunnel directly to you. To access the private mobile network, a VPN router must be installed on your backend (on premises or cloud).",
-                "It is recommended to have VPN installed on the network of M2M/IoT SIM cards/devices when thereare:"
+                "It is recommended to have VPN installed on the network of M2M/IoT SIM cards/devices when there are:"
               ],
               "bottomDescription": [
                 "VPN requires a private APN, but Private APN and VPN are two parts required to create a complete private network and thus creates the most secure solution. VPN service includes Static IPs to be able to address each device on the network individually."
@@ -234,17 +234,17 @@
           "intro": "",
           "details": [
             {
-              "heading": "OneSIM IMEI Lock - Prevent Unauthorized SIM Usage",
+              "heading": "OneSIM IMEI Lock - Prevent Unauthorized IoT SIM Usage",
               "description": [
-                "Enhance data and device security by ensuring that a specific SIM card is locked to an individual device by linking the SIM to the IMEI of the IoT device.",
-                "Are you concerned about having an IoT / M2M SIM being taken from your remote device and used in other devices without your knowledge? If so, OneSimCard IoT has a solution for you."
+                "Enhance data and device security by ensuring that a specific IoT SIM card is locked to an individual device by linking the IoT SIM to the IMEI of the IoT device.",
+                "Are you concerned about having an IoT / M2M IoT SIM card being taken from your remote device and used in other devices without your knowledge? If so, OneSimCard IoT has a solution for you."
               ],
               "bottomDescription": [
-                "Companies using SIM cards need to make certain that the SIM card cannot be taken from the IoT unit and installed into another device (think Smartphone or Tablet) which may use considerably more data. OneSim IMEI Lock is also crucial to ensure data being collected is accurately tied to the device sending it. With the continued surge of IoT devices being deployed globally, having this additional layer of SIM security is pivotal.",
-                "If you are interested in learning more about the OneSIM IMEI Lock or any of our other security features available for our IoT / M2M SIM cards with international connectivity, please contact our experts today!"
+                "Companies using IoT SIM cards need to make certain that the IoT SIM card cannot be taken from the IoT unit and installed into another device (think Smartphone or Tablet) which may use considerably more data. OneSim IMEI Lock is also crucial to ensure data being collected is accurately tied to the device sending it. With the continued surge of IoT devices being deployed globally, having this additional layer of IoT SIM security is pivotal.",
+                "If you are interested in learning more about the OneSIM IMEI Lock or any of our other security features available for our IoT / M2M IoT SIM cards with international connectivity, please contact our experts today!"
               ],
               "featureContent": {
-                "content": "The OneSim IMEI Lock service adds a layer of security and assures that a SIM card can only be used in the IoT device to which it is assigned. OneSim IMEI Lock allows the user to link OneSimCard IoT's international data SIM to a particular IoT device by using the device's unique IMEI number. Locking a SIM card to a singular device can be critical to IoT security and prevent significant financial losses, especially for international SIM card deployments.",
+                "content": "The OneSim IMEI Lock service adds a layer of security and assures that an IoT SIM card can only be used in the IoT device to which it is assigned. OneSim IMEI Lock allows the user to link OneSimCard IoT's international data SIM to a particular IoT device by using the device's unique IMEI number. Locking an IoT SIM card to a singular device can be critical to IoT security and prevent significant financial losses, especially for international IoT SIM card deployments.",
                 "image": "/images/IMEILock.svg"
               },
               "contact": false
@@ -267,17 +267,17 @@
           ],
           "details": [
             {
-              "heading": "1SIM IoT App - Manage Your SIM Cards On The Go",
+              "heading": "1SIM IoT App - Manage Your IoT SIM Cards On The Go",
               "description": [
                 "The OneSimCard IoT app enables you to get access to the most important functions of the OneSimCard OSCAR management platform virtually anywhere you have connectivity on your mobile device or tablet.",
                 "Whether your solution is for GPS (asset tracking, fleet management, people tracking, etc.), wearables, Smart meters/Smart City, Smart Home or any other Internet of Things/Machine to Machine application, you can easily manage all of your mobile IoT / M2M devices with the app."
               ],
               "bottomDescription": [
-                "The app provides access to each SIM card /device, set the monthly spending limit for the SIM, block/unblock mobile data, view the amount of data used in the billing cycle anywhere, anytime your mobile device is connected to the internet.",
+                "The app provides access to each IoT SIM card /device, set the monthly spending limit for the SIM, block/unblock mobile data, view the amount of data used in the billing cycle anywhere, anytime your mobile device is connected to the internet.",
                 "You can create separate logins for account administrators to share or to limit various account access functions. The in-app help tools provide quick access to troubleshooting and customer support."
               ],
               "featureContent": {
-                "content": "The 1Sim IOT app gives you with real time information about all active, blocked or deactivated SIM cards, network registration/connectivity status, and the current data and SMS use records. It also allows you to reconnect the device to the network if required, as well as 2-way communication to the device using Portal SMS option, which keeps logs of all sent commands to, and replies from, the device including the APN settings.",
+                "content": "The 1Sim IOT app gives you with real time information about all active, blocked or deactivated IoT SIM cards, network registration/connectivity status, and the current data and SMS use records. It also allows you to reconnect the device to the network if required, as well as 2-way communication to the device using Portal SMS option, which keeps logs of all sent commands to, and replies from, the device including the APN settings.",
                 "image": "/images/1SIMIoTApp.svg"
               },
               "contact": false
@@ -307,99 +307,99 @@
         },
         {
           "id": "UnderstandingM2MSIMCards",
-          "label": "Understanding M2M SIM Cards",
+          "label": "Understanding M2M IoT SIM Cards",
           "section": [
             {
-              "heading": "Key Features of M2M SIM Cards:",
+              "heading": "Key Features of M2M IoT SIM Cards:",
               "categories": [
                 {
                   "id": "RobustSecurity",
                   "label": "RobustSecurity ",
                   "image": "/images/RobustSecurity.svg",
-                  "description": "An M2M SIM card prioritizes security to protect sensitive data transmitted between devices. Advanced encryption and authentication mechanisms ensure that communication remains secure, making them suitable for applications where data integrity is paramount."
+                  "description": "An M2M IoT SIM card prioritizes security to protect sensitive data transmitted between devices. Advanced encryption and authentication mechanisms ensure that communication remains secure, making them suitable for applications where data integrity is paramount."
                 },
                 {
                   "id": "Durability",
                   "label": "Durability",
                   "image": "/images/Durability.svg",
-                  "description": "Designed for longevity, an M2M SIM are built to withstand harsh environmental conditions. This durability makes them suitable for deployment in various industries, including manufacturing, agriculture, and logistics.",
+                  "description": "Designed for longevity, an M2M IoT SIM are built to withstand harsh environmental conditions. This durability makes them suitable for deployment in various industries, including manufacturing, agriculture, and logistics.",
                   "learnmore": false
                 },
                 {
                   "id": "GlobalNetworkCompatibility",
                   "label": "Global Network Compatibility",
                   "image": "/images/no-steering.svg",
-                  "description": "An M2M SIM card is compatible with a range of networks, including 2G, 3G, 4G, and emerging 5G networks. This versatility ensures that devices can stay connected regardless of location, facilitating a seamless flow of data across borders."
+                  "description": "An M2M IoT SIM card is compatible with a range of networks, including 2G, 3G, 4G, and emerging 5G networks. This versatility ensures that devices can stay connected regardless of location, facilitating a seamless flow of data across borders."
                 }
               ]
             },
             {
-              "heading": "Applications of an M2M SIM Card",
+              "heading": "Applications of an M2M IoT SIM Card",
               "categories": [
                 {
                   "id": "IoTDevices",
                   "label": "IoT Devices",
                   "image": "/images/IoTDevices.svg",
-                  "description": "An M2M SIM is the backbone of the IoT ecosystem, connecting smart devices ranging from home appliances and wearables to industrial sensors and smart city infrastructure.",
+                  "description": "An M2M IoT SIM is the backbone of the IoT ecosystem, connecting smart devices ranging from home appliances and wearables to industrial sensors and smart city infrastructure.",
                   "learnmore": false
                 },
                 {
                   "id": "SmartMeters",
                   "label": "Smart Meters",
                   "image": "/images/SmartMeters.svg",
-                  "description": "The utility sector leverages an M2M SIM card in smart meters to enable remote monitoring and management of energy consumption. This not only enhances efficiency but also enables real-time data analytics.",
+                  "description": "The utility sector leverages an M2M IoT SIM card in smart meters to enable remote monitoring and management of energy consumption. This not only enhances efficiency but also enables real-time data analytics.",
                   "learnmore": false
                 },
                 {
                   "id": "Healthcare",
                   "label": "Healthcare",
                   "image": "/images/Healthcare.svg",
-                  "description": "In the healthcare industry, Machine to Machine SIM cards facilitate communication between medical devices, ensuring timely and accurate transmission of patient data. This is especially crucial in remote patient monitoring and emergency response systems.",
+                  "description": "In the healthcare industry, Machine to Machine IoT SIM cards facilitate communication between medical devices, ensuring timely and accurate transmission of patient data. This is especially crucial in remote patient monitoring and emergency response systems.",
                   "learnmore": false
                 },
                 {
                   "id": "TransportationLogistics",
                   "label": "Transportation and Logistics",
                   "image": "/images/TransportationLogistics.svg",
-                  "description": "In many SIM M2M applications, devices operate on battery power. An M2M SIM is optimized for low power consumption, extending the operational life of battery-powered devices and ensuring consistent communication over extended periods.",
+                  "description": "In many IoT SIM M2M applications, devices operate on battery power. An M2M IoT SIM is optimized for low power consumption, extending the operational life of battery-powered devices and ensuring consistent communication over extended periods.",
                   "learnmore": false
                 }
               ]
             },
             {
-              "heading": "Benefits of Using M2M SIM Cards",
+              "heading": "Benefits of Using M2M IoT SIM Cards",
               "categories": [
                 {
                   "id": "CostSavings",
                   "label": "Cost Savings",
                   "image": "/images/CostSavings.svg",
-                  "description": "M2M SIM cards contribute to cost savings by streamlining communication processes. Automated, efficient data exchange reduces the need for manual intervention, minimizing operational costs. ",
+                  "description": "M2M IoT SIM cards contribute to cost savings by streamlining communication processes. Automated, efficient data exchange reduces the need for manual intervention, minimizing operational costs. ",
                   "learnmore": false
                 },
                 {
                   "id": "EfficientCommunication",
                   "label": "Efficient Communication",
                   "image": "/images/EfficientCommunication.svg",
-                  "description": "Devices equipped with M2M SIM cards can communicate seamlessly with each other, facilitating real-time decision- making. This efficiency is particularly valuable in applications where prompt responses are crucial.",
+                  "description": "Devices equipped with M2M IoT SIM cards can communicate seamlessly with each other, facilitating real-time decision- making. This efficiency is particularly valuable in applications where prompt responses are crucial.",
                   "learnmore": false
                 },
                 {
                   "id": "Scalability",
                   "label": "Scalability",
                   "image": "/images/Scalability.svg",
-                  "description": "M2M SIM cards support the scalability of IoT ecosystems. As the number of connected devices grows, these cards can accommodate the increased demand for communication, ensuring a smooth and scalable infrastructure.",
+                  "description": "M2M IoT SIM cards support the scalability of IoT ecosystems. As the number of connected devices grows, these cards can accommodate the increased demand for communication, ensuring a smooth and scalable infrastructure.",
                   "learnmore": false
                 }
               ]
             },
             {
-              "heading": "Choosing the Right M2M SIM Card",
+              "heading": "Choosing the Right M2M IoT SIM Card",
               "categories": [
                 {
                   "id": "NetworkCoverage",
                   "label": "Network Coverage",
                   "image": "/images/NetworkCoverage.svg",
-                  "description": "Assess the network coverage of the M2M SIM card provider to ensure reliable connectivity across the intended deployment area.",
+                  "description": "Assess the network coverage of the M2M IoT SIM card provider to ensure reliable connectivity across the intended deployment area.",
                   "learnmore": false
                 },
                 {
@@ -413,7 +413,7 @@
                   "id": "SecurityFeatures",
                   "label": "Security Features",
                   "image": "/images/SecurityFeatures.svg",
-                  "description": "Examine the security features offered by M2M SIM cards, including encryption standards and authentication protocols. Choose cards that provide robust security measures to safeguard data.",
+                  "description": "Examine the security features offered by M2M IoT SIM cards, including encryption standards and authentication protocols. Choose cards that provide robust security measures to safeguard data.",
                   "learnmore": false
                 }
               ]
@@ -424,7 +424,7 @@
           "id": "GlossaryofTermsforIoTSIMCards&IoTDevices",
           "label": "Glossary of Terms for IoT SIM Cards & IoT Devices",
           "intro": "",
-          "api_url": "https://onesimcardbackend.vercel.app/api/content/448",
+          "api_url": `${import.meta.env.VITE_API_BASE_URL}/api/content/448`,
           "details": [
             {
               "heading": "Glossary of Terms for IoT SIM Cards & IoT Devices",
@@ -1643,4 +1643,5 @@
       ]
     }
   ]
-}
+};
+export default partnersData;

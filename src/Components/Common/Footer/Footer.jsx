@@ -136,7 +136,7 @@ const Footer = () => {
                 to="/Technology?section=Technology&item=UnderstandingM2MSIMCards"
                 className="hover:text-[#F4C600]"
               >
-                Understanding M2M SIM Cards
+                Understanding M2M IoT SIM cards
               </Link>
             </li>
             <li>
@@ -149,7 +149,7 @@ const Footer = () => {
             </li>
             <li>
               <Link to="/GlobalCoverage" className="hover:text-[#F4C600]">
-                IoT SIM Card Coverage
+                IoT SIM card coverage
               </Link>
             </li>
             <li>

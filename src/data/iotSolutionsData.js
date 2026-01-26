@@ -17,9 +17,7 @@ import imporvedMedicalMonitoring from "../assets/images/imporveMedicalMonitoring
 import ScalableMedicalMonitoring from "../assets/images/ScalableMedicalMonitoring.svg";
 import SecurityMedicalMonitoring from "../assets/images/SecuritMedicalMonitoring.svg";
 import ForCastMedicalMonitoring from "../assets/images/ForCastMedicalMonitoring.svg";
-
 import DigitalSignage from "../assets/images/DigitalSignage.svg";
-
 import RemoteDigitalSignage from "../assets/images/RemoteDigitalSignage.svg";
 import scalableDigitalSignage from "../assets/images/scalableDigitalSignage.svg";
 
@@ -56,12 +54,12 @@ const IoTSolutionsData = {
     title: "Fleet Management Solutions",
     paragraphs: [
       "Transportation telematics have become a vital component in the managing of an efficient and cost effective fleet. Whether it is cutting down idle times, increasing delivery performance or better managing fuel usage, drive times or vehicle maintenance, telematics now plays a mission critical role and is a key factor in both controlling and reducing costs and expenses.",
-      "OneSimCard M2M and its IoT platform offers the fleet management industry advanced IoT solutions, products and services to optimize their businesses and use their vehicles in the most efficient manner possible. The OneSimCard M2M Global IoT SIM Card was specifically designed for Fleet Management Solutions with outstanding Network Connectivity and Redundancy worldwide and no network “Steering” of IoT SIM cards.  OneSimCard Global IoT SIM Cards are programmed to register on the IoT Roaming partner network offering the best signal strength. Whether the vehicles are traveling across town or across Europe, fleet managers can be assured of the best possible network coverage available by choosing the OneSimCard M2M Global IoT SIM Card.",
+      "OneSimCard M2M and its IoT platform offers the fleet management industry advanced IoT solutions, products and services to optimize their businesses and use their vehicles in the most efficient manner possible. The OneSimCard M2M Global IoT SIM card was specifically designed for Fleet Management Solutions with outstanding Network Connectivity and Redundancy worldwide and no network “Steering” of IoT SIM cards.  OneSimCard Global IoT SIM cards are programmed to register on the IoT Roaming partner network offering the best signal strength. Whether the vehicles are traveling across town or across Europe, fleet managers can be assured of the best possible network coverage available by choosing the OneSimCard M2M Global IoT SIM card.",
     ],
     features: [
       {
         description:
-          "OneSimCard M2M /IoT services also offers fleet management companies an advanced administrative account portal and IoT dashboard, along with an IoT platform which allows easy management thousands of IoT sim cards.  In addition, OneSimCard M2M offer IoT industry leading flexibility in data plans and service pricing by evaluating each project and application on its own merit. Unlike some of its IoT competitors, OneSimCard does not have any monthly management fees.",
+          "OneSimCard M2M /IoT services also offers fleet management companies an advanced administrative account portal and IoT dashboard, along with an IoT platform which allows easy management thousands of IoT SIM cards.  In addition, OneSimCard M2M offer IoT industry leading flexibility in data plans and service pricing by evaluating each project and application on its own merit. Unlike some of its IoT competitors, OneSimCard does not have any monthly management fees.",
         imageSrc: FleetImage,
         imageAlt: "Fleet Management",
         reverse: false,
@@ -101,19 +99,19 @@ const IoTSolutionsData = {
     },
     title: "Asset Tracking",
     paragraphs: [
-      "Outstanding GPRS / GSM technology now allows users worldwide to track their valuable assets in real time. Whether the IoT devices are tracking vehicles, suitcases, cargo containers, freight, or even a beloved pet, the OneSimCard M2M Global IoT SIM Card and IoT Platform offers device manufacturers & distributors premium worldwide IoT services. ",
+      "Outstanding GPRS / GSM technology now allows users worldwide to track their valuable assets in real time. Whether the IoT devices are tracking vehicles, suitcases, cargo containers, freight, or even a beloved pet, the OneSimCard M2M Global IoT SIM card and IoT Platform offers device manufacturers & distributors premium worldwide IoT services. ",
     ],
     features: [
       {
         description:
-          "In addition, OneSimCard M2M’s advanced administrative IoT platform provides easy management of thousands of OneSimCards, allowing customers to dramatically improve both the security and visibility of their mobile valuable assets.",
+          "In addition, OneSimCard M2M’s advanced administrative IoT platform provides easy management of thousands of OneSimCard IoT SIM cards, allowing customers to dramatically improve both the security and visibility of their mobile valuable assets.",
         imageSrc: AssetTrackingImg,
         imageAlt: "Asset Tracking",
         reverse: false,
       },
     ],
     extraContent: [
-      "Key to providing OneSimCard M2M customers premium Asset Tracking IoT services, is the way the OneSimCard Global IoT SIM Card is engineered. This global roaming IoT SIM card has over 325 partner roaming networks worldwide. In all the major business and tourism countries, OneSimCard M2M has 2 or more network partners. This network redundancy allows OneSimCard M2M to continuously offer its customers the best available network by constantly monitoring signal strength. The OneSimCard M2M Global IoT SIM card seeks out the strongest signal and registers on that network, even when valuable assets are crossing borders. For more information on OneSimCard M2M’s Network Connectedly and Redundancy please visit the technology page.",
+      "Key to providing OneSimCard M2M customers premium Asset Tracking IoT services, is the way the OneSimCard Global IoT SIM card is engineered. This global roaming IoT SIM card has over 325 partner roaming networks worldwide. In all the major business and tourism countries, OneSimCard M2M has 2 or more network partners. This network redundancy allows OneSimCard M2M to continuously offer its customers the best available network by constantly monitoring signal strength. The OneSimCard M2M Global IoT SIM card seeks out the strongest signal and registers on that network, even when valuable assets are crossing borders. For more information on OneSimCard M2M’s Network Connectedly and Redundancy please visit the technology page.",
     ],
   },
 
@@ -425,7 +423,7 @@ const IoTSolutionsData = {
       },
     ],
     extraContent: [
-      "For Smart Home OEMs & their distributors, OneSimCard M2M offers immediate connectivity with OneSimCards pre-installed in the device. Offering the complete solution, including an IoT service contract, is a huge benefit to end users and removes a major barrier to product sales. For manufacturers & distributors, OneSimCard M2M also offers post sales worldwide customer support options.",
+      "For Smart Home OEMs & their distributors, OneSimCard M2M offers immediate connectivity with OneSimCard IoT SIM cards pre-installed in the device. Offering the complete solution, including an IoT service contract, is a huge benefit to end users and removes a major barrier to product sales. For manufacturers & distributors, OneSimCard M2M also offers post sales worldwide customer support options.",
     ],
   },
 

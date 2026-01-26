@@ -22,7 +22,7 @@ function Banner() {
         </p>
 
         <p className="md:text-xl font-sora font-medium text-white bg-gradient-to-r from-[#455E86] to-[#63A8ED] pr-8 py-2 my-4 rounded-full inline-block">
-          M2M / IoT SIM Card Starter Kit
+          M2M / IoT SIM card Starter Kit
         </p>
 
         <div>
