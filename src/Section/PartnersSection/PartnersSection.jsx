@@ -83,6 +83,9 @@ export default function PartnersSection() {
   };
 
   useEffect(() => {
+    // Always clear old API data when the item changes
+    setApiData(null);
+
     if (!activeItem?.api_url) return;
 
     const fetchData = async () => {
