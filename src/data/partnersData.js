@@ -257,11 +257,11 @@ const partnersData = {
           "intro": "",
           "moreImage": [
             {
-              "image": "https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83&releaseDate=1604534400&h=6987b6a17aa3a5a2ffc256fd3017431e",
+              "image": "/images/appStoreIcon.svg",
               "link": "https://apps.apple.com/us/app/1sim-iot/id1512993522"
             },
             {
-              "image": "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png",
+              "image": "/images/playStoreIcon.svg",
               "link": "https://play.google.com/store/apps/details?id=com.onesimcard.iot&utm_source=website&utm_campaign=app%20page&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
             }
           ],
