@@ -36,7 +36,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="">
+      <div className="overflow-x-clip">
         <Header />
 
         <Routes>
