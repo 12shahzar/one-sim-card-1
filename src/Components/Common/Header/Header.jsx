@@ -29,7 +29,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="w-full bg-white font-sora">
+    <header className="sticky top-0 w-full bg-white font-sora z-50 shadow-sm">
       <nav className="px-4 lg:px-6 py-3">
         <div className="flex justify-between items-center max-w-screen-xl mx-auto">
           {/* LOGO */}
@@ -199,7 +199,7 @@ function Header() {
                   to="/IoTSolutions"
                   onClick={() => setMenuOpen(false)}
                   className={`block py-2 hover:text-[#455E86] ${isActive(
-                    "/GlobalCoverage"
+                    "/IoTSolutions"
                   )}`}
                 >
                   IoT Solutions
@@ -210,7 +210,7 @@ function Header() {
                   to="/ConsumerIOT"
                   onClick={() => setMenuOpen(false)}
                   className={`block py-2 hover:text-[#455E86] ${isActive(
-                    "/EasySIMManagement"
+                    "/ConsumerIOT"
                   )}`}
                 >
                   Consumer IoT
