@@ -1,7 +1,7 @@
 import React from "react";
 import Common_Banner from "../Components/Banner/Common_Banner";
 import FaqSection from "../Section/FaqSection/FaqSection";
-import Devices from "../assets/images/Devices.svg";
+import Devices from "../assets/images/Devices.png";
 import FeaturesGrid from "../Components/FeaturesGrid/FeaturesGrid";
 import featuresData from "../data/featuresData";
 
