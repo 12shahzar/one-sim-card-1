@@ -14,6 +14,7 @@ export default function BlogSection() {
     return txt.value;
   };
 
+  
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
