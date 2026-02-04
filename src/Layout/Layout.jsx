@@ -8,15 +8,15 @@ const Layout = ({ children, banner }) => {
       {/* ✅ Banner section (only show when page passes banner props) */}
       {banner && (
         <Common_Banner
-          titleFirst={banner.titleFirst}
-          titleLast={banner.titleLast}
-          breadcrumb={banner.breadcrumb}
+          titleFirst={banner?.titleFirst}
+          titleLast={banner?.titleLast}
+          breadcrumb={banner?.breadcrumb}
         />
       )}
 
       {/* ✅ Page content */}
       <main className="">{children}</main>
-      <FaqSection bgColor={banner.bgColor} searchBar={banner.searchBar} />
+      <FaqSection bgColor={banner?.bgColor} searchBar={banner?.searchBar} />
     </div>
   );
 };

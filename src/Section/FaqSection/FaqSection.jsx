@@ -29,11 +29,13 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
       const data = await getFaqGroups();
       setCategories(data);
 
-      if (data.length > 0) {
-        const firstGroupId = data[0].idgroup;
-        setActiveGroupId(firstGroupId);
-        setActiveCategory(data[0].groupname);
-        loadFaqList(firstGroupId);
+      if (Array.isArray(data) && data.length > 0) {
+        const firstGroupId = data[0]?.idgroup;
+        if (firstGroupId) {
+          setActiveGroupId(firstGroupId);
+          setActiveCategory(data[0]?.groupname || "");
+          loadFaqList(firstGroupId);
+        }
       }
     } catch (err) {
       console.error("Failed to load groups:", err);
@@ -83,22 +85,24 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
           {/* Sidebar */}
           <div className="md:w-1/3 w-full flex justify-center md:justify-start h-fit">
             <div className="w-full max-w-xs sm:max-w-sm bg-white rounded-4xl p-2 md:p-8 shadow-[0_8px_90px_rgba(0,0,0,0.04)]">
-              {categories.map((cat) => (
+              {Array.isArray(categories) && categories.map((cat) => (
                 <button
-                  key={cat.idgroup}
+                  key={cat?.idgroup || Math.random()}
                   onClick={() => {
-                    setActiveCategory(cat.groupname);
-                    setActiveGroupId(cat.idgroup);
-                    loadFaqList(cat.idgroup);
+                    if (cat?.idgroup) {
+                      setActiveCategory(cat.groupname);
+                      setActiveGroupId(cat.idgroup);
+                      loadFaqList(cat.idgroup);
+                    }
                   }}
                   className={`flex text-left w-full py-3 px-4 rounded-lg transition-all text-lg sm:text-2xl font-medium cursor-pointer
-    ${activeGroupId === cat.idgroup ? "text-[#455E86]" : "text-[#08080C]"}
+    ${activeGroupId === cat?.idgroup ? "text-[#455E86]" : "text-[#08080C]"}
   `}
                 >
-                  {activeGroupId === cat.idgroup && (
+                  {activeGroupId === cat?.idgroup && (
                     <ChevronRight className="mr-2 h-5 w-5 text-[#455E86]" />
                   )}
-                  {cat.groupname}
+                  {cat?.groupname}
                 </button>
               ))}
             </div>
@@ -165,14 +169,14 @@ export default function FaqSection({ bgColor = "#F5F5F5", searchBar = false }) {
                     <span
                       className={`text-base sm:text-lg md:text-xl font-medium ${isOpen ? "text-[#455E86]" : "text-[#08080C]"
                         }`}
-                      dangerouslySetInnerHTML={{ __html: faq?.question }}
+                      dangerouslySetInnerHTML={{ __html: faq?.question || "" }}
                     />
                   </button>
 
                   {isOpen && (
                     <div
                       className="px-12 pb-5 text-[#6B7280] text-lg sm:text-base md:text-lg font-regular"
-                      dangerouslySetInnerHTML={{ __html: faq?.answer }}
+                      dangerouslySetInnerHTML={{ __html: faq?.answer || "" }}
                     />
                   )}
                 </div>

@@ -14,7 +14,7 @@ function Details({ details }) {
       <SectionHeading title={detail.heading} align="left" />
 
       {/* Main description */}
-      {detail.description?.map((desc, idx) => (
+      {Array.isArray(detail.description) && detail.description.map((desc, idx) => (
         <p key={idx} className="my-2 text-base text-[#6B7280]">
           {desc}
         </p>
@@ -38,7 +38,7 @@ function Details({ details }) {
       )}
 
       {/* Bottom description */}
-      {detail.bottomDescription?.map((desc, idx) => (
+      {Array.isArray(detail.bottomDescription) && detail.bottomDescription.map((desc, idx) => (
         <p key={idx} className="my-5 text-base text-[#6B7280]">
           {desc}
         </p>

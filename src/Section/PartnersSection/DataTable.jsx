@@ -7,8 +7,8 @@ export default function DataTable({ tables, expandedTables, onToggleTable }) {
       {tables?.map((table, idx) => {
         const isExpanded = expandedTables[idx];
         const visibleItems = isExpanded
-          ? table.items
-          : table.items.slice(0, 11);
+          ? (table?.items || [])
+          : (table?.items || []).slice(0, 11);
 
         return (
           <div
@@ -27,7 +27,7 @@ export default function DataTable({ tables, expandedTables, onToggleTable }) {
               ))}
             </div>
 
-            {table.items.length > 11 && (
+            {Array.isArray(table?.items) && table.items.length > 11 && (
               <div className="mt-10">
                 <CustomButton
                   text={isExpanded ? "View Less" : "View More"}

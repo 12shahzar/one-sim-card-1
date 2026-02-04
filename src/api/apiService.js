@@ -62,6 +62,17 @@ export const fetchByUrl = async (url) => {
     return response?.data;
 };
 
+// Partners
+export const getPartnerSections = async () => {
+    const response = await api.get("/partners/sections");
+    return response?.data || { data: [] };
+};
+
+export const getPartnerItemDetails = async (itemId) => {
+    const response = await api.get(`/partners/item/${itemId}`);
+    return response?.data || { data: null };
+};
+
 export default {
     getCountries,
     getOperatorsAndPlans,
@@ -73,4 +84,6 @@ export default {
     submitCustomQuote,
     submitBuyNow,
     fetchByUrl,
+    getPartnerSections,
+    getPartnerItemDetails,
 };

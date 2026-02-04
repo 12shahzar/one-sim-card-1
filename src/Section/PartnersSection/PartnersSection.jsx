@@ -1,57 +1,92 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom"; // Added useNavigate
-import partnersData from "../../data/partnersData";
+import { useLocation, useNavigate } from "react-router-dom";
 import SectionContent from "./SectionContent";
 import DataTable from "./DataTable";
 import Sidebar from "./Sidebar";
 import Details from "./Details";
-import { fetchByUrl } from "../../api/apiService";
+import { fetchByUrl, getPartnerSections, getPartnerItemDetails } from "../../api/apiService";
 
 export default function PartnersSection() {
   const location = useLocation();
-  const navigate = useNavigate(); // Added navigate
+  const navigate = useNavigate();
   const queryParams = new URLSearchParams(location.search);
 
-  const sections = partnersData.sections || [];
-
   // State initialization
-  const [activeSection, setActiveSection] = useState(sections[0]?.header);
-  const [activeId, setActiveId] = useState(sections[0]?.items?.[0]?.id);
-  const [activeItem, setActiveItem] = useState(sections[0]?.items?.[0]);
+  const [sections, setSections] = useState([]);
+  const [activeSection, setActiveSection] = useState(null);
+  const [activeId, setActiveId] = useState(null);
+  const [activeItem, setActiveItem] = useState(null);
   const [expandedTables, setExpandedTables] = useState({});
   const [apiData, setApiData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const [openSections, setOpenSections] = useState({
-    [sections[0]?.header]: true,
-  });
+  const [openSections, setOpenSections] = useState({});
 
-  // ⚡ Sync activeSection and activeId with route query params
+  // 1. Fetch sections on mount
   useEffect(() => {
-    const sectionFromRoute = queryParams.get("section") || sections[0]?.header;
+    const fetchSections = async () => {
+      try {
+        console.log("Fetching partner sections...");
+        const result = await getPartnerSections();
+        console.log("Partner sections result:", result);
+        const apiSections = result.data || [];
+        setSections(apiSections);
+
+        if (apiSections.length > 0) {
+          const sectionFromRoute = queryParams.get("section") || apiSections[0]?.header;
+          const targetSection = apiSections.find((s) => s.header === sectionFromRoute) || apiSections[0];
+
+          console.log("Initializing active section:", targetSection.header);
+          setActiveSection(targetSection.header);
+          setOpenSections({ [targetSection.header]: true });
+
+          const itemFromRoute = queryParams.get("item");
+          const targetItemId = itemFromRoute || targetSection.items?.[0]?.item_id_str;
+          console.log("Initializing active ID:", targetItemId);
+          setActiveId(targetItemId);
+        }
+      } catch (error) {
+        console.error("Error fetching partner sections:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchSections();
+  }, []);
+
+  // 2. Sync with route params (when sections are ready)
+  useEffect(() => {
+    if (sections.length === 0) return;
+
+    const sectionFromRoute = queryParams.get("section");
     const itemFromRoute = queryParams.get("item");
 
-    const sectionObj =
-      sections.find((s) => s.header === sectionFromRoute) || sections[0];
-    const itemObj =
-      sectionObj.items.find((i) => i.id === itemFromRoute) ||
-      sectionObj.items[0];
-
-    setActiveSection(sectionObj.header);
-    setActiveId(itemObj.id);
-    setActiveItem(itemObj);
-    setOpenSections({ [sectionObj.header]: true });
-    setExpandedTables({});
-
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (sectionFromRoute) {
+      setActiveSection(sectionFromRoute);
+      setOpenSections((prev) => ({ ...prev, [sectionFromRoute]: true }));
+    }
+    if (itemFromRoute) {
+      setActiveId(itemFromRoute);
+    }
   }, [location.search, sections]);
 
-  // Keep activeItem in sync when activeId or activeSection changes manually
+  // 3. Fetch item details when activeId changes
   useEffect(() => {
-    const currentSection = sections.find((s) => s.header === activeSection);
-    const foundItem = currentSection?.items?.find((i) => i.id === activeId);
-    setActiveItem(foundItem);
-    setExpandedTables({});
-  }, [activeId, activeSection, sections]);
+    if (!activeId) return;
+
+    const fetchDetails = async () => {
+      try {
+        console.log("Fetching details for item:", activeId);
+        const result = await getPartnerItemDetails(activeId);
+        console.log("Item details result:", result);
+        setActiveItem(result?.data || null);
+        setExpandedTables({});
+      } catch (error) {
+        console.error("Error fetching item details:", error);
+      }
+    };
+    fetchDetails();
+  }, [activeId]);
 
   const toggleTable = (idx) =>
     setExpandedTables((prev) => ({ ...prev, [idx]: !prev[idx] }));
@@ -61,24 +96,28 @@ export default function PartnersSection() {
 
   // ⚡ Update URL when selecting an item
   const handleSelectItem = (section, id) => {
-    setActiveSection(section);
     setActiveId(id);
-    setOpenSections({ [section]: true });
+    setActiveSection(section);
+    setOpenSections((prev) => ({ ...prev, [section]: true }));
 
     navigate(`?section=${section}&item=${id}`, { replace: true });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleLearnMore = (categoryId) => {
+    console.log("handleLearnMore called with:", categoryId);
     const currentSection = sections.find((s) => s.header === activeSection);
     const detailItem = currentSection?.items?.find(
       (i) =>
-        i.id === categoryId ||
-        (i.details && i.details.some((d) => d.id === categoryId))
+        i.item_id_str === categoryId ||
+        (Array.isArray(i.details) && i.details.some((d) => d.id === categoryId))
     );
 
     if (detailItem) {
-      handleSelectItem(activeSection, detailItem.id); // update URL and state
+      console.log("Found detail item for learn more:", detailItem.item_id_str);
+      handleSelectItem(activeSection, detailItem.item_id_str); // update URL and state
+    } else {
+      console.warn("Could not find detail item for category:", categoryId);
     }
   };
 
@@ -158,7 +197,7 @@ export default function PartnersSection() {
               </div>
 
               <div
-                dangerouslySetInnerHTML={{ __html: apiData?.data?.content }}
+                dangerouslySetInnerHTML={{ __html: apiData?.data?.content || "" }}
               />
 
               <DataTable

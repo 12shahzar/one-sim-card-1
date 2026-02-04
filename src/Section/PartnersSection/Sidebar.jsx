@@ -38,18 +38,17 @@ export default function Sidebar({
             {openSections[section.header] && (
               <>
                 <ul className="space-y-2">
-                  {section.items.map((item) => (
-                    <li key={item.id}>
+                  {Array.isArray(section.items) && section.items.map((item) => (
+                    <li key={item.item_id_str}>
                       <button
-                        onClick={() => onSelectItem(section.header, item.id)}
-                        className={`w-full text-left px-3 py-1 text-base transition-colors flex items-center gap-2 cursor-pointer ${
-                          activeId === item.id &&
+                        onClick={() => onSelectItem(section.header, item.item_id_str)}
+                        className={`w-full text-left px-3 py-1 text-base transition-colors flex items-center gap-2 cursor-pointer ${activeId === item.item_id_str &&
                           activeSection === section.header
-                            ? "text-[#455E86]"
-                            : "text-[#6B7280]"
-                        }`}
+                          ? "text-[#455E86]"
+                          : "text-[#6B7280]"
+                          }`}
                       >
-                        {activeId === item.id &&
+                        {activeId === item.item_id_str &&
                           activeSection === section.header && (
                             <span className="text-[#455E86]">•</span>
                           )}
