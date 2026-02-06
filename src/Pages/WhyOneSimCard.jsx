@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SectionHeading from "../Components/Heading/SectionHeading";
-import cardsData from "../data/whyonesim.json";
+import { fetchWhyOneSimCards } from "../api/whyOneSimApi";
 
 function WhyOneSimCard() {
+  const [cardsData, setCardsData] = useState([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const data = await fetchWhyOneSimCards();
+        setCardsData(data);
+      } catch (error) {
+        console.error("Failed to load cards", error);
+      }
+    };
+    loadData();
+  }, []);
+
   return (
     <div className="max-w-7xl mx-auto py-16 px-2 md:px-6 font-sora">
       {/* Section Heading */}
